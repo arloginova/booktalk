@@ -1,0 +1,31 @@
+.input {
+	font-family: Raleway-M;
+	font-size: 20px;
+	border-radius: var(--block-full-border-radius);
+	text-indent: 20px;
+	background-color: var(--white-200);
+	height: 44px;
+	width: 274px;
+	outline: 2px solid transparent;
+	transition: var(--transition-low);
+	&::placeholder {
+		color: var(--white-300);
+		font-size: inherit;
+		font-family: inherit;
+		transition: inherit;
+	}
+	&:hover {
+		&::placeholder {
+			color: var(--black-100);
+		}
+	}
+}
+
+@media screen and (max-width: 1406px) {
+	.input {
+		height: 34px;
+		width: 214px;
+		font-size: 14px;
+		text-indent: 15px;
+	}
+}

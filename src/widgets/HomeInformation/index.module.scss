@@ -1,0 +1,12 @@
+.wrapper {
+}
+.container {
+	display: flex;
+	gap: var(--modules-gap);
+}
+
+@media screen and (max-width: 834px) {
+	.container {
+		flex-flow: wrap;
+	}
+}
