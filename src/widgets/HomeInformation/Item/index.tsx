@@ -1,15 +1,17 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import { TClassName } from '@/shared/types'
 import { cn } from '@/shared/lib'
 import { Typography } from '@/shared/ui'
 import { useScreen } from '@/shared/hooks'
 import cls from './index.module.scss'
+import { LG, MD } from '@/shared/constants'
 
 interface Props extends TClassName {
 	title: string
 	content: {
 		title: string
-		subtitle: string
+		subtitle: ReactNode
+		subtitleMiddleScreen?: ReactNode
 	}
 }
 const Item: FC<Props> = ({ className, content, title }) => {
@@ -24,8 +26,11 @@ const Item: FC<Props> = ({ className, content, title }) => {
 				<Typography size={screen >= 1406 ? 24 : 17} font='Raleway-SB' tag='h3'>
 					{content.title}
 				</Typography>
+
 				<Typography size={screen >= 1406 ? 20 : 16} font='Raleway-M' tag='h4'>
-					{content.subtitle}
+					{content.subtitleMiddleScreen && screen <= LG && screen > MD
+						? content.subtitleMiddleScreen
+						: content.subtitle}
 				</Typography>
 			</div>
 		</li>

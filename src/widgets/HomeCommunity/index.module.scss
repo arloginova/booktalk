@@ -20,6 +20,9 @@
 		input {
 		}
 	}
+	.newsletter_subtitle {
+		max-width: 464px;
+	}
 }
 
 .block {
@@ -47,6 +50,9 @@
 			flex-flow: column;
 			row-gap: 8px;
 			align-items: start;
+		}
+		.newsletter_subtitle {
+			max-width: 371px;
 		}
 	}
 	.image_block {

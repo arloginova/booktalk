@@ -41,6 +41,7 @@ const Item: FC<Props> = ({ questions, className, theme, tailDirection }) => {
 						className={cn(cls.question, [], {
 							[cls.active]: visibleIndex === index,
 						})}
+						key={index}
 					>
 						{question}
 					</Typography>

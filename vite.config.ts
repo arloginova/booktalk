@@ -12,5 +12,5 @@ export default defineConfig({
 			shared: path.resolve(__dirname, './src/'),
 		},
 	},
-	base: '/test-deploy-booktalk',
+	base: '/booktalk',
 })

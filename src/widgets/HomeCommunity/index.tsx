@@ -30,6 +30,7 @@ const HomeCommunity: FC<Props> = ({ className, wrapperClassName }) => {
 				{screen >= MD && <News className={cn(cls.block, [cls.news])} />}
 				<ImageBlock className={cn(cls.block, [cls.image_block])} />
 				<ContentBlock
+					subtitleCls={cn(cls.newsletter_subtitle)}
 					plaque='рассылка'
 					subtitle='Подпишитесь на рассылку и узнайте первыми 
 о запуске платформы'
