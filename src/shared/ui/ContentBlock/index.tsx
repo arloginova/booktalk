@@ -10,12 +10,14 @@ import cls from './index.module.scss'
 interface Props extends TClassName {
 	plaque: string
 	title: string
-	subtitle: string
+	subtitle: ReactNode
 	endContent?: ReactNode
 	plaqueCls?: string
 	titleCls?: string
 	subtitleCls?: string
 	contentCls?: string
+	subtitleMid?: ReactNode
+	subtitleLow?: ReactNode
 }
 const ContentBlock: FC<Props> = ({
 	endContent,
@@ -27,6 +29,8 @@ const ContentBlock: FC<Props> = ({
 	plaqueCls,
 	subtitleCls,
 	titleCls,
+	subtitleMid,
+	subtitleLow,
 }) => {
 	const screen = useScreen()
 
@@ -48,7 +52,11 @@ const ContentBlock: FC<Props> = ({
 					tag='h3'
 					className={subtitleCls}
 				>
-					{subtitle}
+					{subtitleMid && screen <= LG && screen > MD
+						? subtitleMid
+						: subtitleLow && screen <= MD
+						? subtitleLow
+						: subtitle}
 				</Typography>
 				{endContent}
 			</div>

@@ -20,8 +20,35 @@ const HomeCommunity: FC<Props> = ({ className, wrapperClassName }) => {
 			<Container className={cn(cls.container, [className])}>
 				<ContentBlock
 					plaque='Сообщество'
-					subtitle='Книжный telegram канал с регулярными обновлениями новинок книг и рецензий. Подписывайтесь, чтобы быть 
-в курсе всех книжных событий'
+					subtitle={
+						<>
+							Книжный telegram канал с регулярными обновлениями новинок книг и
+							рецензий. Подписывайтесь, чтобы быть
+							<br />в курсе всех книжных событий
+						</>
+					}
+					subtitleLow={
+						<>
+							Книжный telegram канал с регулярными
+							<br />
+							обновлениями новинок книг и рецензий.
+							<br />
+							Подписывайтесь, чтобы быть в курсе всех
+							<br />
+							книжных событий
+						</>
+					}
+					subtitleMid={
+						<>
+							Книжный telegram канал с регулярными
+							<br />
+							обновлениями новинок книг и рецензий.
+							<br />
+							Подписывайтесь, чтобы быть в курсе
+							<br />
+							всех книжных событий
+						</>
+					}
 					title='наше сообщество'
 					endContent={<Button className={cn(cls.btn)}>@btalkcom</Button>}
 					subtitleCls={cn(cls.community_subtitle)}
