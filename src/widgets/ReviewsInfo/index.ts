@@ -1,0 +1,1 @@
+export { ReviewsInfo } from './ui'

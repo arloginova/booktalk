@@ -1,0 +1,7 @@
+export { SearchIcon } from './SearchIcon'
+export { EyeIcon } from './EyeIcon'
+export { BookIcon } from './BookIcon'
+export { StarIcon } from './StarIcon'
+export { HeartIcon } from './HeartIcon'
+export { ShareIcon } from './ShareIcon'
+export { TelegramIcon } from './TelegramIcon'

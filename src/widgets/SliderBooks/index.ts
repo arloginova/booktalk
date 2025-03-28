@@ -1,0 +1,1 @@
+export { SliderBooks } from './ui'

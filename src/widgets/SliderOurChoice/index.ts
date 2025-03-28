@@ -1,0 +1,1 @@
+export { SliderOurChoice } from './ui'

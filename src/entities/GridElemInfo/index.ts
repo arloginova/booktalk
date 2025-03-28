@@ -1,0 +1,1 @@
+export { GridElemInfo } from './ui'

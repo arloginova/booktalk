@@ -1,0 +1,145 @@
+@import 'tailwindcss';
+
+@theme {
+	/* COLORS */
+	--color-blackMain: #000;
+	--color-blackMain-50: rgba(0, 0, 0, 50%);
+
+	--color-greyMain: #e2e1ea;
+	--color-greyBackground: #eeedf2;
+	--color-greyExtra: #a0a0a0;
+
+	--color-orangeMain: #f95c3b;
+	--color-orangeMainH: #d72b06;
+	--color-orangeExtra: #ff927b;
+	--color-orangeError: #faeeeb;
+
+	--color-whiteMain: #fff;
+
+	/* FONTS */
+	--font-raleway: Raleway;
+	--font-muller: Muller;
+
+	/* BREAKPOINTS */
+	--breakpoint-xxl: 1601px;
+	--breakpoint-xl: 1441px;
+	--breakpoint-xl-1: 1440px;
+	--breakpoint-lg-big: 1281px;
+	--breakpoint-lg-mid: 1025px;
+	--breakpoint-lg-low: 835px;
+	--breakpoint-lg-low-1: 834px;
+	--breakpoint-md-mid: 769px;
+	--breakpoint-md-low: 601px;
+	--breakpoint-xs-big: 481px;
+	--breakpoint-xs-big-1: 480px;
+	--breakpoint-xs-mid: 394px;
+	--breakpoint-xs-low: 321px;
+}
+@layer base {
+	@font-face {
+		font-family: Muller;
+		src: local('Muller'), url(/fonts/MullerRegular.woff) format(woff),
+			url(/fonts/MullerRegular.woff2) format(woff2);
+		font-display: swap;
+		font-weight: 400;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: Muller;
+		src: local('Muller'), url(/fonts/MullerMedium.woff) format(woff),
+			url(/fonts/MullerMedium.woff2) format(woff2);
+		font-display: swap;
+		font-weight: 500;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: Raleway;
+		src: local('Raleway'), url(/fonts/Raleway-Medium.woff) format(woff),
+			url(/fonts/Raleway-Medium.woff2) format(woff2);
+		font-display: swap;
+		font-weight: 500;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: Raleway;
+		src: local('Raleway'), url(/fonts/Raleway-Semibold.woff) format(woff),
+			url(/fonts/Raleway-Semibold.woff2) format(woff2);
+		font-display: swap;
+		font-weight: 600;
+		font-style: normal;
+	}
+	body {
+		color: var(--color-blackMain);
+		background-color: var(--color-greyBackground);
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+	@media screen and (min-width: 0px) {
+		body {
+			--main-blocks-gap: 12px;
+			padding: 12px;
+		}
+	}
+	@media screen and (min-width: 835px) {
+		body {
+			--main-blocks-gap: 16px;
+			padding: 16px;
+		}
+	}
+	button {
+		display: block;
+		cursor: pointer;
+	}
+	*:focus {
+		outline: none;
+		box-shadow: none;
+	}
+}
+@layer components {
+	@media screen and (min-width: 0px) {
+		.p-hr-main {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+		.p-vr-main {
+			padding-top: 16px;
+			padding-bottom: 16px;
+		}
+		.p-main {
+			padding: 16px;
+		}
+	}
+	@media screen and (min-width: 601px) {
+		.p-hr-main {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.p-vr-main {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		.p-main {
+			padding: 20px;
+		}
+	}
+	@media screen and (min-width: 1025px) {
+		.p-hr-main {
+			padding-left: 32px;
+			padding-right: 32px;
+		}
+		.p-vr-main {
+			padding-top: 32px;
+			padding-bottom: 32px;
+		}
+		.p-main {
+			padding: 32px;
+		}
+	}
+	.no-scrollbar::-webkit-scrollbar {
+		height: 0px;
+	}
+	.font-size-inherit::placeholder {
+		font-size: inherit;
+	}
+}

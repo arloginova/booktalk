@@ -1,0 +1,1 @@
+export const API_MOCK_REQUEST_TIME_MS = 1000

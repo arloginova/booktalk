@@ -1,0 +1,1 @@
+export { SliderArticles } from './ui'
