@@ -1,0 +1,28 @@
+.wrapper {
+}
+.container {
+}
+.content {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: calc(var(--modules-gap) + 7px);
+	width: 854px;
+	margin: 0 auto;
+}
+.item {
+	&.opacity {
+		opacity: 0.5;
+	}
+}
+
+@media screen and (max-width: 1406px) {
+	.content {
+		width: 600px;
+	}
+}
+
+@media screen and (max-width: 834px) {
+	.content {
+		width: 100%;
+	}
+}

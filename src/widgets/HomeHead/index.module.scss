@@ -1,0 +1,48 @@
+.wrapper {
+}
+.container {
+	height: 520px;
+	background-image: url('../../../public/images/Home/Head/background.png');
+	background-position: center center;
+	background-size: cover;
+	border-radius: var(--block-border-radius);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.content {
+	text-align: center;
+	h1 {
+		text-transform: uppercase;
+	}
+	h2 {
+		max-width: 450px;
+		margin: var(--main-text-gap) auto 20px auto;
+	}
+	.btn {
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 1406px) {
+	.container {
+		height: 300px;
+	}
+	.content {
+		h2 {
+			max-width: 383px;
+		}
+	}
+}
+
+@media screen and (max-width: 834px) {
+	.container {
+		height: 387px;
+	}
+	.content {
+		h2 {
+			margin-bottom: var(--modules-gap);
+			max-width: 270px;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+.container {
+	height: calc(100vh - var(--modules-gap) * 2 - var(--header-height));
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.content {
+	position: relative;
+	z-index: 2;
+}

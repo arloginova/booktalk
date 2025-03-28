@@ -1,0 +1,11 @@
+.btn {
+	color: var(--white-100);
+	text-transform: uppercase;
+	background-color: var(--orange-100);
+	border-radius: var(--block-full-border-radius);
+	padding: 10.5px var(--main-padding);
+	transition: var(--transition-low);
+	&:hover {
+		background-color: var(--black-100);
+	}
+}

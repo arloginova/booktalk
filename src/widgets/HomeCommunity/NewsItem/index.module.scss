@@ -1,0 +1,45 @@
+.item {
+	position: relative;
+	border-radius: var(--block-border-radius);
+	background-color: var(--white-100);
+	h3 {
+		margin-top: 27px;
+		padding: 0 var(--main-padding);
+		overflow: auto;
+	}
+	.tail {
+		width: 42px;
+		height: 32px;
+		position: absolute;
+		scale: -1 1;
+		right: -11px;
+		bottom: 0;
+	}
+}
+.head {
+	padding: 5px 5px 0 5px;
+	display: flex;
+	column-gap: 2px;
+	img {
+		object-fit: cover;
+		flex: 1;
+		&:first-child {
+			border-radius: var(--block-border-radius) 0 0 0;
+		}
+		&:last-child {
+			border-radius: 0 var(--block-border-radius) 0 0;
+		}
+	}
+}
+
+@media screen and (max-width: 1406px) {
+	.item {
+		h3 {
+			margin-top: 11px;
+			max-width: 300px;
+		}
+	}
+	.head {
+		height: 200px;
+	}
+}
