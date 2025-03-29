@@ -1,8 +1,6 @@
 import { TBookData, TBookItem } from '../types/Book'
 import { API_MOCK_REQUEST_TIME_MS } from '../constants'
 
-import popular from './data/reviews/popular.json'
-
 import allPopular from './data/reviews/all/popular.json'
 import allFantasy from './data/reviews/all/fantasy.json'
 import allNotFiction from './data/reviews/all/not-fiction.json'
@@ -68,19 +66,6 @@ export enum EnReviewsTypes {
 	'not-fiction-emotions-under-control' = 'not-fiction-emotions-under-control',
 }
 
-export const reviewsPopularBooks = () => {
-	return new Promise<TResponse>((res, rej) => {
-		setTimeout(() => {
-			res(
-				popular.data.map(data => ({
-					data,
-					genre: popular.genre,
-					type: popular.type,
-				}))
-			)
-		}, API_MOCK_REQUEST_TIME_MS)
-	})
-}
 export const reviewsAllPopularBooks = () => {
 	return new Promise<TResponse>((res, rej) => {
 		setTimeout(() => {

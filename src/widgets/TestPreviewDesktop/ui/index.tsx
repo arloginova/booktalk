@@ -46,7 +46,7 @@ const TestPreviewDesktop: FC<Props> = ({ className, setScreen }) => {
 						className={imageCls}
 					/>
 				) : null}
-				<UiTypography className={titleCls} font='Raleway-SB' tag='h1'>
+				<UiTypography className={titleCls} font='Raleway-M' tag='h1'>
 					Найдите книгу
 					<br />
 					по своему настроению!

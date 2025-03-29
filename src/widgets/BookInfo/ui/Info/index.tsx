@@ -24,7 +24,7 @@ interface Props
 const Info: FC<Props> = ({ className, description, slug, author }) => {
 	return (
 		<div className={cn(wrapperCls, className)}>
-			<UiTypography font='Raleway-SB' tag='h1' className={titleCls}>
+			<UiTypography font='Raleway-M' tag='h1' className={titleCls}>
 				{slug}
 			</UiTypography>
 			<UiTypography tag='h4' font='Raleway-M' className={authorCls}>

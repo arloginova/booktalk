@@ -59,7 +59,7 @@ const TestResult: FC<Props> = ({ setScreen, className }) => {
 			>
 				<div className={contentCls}>
 					<div className={infoCls}>
-						<UiTypography className={titleCls} font='Raleway-SB' tag='h1'>
+						<UiTypography className={titleCls} font='Raleway-M' tag='h1'>
 							Ваши 7 Рекомендаций
 						</UiTypography>
 						<UiTypography className={subtitleCls} font='Raleway-M' tag='h2'>

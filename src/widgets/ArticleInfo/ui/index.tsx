@@ -36,7 +36,7 @@ const ArticleInfo: FC<Props> = async ({
 			plaque='Рецензии'
 		>
 			<div className={contentCls}>
-				<UiTypography font='Raleway-SB' tag='h1' className={titleCls}>
+				<UiTypography font='Raleway-M' tag='h1' className={titleCls}>
 					{responseData.data.title}
 				</UiTypography>
 				<UiTypography font='Raleway-M' tag='p' className={introductionCls}>
