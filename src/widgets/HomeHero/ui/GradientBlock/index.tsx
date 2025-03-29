@@ -58,6 +58,7 @@ const GradientBlock: FC<Props> = ({ className }) => {
 			<div className={btnWrapperCls}>
 				<UiButton
 					isInverted
+					font="Muller-R"
 					className={btnCls}
 					size={screenWidth >= LG_BIG ? 'big' : screenWidth >= LG_LOW ? 'mid' : 'small'}
 				>

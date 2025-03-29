@@ -9,7 +9,7 @@ import {
 import { cn } from '@/shared/lib'
 import Image from 'next/image'
 import { useScreen } from '@/shared/hooks'
-import { MD_MID } from '@/shared/constants'
+import { MD_LOW, MD_MID } from '@/shared/constants'
 import { EnScreens } from '@/screens/Test/types/screens'
 
 const wrapperCls = 'relative z-[0]'
@@ -29,6 +29,7 @@ const TestPreviewDesktop: FC<Props> = ({ className, setScreen }) => {
 	const handleStart: MouseEventHandler = () => {
 		setScreen(EnScreens.first)
 	}
+
 
 	return (
 		<UiGridElemWrapper
@@ -51,7 +52,7 @@ const TestPreviewDesktop: FC<Props> = ({ className, setScreen }) => {
 					по своему настроению!
 				</UiTypography>
 				<UiTypography className={subtitleCls} font='Raleway-M' tag='h2'>
-					Тест поможет подобрать книги на основе вашего настроения и интересов
+					Тест поможет подобрать книги{screenWidth >= MD_LOW ? <br /> : null} на основе вашего настроения и интересов
 				</UiTypography>
 				<UiButton onClick={handleStart} className={btnCls}>
 					Пройти тест

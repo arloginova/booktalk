@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, FC } from 'react'
 import { cn } from '@/shared/lib'
-import { UiTypography } from '../UiTypography'
+import { TUiTypographyTextProps, UiTypography } from '../UiTypography'
 
 const wrapperCls = 'uppercase rounded-full duration-150'
 const isInvertedCls = 'bg-whiteMain text-orangeMain hover:bg-greyBackground'
@@ -14,6 +14,7 @@ interface TUiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	isInverted?: boolean
 	size?: 'big' | 'mid' | 'small'
 	textClassName?: string
+	font?: TUiTypographyTextProps['font']
 }
 
 const UiButton: FC<TUiButtonProps> = ({
@@ -22,6 +23,7 @@ const UiButton: FC<TUiButtonProps> = ({
 	isInverted,
 	size = 'big',
 	textClassName,
+	font = "Raleway-M",
 	...props
 }) => {
 	return (
@@ -39,7 +41,7 @@ const UiButton: FC<TUiButtonProps> = ({
 			)}
 			{...props}
 		>
-			<UiTypography font='Raleway-M' tag='p' className={textClassName}>
+			<UiTypography font={font} tag='p' className={textClassName}>
 				{children}
 			</UiTypography>
 		</button>

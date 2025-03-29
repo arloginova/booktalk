@@ -70,7 +70,7 @@ const TestPreview: FC<Props> = ({ className, setScreen }) => {
 					по своему настроению!
 				</UiTypography>
 				<UiTypography className={subtitleCls} font='Raleway-M' tag='h2'>
-					Тест поможет подобрать книги на основе вашего настроения и интересов
+					Тест поможет подобрать книги{screenWidth >= MD_MID ? <br /> : ' '}на основе вашего настроения и интересов
 				</UiTypography>
 				<UiButton onClick={handleStart} className={btnCls}>
 					Пройти тест
