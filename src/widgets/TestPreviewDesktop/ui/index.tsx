@@ -39,7 +39,7 @@ const TestPreviewDesktop: FC<Props> = ({ className, setScreen }) => {
 			<div className={contentCls}>
 				{screenWidth >= MD_MID ? (
 					<Image
-						src='/images/Test/illustrations/preview.png'
+						src='/images/Test/illustrations/preview.svg'
 						alt='Декорации'
 						width={880}
 						height={550}
@@ -52,7 +52,7 @@ const TestPreviewDesktop: FC<Props> = ({ className, setScreen }) => {
 					по своему настроению!
 				</UiTypography>
 				<UiTypography className={subtitleCls} font='Raleway-M' tag='h2'>
-					Тест поможет подобрать книги{screenWidth >= MD_LOW ? <br /> : null} на основе вашего настроения и интересов
+					Тест поможет подобрать книги{screenWidth >= MD_LOW ? <br /> : null}на основе вашего настроения и интересов
 				</UiTypography>
 				<UiButton onClick={handleStart} className={btnCls}>
 					Пройти тест

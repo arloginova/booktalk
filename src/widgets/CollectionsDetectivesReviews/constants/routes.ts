@@ -2,6 +2,7 @@ import { EnBookTypes } from '@/shared/api/booksCollections'
 import {
 	detectivesKeToUnravelingBooks,
 	detectivesNewsBooks,
+	detectivesOurChoiceBooks,
 	detectivesPopularBooks,
 	detectivesRiddleUnansweredBooks,
 } from '@/shared/api/detectivesBooks'
@@ -12,6 +13,7 @@ enum EnAllReviewsRoutesKeys {
 	riddleUnanswered = EnBookTypes['detectives-riddle-unanswered'],
 	popular = EnBookTypes['detectives-popular'],
 	new = EnBookTypes['detectives-new'],
+	choice = EnBookTypes['detectives-choice'],
 }
 
 const allReviewsRoutes: Record<
@@ -37,6 +39,11 @@ const allReviewsRoutes: Record<
 		href: EnBookTypes['detectives-riddle-unanswered'],
 		title: 'Загадки без ответа',
 		queryFn: detectivesRiddleUnansweredBooks,
+	},
+	[EnAllReviewsRoutesKeys.choice]: {
+		href: EnBookTypes['detectives-choice'],
+		title: 'Наш выбор',
+		queryFn: detectivesOurChoiceBooks,
 	},
 }
 

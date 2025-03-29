@@ -1,5 +1,5 @@
 'use client'
-import { FC } from 'react'
+import { FC, useRef } from 'react'
 import { TClassName } from '@/shared/types'
 import { UiButton, UiGridElemWrapper, UiTypography } from '@/shared/ui'
 import { cn } from '@/shared/lib'
@@ -11,15 +11,16 @@ import { LG_BIG, LG_LOW, MD_MID } from '@/shared/constants'
 const wrapperCls = 'flex flex-col items-start relative z-[0] overflow-hidden'
 const btnCls = 'shadow-[0_0_5px_0_rgba(0,0,0,20%)]'
 const btnWrapperCls = 'flex justify-end w-full mb-auto'
-const previewImagesCls = 'flex justify-center lg-big:gap-x-4 gap-x-2'
+const previewImagesCls = 'flex justify-between w-full lg-big:gap-x-4 gap-x-2'
 const titleCls = 'lg-big:text-2xl text-whiteMain uppercase lg-big:mb-8 mb-5 leading-[130%]'
 const decorImageCls = 'absolute -z-[1]'
 const previewItemCls =
-	'h-auto -rotate-[16deg] lg-low:rounded-xl md-low:rounded-base rounded-md flex-1 xl-1:max-w-[92.5px] lg-big:max-w-[75px] lg-low-1:max-w-[56.5px] max-w-[53px] w-full translate-x-[20.77%]'
+	'h-auto -rotate-[16deg] lg-low:rounded-xl md-low:rounded-base rounded-md flex-1 xl-1:max-w-[92.5px] lg-big:max-w-[75px] lg-low-1:max-w-[56.5px] max-w-[53px] w-full'
 
 interface Props extends TClassName { }
 
 const GradientBlock: FC<Props> = ({ className }) => {
+	const previewImageRef = useRef<HTMLImageElement | null>(null)
 	const { screenWidth } = useScreen()
 	return (
 		<UiGridElemWrapper className={cn(wrapperCls, className)}>
@@ -70,11 +71,15 @@ const GradientBlock: FC<Props> = ({ className }) => {
 				<br />
 				для любимого чтения
 			</UiTypography>
-			<div className={previewImagesCls}>
+			<div className={previewImagesCls} style={{
+				translate: `${previewImageRef.current?.clientWidth ? previewImageRef.current.clientWidth / 100 * 20.77 : 0}px 0`,
+				width: `calc(100% - ${(previewImageRef.current?.clientWidth ? previewImageRef.current.clientWidth / 100 * 20.77 : 0) * 2}px)`
+			}}>
 				{PREVIEW_IMAGES.map((path, index) =>
 					screenWidth < LG_LOW && index > 5 ? null : screenWidth < MD_MID &&
 						index > 4 ? null : (
 						<Image
+							ref={previewImageRef}
 							src={path}
 							key={path}
 							width={95}

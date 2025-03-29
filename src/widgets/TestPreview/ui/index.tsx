@@ -44,7 +44,7 @@ const TestPreview: FC<Props> = ({ className, setScreen }) => {
 						className={cn(contentWrapperCls, 'mt-[var(--main-blocks-gap)]')}
 					>
 						<Image
-							src='/images/Test/illustrations/preview.png'
+							src='/images/Test/illustrations/preview.svg'
 							alt='Декорации'
 							width={880}
 							height={550}

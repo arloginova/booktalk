@@ -1,3 +1,4 @@
+import { EnBookTypes } from '@/shared/api/booksCollections'
 import {
 	EnReviewsTypes,
 	reviewsRomanticForbiddenBooks,
@@ -5,7 +6,7 @@ import {
 	reviewsRomanticNewsBooks,
 	reviewsRomanticPopularBooks,
 } from '@/shared/api/reviewsList'
-import { romanticNewsBooks } from '@/shared/api/romanticBooks'
+import { romanticOurChoiceBooks } from '@/shared/api/romanticBooks'
 import { TBookItem } from '@/shared/types/Book'
 
 enum EnAllReviewsRoutesKeys {
@@ -13,6 +14,7 @@ enum EnAllReviewsRoutesKeys {
 	modernRomance = EnReviewsTypes['romantic-modern-romance'],
 	popular = EnReviewsTypes['romantic-popular'],
 	new = EnReviewsTypes['romantic-new'],
+	choice = EnBookTypes['romantic-choice'],
 }
 
 const allReviewsRoutes: Record<
@@ -38,6 +40,11 @@ const allReviewsRoutes: Record<
 		href: EnReviewsTypes['romantic-modern-romance'],
 		title: 'Разрушенные обещания',
 		queryFn: reviewsRomanticModernRomanceBooks,
+	},
+	[EnAllReviewsRoutesKeys.choice]: {
+		href: EnBookTypes['romantic-choice'],
+		title: 'Загадки без ответа',
+		queryFn: romanticOurChoiceBooks,
 	},
 }
 

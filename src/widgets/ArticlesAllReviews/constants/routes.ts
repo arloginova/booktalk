@@ -1,6 +1,7 @@
 import {
 	articlesAtmospheric,
 	articlesNews,
+	articlesOurChoice,
 	articlesPopular,
 	articlesRomanticMood,
 } from '@/shared/api/articles'
@@ -29,6 +30,12 @@ const allReviewsRoutes: Record<
 		href: '/romantic-mood',
 		title: 'романтическое настроение',
 		queryFn: articlesRomanticMood,
+	},
+	'our-choice': {
+		href: '/our-choice',
+		title: 'Наш выбор',
+		//@ts-ignore
+		queryFn: articlesOurChoice,
 	},
 }
 

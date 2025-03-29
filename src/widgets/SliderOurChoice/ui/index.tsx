@@ -10,6 +10,9 @@ import {
 import { sliderConfig } from '../config/slider'
 import 'swiper/swiper-bundle.css'
 import { OurChoiceItem } from '@/entities/OurChoiceItem'
+import { reviewsRoutes } from '@/screens/BookType'
+import { EnRoutes } from '@/shared/constants'
+import Link from 'next/link'
 
 const itemCls = 'lg-low:w-[400px] w-[300px] h-full'
 const slideCls = '!w-auto !h-auto'
@@ -49,14 +52,21 @@ const SliderOurChoice: FC<Props> = ({
 					))
 					:
 					<>
-						{books.map(({ genre, type, data }) => (
-							<SwiperSlide
-								className={slideCls}
-								key={`${data.slug}${genre}${type}`}
-							>
-								<OurChoiceItem {...data} className={itemCls} />
-							</SwiperSlide>
-						))}
+						{books.map(({ genre, type, data }) => {
+
+							return (
+								<SwiperSlide
+									className={slideCls}
+									key={`${data.slug}${genre}${type}`}
+								>
+									<Link
+										href={`${EnRoutes.collections}/${reviewsRoutes[type]?.href}/${data.slug}`}
+									>
+										<OurChoiceItem {...data} className={itemCls} />
+									</Link>
+								</SwiperSlide>
+							)
+						})}
 						{books.length <= REPEAT_OUR_CHOICE_ITEMS ?
 							[...Array(REPEAT_OUR_CHOICE_ITEMS)].map((_, index) => {
 								if (curRepeatItemIndex + 2 > books.length) {
@@ -64,16 +74,17 @@ const SliderOurChoice: FC<Props> = ({
 								} else {
 									curRepeatItemIndex++
 								}
-
-
 								const { data, genre, type } = books[curRepeatItemIndex]
-
 
 								return <SwiperSlide
 									className={slideCls}
 									key={`${data.slug}${genre}${type}${index}`}
 								>
-									<OurChoiceItem {...data} className={itemCls} />
+									<Link
+										href={`${EnRoutes.collections}/${reviewsRoutes[type]?.href}/${data.slug}`}
+									>
+										<OurChoiceItem {...data} className={itemCls} />
+									</Link>
 								</SwiperSlide>
 							})
 							: null}

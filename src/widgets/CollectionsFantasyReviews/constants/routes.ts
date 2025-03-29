@@ -3,6 +3,7 @@ import {
 	fantasyHeroWayBooks,
 	fantasyMisticBooks,
 	fantasyNewsBooks,
+	fantasyOurChoiceBooks,
 	fantasyPopularBooks,
 } from '@/shared/api/fantasyBooks'
 import { TBookItem } from '@/shared/types/Book'
@@ -12,6 +13,7 @@ enum EnAllReviewsRoutesKeys {
 	mistic = EnBookTypes['fantasy-mistic'],
 	popular = EnBookTypes['fantasy-popular'],
 	new = EnBookTypes['fantasy-new'],
+	choice = EnBookTypes['fantasy-choice'],
 }
 
 const allReviewsRoutes: Record<
@@ -37,6 +39,11 @@ const allReviewsRoutes: Record<
 		href: EnBookTypes['fantasy-mistic'],
 		title: 'Мистика',
 		queryFn: fantasyMisticBooks,
+	},
+	[EnAllReviewsRoutesKeys.choice]: {
+		href: EnBookTypes['fantasy-choice'],
+		title: 'Наш выбор',
+		queryFn: fantasyOurChoiceBooks,
 	},
 }
 

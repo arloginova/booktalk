@@ -47,7 +47,7 @@ const TestFirst: FC<Props> = ({ setScreen, className }) => {
 			/>
 			<div className={actionsCls}>
 				<UiButton className={cn(btnCls, prevBtnCls)}>Назад</UiButton>
-				<UiPlaque className={plaqueCls}>Вопрос 1 из 4</UiPlaque>
+				<UiPlaque font="Muller-M" className={plaqueCls}>Вопрос 1 из 4</UiPlaque>
 				<UiButton className={cn(btnCls, nextBtnCls)} onClick={handleNext}>
 					Вперед
 				</UiButton>

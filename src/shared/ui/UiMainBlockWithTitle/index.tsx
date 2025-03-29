@@ -35,7 +35,7 @@ const UiMainBlockWithTitle: FC<TUiMainBlockWithTitleProps> = ({
 		<Tag className={cn(wrapperCls, className)}>
 			<div className={cn(headCls, { ['mb-5']: !!title }, headClassName)}>
 				{title ? (
-					<Link href={headLink?.href || '#'} onClick={(e) => {
+					<Link href={headLink?.href || '#'} className={cn({ ['mt-35']: withMarginTop, ['hover:text-orangeMain duration-150']: !!headLink?.href })} onClick={(e) => {
 						if (!headLink?.href) e.preventDefault()
 					}}>
 						<UiTypography
@@ -43,7 +43,6 @@ const UiMainBlockWithTitle: FC<TUiMainBlockWithTitleProps> = ({
 							tag='h2'
 							className={cn(
 								titleCls,
-								{ ['mt-35']: withMarginTop },
 								titleClassName
 							)}
 						>

@@ -5,6 +5,7 @@ import romanticNew from './data/romantic/new.json'
 import detectivesNew from './data/detectives/new.json'
 import {
 	notFictionEmotionsUnderControlBooks,
+	notFictionOurChoiceBooks,
 	notFictionPowerOfThoughtsBooks,
 	notFictionStepsBestVersionBooks,
 } from './notFictionBooks'
@@ -12,11 +13,13 @@ import {
 	romanticBrokenPromisesBooks,
 	romanticLoveAmongStormsBooks,
 	romanticNewsBooks,
+	romanticOurChoiceBooks,
 	romanticPopularBooks,
 } from './romanticBooks'
 import {
 	detectivesKeToUnravelingBooks,
 	detectivesNewsBooks,
+	detectivesOurChoiceBooks,
 	detectivesPopularBooks,
 	detectivesRiddleUnansweredBooks,
 } from './detectivesBooks'
@@ -24,10 +27,12 @@ import {
 	fantasyHeroWayBooks,
 	fantasyMisticBooks,
 	fantasyNewsBooks,
+	fantasyOurChoiceBooks,
 	fantasyPopularBooks,
 } from './fantasyBooks'
 import {
 	horrorsNewsBooks,
+	horrorsOurChoiceBooks,
 	horrorsPopularBooks,
 	horrorsUnforgettableGoosebumpsBooks,
 	horrorsWhenShadowsLifeBooks,
@@ -37,25 +42,31 @@ export enum EnBookTypes {
 	'all-new' = 'all-new',
 	'all-romantic' = 'all-romantic',
 	'all-not-fiction' = 'all-not-fiction',
+	'all-choice' = 'all-choice',
 	'fantasy-new' = 'fantasy-new',
 	'fantasy-hero-way' = 'fantasy-hero-way',
 	'fantasy-popular' = 'fantasy-popular',
 	'fantasy-mistic' = 'fantasy-mistic',
+	'fantasy-choice' = 'fantasy-choice',
 	'horrors-new' = 'horrors-new',
 	'horrors-unforgettable-goosebumps' = 'horrors-unforgettable-goosebumps',
 	'horrors-popular' = 'horrors-popular',
 	'horrors-when-shadows-life' = 'horrors-when-shadows-life',
+	'horrors-choice' = 'horrors-choice',
 	'romantic-new' = 'romantic-new',
 	'romantic-love-among-storms' = 'romantic-love-among-storms',
 	'romantic-popular' = 'romantic-popular',
 	'romantic-broken-promises' = 'romantic-broken-promises',
+	'romantic-choice' = 'romantic-choice',
 	'not-fiction-steps-best-version' = 'not-fiction-steps-best-version',
 	'not-fiction-emotions-under-control' = 'not-fiction-emotions-under-control',
 	'not-fiction-power-of-thoughts' = 'not-fiction-power-of-thoughts',
+	'not-fiction-choice' = 'not-fiction-choice',
 	'detectives-new' = 'detectives-new',
 	'detectives-key-to-unraveling' = 'detectives-key-to-unraveling',
 	'detectives-popular' = 'detectives-popular',
 	'detectives-riddle-unanswered' = 'detectives-riddle-unanswered',
+	'detectives-choice' = 'detectives-choice',
 }
 
 export const booksCollections = () => {
@@ -155,6 +166,15 @@ export const booksFindOneBySlugRequest = (type: EnBookTypes) => {
 						decodeURIComponent(slug).replace('?', '')
 				)
 			}
+		case EnBookTypes['all-choice']:
+			return async (slug: TBookData['slug']) => {
+				const data = await romanticOurChoiceBooks()
+				return data.find(
+					({ data }) =>
+						data.slug.replace('?', '') ===
+						decodeURIComponent(slug).replace('?', '')
+				)
+			}
 		case EnBookTypes['detectives-key-to-unraveling']:
 			return async (slug: TBookData['slug']) => {
 				const data = await detectivesKeToUnravelingBooks()
@@ -185,6 +205,15 @@ export const booksFindOneBySlugRequest = (type: EnBookTypes) => {
 		case EnBookTypes['detectives-riddle-unanswered']:
 			return async (slug: TBookData['slug']) => {
 				const data = await detectivesRiddleUnansweredBooks()
+				return data.find(
+					({ data }) =>
+						data.slug.replace('?', '') ===
+						decodeURIComponent(slug).replace('?', '')
+				)
+			}
+		case EnBookTypes['detectives-choice']:
+			return async (slug: TBookData['slug']) => {
+				const data = await detectivesOurChoiceBooks()
 				return data.find(
 					({ data }) =>
 						data.slug.replace('?', '') ===
@@ -227,6 +256,15 @@ export const booksFindOneBySlugRequest = (type: EnBookTypes) => {
 						decodeURIComponent(slug).replace('?', '')
 				)
 			}
+		case EnBookTypes['fantasy-choice']:
+			return async (slug: TBookData['slug']) => {
+				const data = await fantasyOurChoiceBooks()
+				return data.find(
+					({ data }) =>
+						data.slug.replace('?', '') ===
+						decodeURIComponent(slug).replace('?', '')
+				)
+			}
 		case EnBookTypes['horrors-new']:
 			return async (slug: TBookData['slug']) => {
 				const data = await horrorsNewsBooks()
@@ -263,6 +301,16 @@ export const booksFindOneBySlugRequest = (type: EnBookTypes) => {
 						decodeURIComponent(slug).replace('?', '')
 				)
 			}
+
+		case EnBookTypes['horrors-choice']:
+			return async (slug: TBookData['slug']) => {
+				const data = await horrorsOurChoiceBooks()
+				return data.find(
+					({ data }) =>
+						data.slug.replace('?', '') ===
+						decodeURIComponent(slug).replace('?', '')
+				)
+			}
 		case EnBookTypes['not-fiction-emotions-under-control']:
 			return async (slug: TBookData['slug']) => {
 				const data = await notFictionEmotionsUnderControlBooks()
@@ -284,6 +332,16 @@ export const booksFindOneBySlugRequest = (type: EnBookTypes) => {
 		case EnBookTypes['not-fiction-steps-best-version']:
 			return async (slug: TBookData['slug']) => {
 				const data = await notFictionStepsBestVersionBooks()
+				return data.find(
+					({ data }) =>
+						data.slug.replace('?', '') ===
+						decodeURIComponent(slug).replace('?', '')
+				)
+			}
+
+		case EnBookTypes['not-fiction-choice']:
+			return async (slug: TBookData['slug']) => {
+				const data = await notFictionOurChoiceBooks()
 				return data.find(
 					({ data }) =>
 						data.slug.replace('?', '') ===
@@ -320,6 +378,15 @@ export const booksFindOneBySlugRequest = (type: EnBookTypes) => {
 		case EnBookTypes['romantic-popular']:
 			return async (slug: TBookData['slug']) => {
 				const data = await romanticPopularBooks()
+				return data.find(
+					({ data }) =>
+						data.slug.replace('?', '') ===
+						decodeURIComponent(slug).replace('?', '')
+				)
+			}
+		case EnBookTypes['romantic-choice']:
+			return async (slug: TBookData['slug']) => {
+				const data = await romanticOurChoiceBooks()
 				return data.find(
 					({ data }) =>
 						data.slug.replace('?', '') ===

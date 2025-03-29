@@ -1,6 +1,7 @@
 import { EnBookTypes } from '@/shared/api/booksCollections'
 import {
 	horrorsNewsBooks,
+	horrorsOurChoiceBooks,
 	horrorsPopularBooks,
 	horrorsUnforgettableGoosebumpsBooks,
 	horrorsWhenShadowsLifeBooks,
@@ -12,6 +13,7 @@ enum EnAllReviewsRoutesKeys {
 	whenShadowsLife = EnBookTypes['horrors-when-shadows-life'],
 	popular = EnBookTypes['horrors-popular'],
 	new = EnBookTypes['horrors-new'],
+	choice = EnBookTypes['horrors-choice'],
 }
 
 const allReviewsRoutes: Record<
@@ -37,6 +39,11 @@ const allReviewsRoutes: Record<
 		href: EnBookTypes['horrors-when-shadows-life'],
 		title: 'Мистика',
 		queryFn: horrorsWhenShadowsLifeBooks,
+	},
+	[EnAllReviewsRoutesKeys.choice]: {
+		href: EnBookTypes['horrors-choice'],
+		title: 'Наш выбор',
+		queryFn: horrorsOurChoiceBooks,
 	},
 }
 

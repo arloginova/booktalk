@@ -1,6 +1,7 @@
 import { EnBookTypes } from '@/shared/api/booksCollections'
 import {
 	notFictionEmotionsUnderControlBooks,
+	notFictionOurChoiceBooks,
 	notFictionPowerOfThoughtsBooks,
 	notFictionStepsBestVersionBooks,
 } from '@/shared/api/notFictionBooks'
@@ -10,6 +11,7 @@ enum EnAllReviewsRoutesKeys {
 	stepsBestVersion = EnBookTypes['not-fiction-steps-best-version'],
 	powerOfThoughts = EnBookTypes['not-fiction-power-of-thoughts'],
 	emotionsUnderControl = EnBookTypes['not-fiction-emotions-under-control'],
+	choice = EnBookTypes['not-fiction-choice'],
 }
 
 const allReviewsRoutes: Record<
@@ -30,6 +32,11 @@ const allReviewsRoutes: Record<
 		href: EnBookTypes['not-fiction-power-of-thoughts'],
 		title: 'Сила мыслей',
 		queryFn: notFictionPowerOfThoughtsBooks,
+	},
+	[EnAllReviewsRoutesKeys.choice]: {
+		href: EnBookTypes['not-fiction-choice'],
+		title: 'Наш выбор',
+		queryFn: notFictionOurChoiceBooks,
 	},
 }
 

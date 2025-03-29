@@ -3,6 +3,7 @@ import {
 	romanticBrokenPromisesBooks,
 	romanticLoveAmongStormsBooks,
 	romanticNewsBooks,
+	romanticOurChoiceBooks,
 	romanticPopularBooks,
 } from '@/shared/api/romanticBooks'
 import { TBookItem } from '@/shared/types/Book'
@@ -12,6 +13,7 @@ enum EnAllReviewsRoutesKeys {
 	brokenPromises = EnBookTypes['romantic-broken-promises'],
 	popular = EnBookTypes['romantic-popular'],
 	new = EnBookTypes['romantic-new'],
+	choice = EnBookTypes['romantic-choice'],
 }
 
 const allReviewsRoutes: Record<
@@ -37,6 +39,11 @@ const allReviewsRoutes: Record<
 		href: EnBookTypes['romantic-broken-promises'],
 		title: 'Разрушенные обещания',
 		queryFn: romanticBrokenPromisesBooks,
+	},
+	[EnAllReviewsRoutesKeys.choice]: {
+		href: EnBookTypes['romantic-choice'],
+		title: 'Наш выбор',
+		queryFn: romanticOurChoiceBooks,
 	},
 }
 

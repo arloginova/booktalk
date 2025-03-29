@@ -1,12 +1,16 @@
 import { booksCollections, EnBookTypes } from '@/shared/api/booksCollections'
 import { notFictionStepsBestVersionBooks } from '@/shared/api/notFictionBooks'
-import { romanticNewsBooks } from '@/shared/api/romanticBooks'
+import {
+	romanticNewsBooks,
+	romanticOurChoiceBooks,
+} from '@/shared/api/romanticBooks'
 import { TBookItem } from '@/shared/types/Book'
 
 enum EnAllReviewsRoutesKeys {
 	new = EnBookTypes['all-new'],
 	romantic = EnBookTypes['all-romantic'],
 	notFiction = EnBookTypes['all-not-fiction'],
+	choice = EnBookTypes['all-choice'],
 }
 
 const allReviewsRoutes: Record<
@@ -27,6 +31,11 @@ const allReviewsRoutes: Record<
 		href: EnBookTypes['all-not-fiction'],
 		title: 'нон-фикшн',
 		queryFn: notFictionStepsBestVersionBooks,
+	},
+	[EnAllReviewsRoutesKeys.choice]: {
+		href: EnBookTypes['all-choice'],
+		title: 'Наш выбор',
+		queryFn: romanticOurChoiceBooks,
 	},
 }
 
