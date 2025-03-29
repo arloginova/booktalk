@@ -42,7 +42,7 @@ const ReviewsTypeScreen: FC<Props> = ({ className, type }) => {
 				<ul className={groupCls}>
 					{!data.data || !data.data?.length
 						? [...Array(6)].map((_, index) => (
-							<>1</>
+							<ReviewItem className={itemCls} hasSkeleton />
 						))
 						: data.data.map(({ data, genre, type }) => {
 

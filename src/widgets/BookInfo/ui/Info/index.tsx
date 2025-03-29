@@ -11,7 +11,7 @@ const authorCls =
 	'lg-low:mt-3 mt-1 lg-low:mb-5 mb-3 text-greyExtra lg-low:text-xl text-sm'
 const ratingCls = 'flex items-center justify-between'
 const generalRatingCls =
-	'text-2xl flex items-center lg-low:gap-x-1 gap-x-0.5 leading-none'
+	'lg-low:text-2xl text-sm flex items-center lg-low:gap-x-1 gap-x-0.5 leading-none'
 const starsCls =
 	'flex items-center lg-low:gap-x-1 gap-x-0.5 text-xl text-greyExtra'
 const descriptionCls = 'lg-low:my-5 my-3 lg-low:text-xl text-sm'
@@ -19,7 +19,7 @@ const expandCls = 'lg-low:text-xl text-sm'
 
 interface Props
 	extends TClassName,
-		Pick<TBookData, 'slug' | 'description' | 'author'> {}
+	Pick<TBookData, 'slug' | 'description' | 'author'> { }
 
 const Info: FC<Props> = ({ className, description, slug, author }) => {
 	return (
@@ -36,7 +36,7 @@ const Info: FC<Props> = ({ className, description, slug, author }) => {
 						fill='var(--color-blackMain)'
 						className='lg-low:size-6 size-5'
 					/>
-					<UiTypography font='Muller-M' tag='p'>
+					<UiTypography font='Muller-M' tag='p' className="lg-low:translate-y-0 translate-y-0.5">
 						4,7
 					</UiTypography>
 				</div>

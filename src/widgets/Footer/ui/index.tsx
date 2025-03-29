@@ -16,7 +16,7 @@ const navCls =
 const linkCls = ''
 const telegramCls = ''
 
-interface Props extends TClassName {}
+interface Props extends TClassName { }
 
 const Footer: FC<Props> = ({ className }) => {
 	const { screenWidth } = useScreen()

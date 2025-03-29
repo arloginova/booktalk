@@ -12,8 +12,8 @@ import { reviewsRoutes } from '../constants/reviews'
 
 const wrapperCls = 'my-[var(--main-blocks-gap)] grow'
 const groupCls =
-	'grid lg-low:grid-cols-[repeat(6,1fr)] xs-big:grid-cols-[repeat(4,1fr)] lg-low:gap-x-5 gap-x-3 lg-low:gap-y-10 gap-y-7'
-const itemCls = 'р-[225px]'
+	'grid lg-low:grid-cols-[repeat(auto-fit,210px)] grid-cols-[repeat(auto-fit,160px)] lg-low:gap-x-5 gap-x-3 lg-low:gap-y-10 lg-low:gap-y-7 gap-y-4 justify-center'
+const itemCls = 'lg-low:w-[210px] w-[160px]'
 
 interface Props extends TClassName {
 	type: string

@@ -58,7 +58,7 @@ const GridElemInfo: FC<Props> = ({
 			<div className={plaqueWrapperCls}>
 				<UiPlaque className={plaqueCls}>{plaque}</UiPlaque>
 			</div>
-			<UiTypography className={cn(titleCls, titleClassName)} tag='h2' font='Raleway-SB'>
+			<UiTypography className={cn(titleCls, titleClassName)} tag='h2' font='Raleway-M'>
 				{title}
 			</UiTypography>
 			<UiTypography

@@ -1,5 +1,9 @@
 export { UiLogo, type TUiLogoProps } from './UiLogo'
-export { UiTypography, type TUiTypographyProps } from './UiTypography'
+export {
+	UiTypography,
+	type TUiTypographyProps,
+	type TUiTypographyTextProps,
+} from './UiTypography'
 export { UiInput, type TUiInputProps } from './UiInput'
 export { UiPlaque, type TUiPlaqueProps } from './UiPlaque'
 export {

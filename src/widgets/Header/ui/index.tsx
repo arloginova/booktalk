@@ -16,10 +16,10 @@ const inputWrapperCls =
 	'lg-mid:max-w-112 md-mid:max-w-80 max-w-50 w-full lg-mid:ml-8 ml-4'
 const inputContentCls =
 	'lg-mid:gap-x-4 gap-x-3 lg-mid:px-5 px-4 lg-mid:py-3 py-1.75'
-const inputCls = 'lg-mid:text-base text-xs'
+const inputCls = 'lg-mid:text-lg text-xs'
 const navigationCls = 'ml-auto'
 
-interface Props extends TClassName {}
+interface Props extends TClassName { }
 
 const Header: FC<Props> = ({ className }) => {
 	const { screenWidth } = useScreen()

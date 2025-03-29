@@ -22,6 +22,8 @@ const sliderCls = ''
 const itemCls = 'lg-low:w-[300px] w-[250px]'
 const slideCls = '!w-auto'
 
+const REPEAT_ARTICLES_ITEMS = 7
+
 interface Props extends TClassName {
 	title: string
 	articles?: TArticleItem[]
@@ -36,6 +38,7 @@ const SliderArticles: FC<Props> = ({
 	withMarginTop,
 	headLink,
 }) => {
+	let curRepeatItemIndex = -1
 	let curChainItemIndex = -1
 
 	return (
@@ -48,11 +51,12 @@ const SliderArticles: FC<Props> = ({
 			<Swiper className={sliderCls} {...sliderConfig()}>
 				{!articles?.length || !articles
 					? [...Array(12)].map((_, index) => (
-							<SwiperSlide key={index} className={slideCls}>
-								<ArticleItem hasSkeleton className={itemCls} />
-							</SwiperSlide>
-					  ))
-					: articles.map(({ data, genre, type }) => {
+						<SwiperSlide key={index} className={slideCls}>
+							<ArticleItem hasSkeleton className={itemCls} />
+						</SwiperSlide>
+					))
+					: <>
+						{articles.map(({ data, genre, type }) => {
 							if (curChainItemIndex + 2 > CHAIN.length) {
 								curChainItemIndex = 0
 							} else {
@@ -65,9 +69,8 @@ const SliderArticles: FC<Props> = ({
 									key={`${data.title}${genre}${type}`}
 								>
 									<Link
-										href={`${EnRoutes.articles}${
-											allReviewsRoutes[type].href
-										}/${data.title.replace('?', '')}`}
+										href={`${EnRoutes.articles}${allReviewsRoutes[type].href
+											}/${data.title.replace('?', '')}`}
 									>
 										<ArticleItem
 											{...data}
@@ -77,7 +80,42 @@ const SliderArticles: FC<Props> = ({
 									</Link>
 								</SwiperSlide>
 							)
-					  })}
+						})}
+						{articles.length <= REPEAT_ARTICLES_ITEMS ?
+							[...Array(REPEAT_ARTICLES_ITEMS)].map((_, index) => {
+								if (curChainItemIndex + 2 > CHAIN.length) {
+									curChainItemIndex = 0
+								} else {
+									curChainItemIndex++
+								}
+								if (curRepeatItemIndex + 2 > articles.length) {
+									curRepeatItemIndex = 0
+								} else {
+									curRepeatItemIndex++
+								}
+
+								const { data, genre, type } = articles[curRepeatItemIndex]
+
+								return (
+									<SwiperSlide
+										className={slideCls}
+										key={`${data.title}${genre}${type}${index}`}
+									>
+										<Link
+											href={`${EnRoutes.articles}${allReviewsRoutes[type].href
+												}/${data.title.replace('?', '')}`}
+										>
+											<ArticleItem
+												{...data}
+												theme={CHAIN[curChainItemIndex]}
+												className={itemCls}
+											/>
+										</Link>
+									</SwiperSlide>
+								)
+							})
+							: null}
+					</>}
 			</Swiper>
 		</UiMainBlockWithTitle>
 	)

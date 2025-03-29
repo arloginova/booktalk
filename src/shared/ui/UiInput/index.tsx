@@ -8,7 +8,7 @@ const contentCls =
 	'flex gap-x-4 items-end px-5 py-2 bg-whiteMain rounded-full duration-200'
 const errorContentCls = 'bg-orangeError'
 const inputCls =
-	'text-lg text-blackMain font-raleway font-medium placeholder:text-greyExtra font-size-inherit placeholder:font-muller placeholder:font-normal w-full flex-1 focus:outline-none leading-none text-blackMain'
+	'text-lg text-blackMain font-raleway font-medium placeholder:text-greyExtra placeholder:font-muller placeholder:font-normal w-full flex-1 focus:outline-none leading-none text-blackMain'
 const errorCls = 'text-orangeMain '
 const labelCls = ''
 

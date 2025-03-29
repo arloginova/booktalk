@@ -9,21 +9,22 @@ const wrapperCls = ''
 const imgWrapperCls = 'relative w-full'
 const imgCls = 'lg-low:h-[325px] h-[245px] w-full rounded-[15px] object-cover'
 const adultRatingCls =
-	'pb-0.75 pt-1.25 px-1.75 rounded-md bg-orangeMain text-whiteMain absolute left-4 top-4 text-base'
+	'pb-0.25 pt-0.75 px-1.75 rounded-md bg-orangeMain text-whiteMain absolute left-3.5 top-3.5 text-sm'
 const titleCls =
 	'mt-3.5 lg-low:text-xl text-sm lg-low:mb-2 mb-1 line-clamp-1 uppercase w-full'
 const authorCls = 'text-greyExtra lg-low:text-lg text-xs line-clamp-1'
 
-type WithoutSkeleton = {
-	hasSkeleton?: never
-} & TClassName &
-	Partial<Pick<TBookData, 'forAdult' | 'slug' | 'slug' | 'author' | 'image'>>
-type WithSkeleton = {
-	hasSkeleton?: boolean
-} & TClassName &
-	Partial<Pick<TBookData, 'forAdult' | 'slug' | 'slug' | 'author' | 'image'>>
+type Props = TClassName & (
+	| {
+		hasSkeleton: true
+	} & {
+		[K in keyof Pick<TBookData, 'forAdult' | 'slug' | 'slug' | 'author' | 'image'>]?: never
+	}
+	| {
+		hasSkeleton?: false | undefined
+	} & Pick<TBookData, 'forAdult' | 'slug' | 'slug' | 'author' | 'image'>
+)
 
-type Props = WithoutSkeleton | WithSkeleton
 
 const BookItem: FC<Props> = ({
 	hasSkeleton,
@@ -57,8 +58,8 @@ const BookItem: FC<Props> = ({
 			</div>
 			{hasSkeleton ? (
 				<>
-					<UiSkeleton isAbsolute={false}>
-						<UiTypography className={titleCls} font='Raleway-SB' tag='h2'>
+					<UiSkeleton className={titleCls} isAbsolute={false}>
+						<UiTypography font='Raleway-M' tag='h2'>
 							skeleton
 						</UiTypography>
 					</UiSkeleton>
@@ -70,7 +71,7 @@ const BookItem: FC<Props> = ({
 				</>
 			) : (
 				<>
-					<UiTypography className={titleCls} font='Raleway-SB' tag='h2'>
+					<UiTypography className={titleCls} font='Raleway-M' tag='h2'>
 						{slug}
 					</UiTypography>
 					<UiTypography className={authorCls} font='Raleway-M' tag='h4'>

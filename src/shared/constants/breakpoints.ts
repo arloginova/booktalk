@@ -6,6 +6,6 @@ export const LG_LOW = 961 as const
 export const MD_MID = 769 as const
 export const MD_LOW = 601 as const
 export const XS_BIG = 481 as const
-export const XS_MID = 376 as const
+export const XS_MID = 394 as const
 export const XS_LOW = 321 as const
 export const ZERO = 0 as const

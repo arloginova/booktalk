@@ -5,8 +5,9 @@ import { SliderArticles } from '@/widgets/SliderArticles'
 import { UiGridElemWrapper } from '@/shared/ui'
 import { useQuery } from '@tanstack/react-query'
 import { articlesCollections } from '@/shared/api/articlesCollections'
+import { EnRoutes } from '@/shared/constants'
 
-interface Props extends TClassName {}
+interface Props extends TClassName { }
 
 const HomeArticles: FC<Props> = ({ className }) => {
 	const articles = useQuery({
@@ -20,7 +21,9 @@ const HomeArticles: FC<Props> = ({ className }) => {
 				withMarginTop
 				className={''}
 				title='Наши тематические статьи'
-				articles={articles.data}
+				articles={articles.data} headLink={{
+					href: EnRoutes.articles
+				}}
 			/>
 		</UiGridElemWrapper>
 	)

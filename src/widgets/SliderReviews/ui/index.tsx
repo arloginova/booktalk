@@ -19,12 +19,8 @@ const wrapperCls = ''
 const sliderCls = ''
 const slideCls = '!w-auto'
 const itemCls = 'lg-low:w-[300px] w-[250px]'
-const infoCls = 'mt-3'
 
-const itemSkeletonCls = ''
-const itemSkeletonImgCls =
-	'lg-mid:aspect-[300/185] aspect-[250/150] bg-greyExtra rounded-[15px]'
-const skeletonTextCls = 'bg-greyExtra text-transparent rounded-[10px]'
+const REPEAT_REVIEWS_ITEMS = 7
 
 interface Props extends TClassName {
 	reviews?: TBookItem[]
@@ -41,6 +37,8 @@ const SliderReviews: FC<Props> = ({
 	withMarginTop,
 	headLink, redirectOverrideType
 }) => {
+	let curRepeatItemIndex = -1
+
 	return (
 		<UiMainBlockWithTitle
 			withMarginTop={withMarginTop}
@@ -52,29 +50,40 @@ const SliderReviews: FC<Props> = ({
 				{!reviews?.length || !reviews
 					? [...Array(12)].map((_, index) => (
 						<SwiperSlide key={index} className={slideCls}>
-							<div className={itemSkeletonCls}>
-								<div className={cn(itemCls, itemSkeletonImgCls)} />
-								<div />
-								<UiTypography
-									className={cn(infoCls, skeletonTextCls)}
-									font='Raleway-SB'
-									tag='h2'
-								>
-									skeleton
-								</UiTypography>
-							</div>
+							<ReviewItem hasSkeleton className={itemCls} />
 						</SwiperSlide>
 					))
-					: reviews.map(({ genre, type, data }) => {
-						return (
-							<SwiperSlide
-								key={`${data.slug}${genre}${type}`}
-								className={slideCls}
-							>
-								<Link href={`${EnRoutes.reviews}/${redirectOverrideType || type}/${data.slug}`}><ReviewItem {...data} className={itemCls} /></Link>
-							</SwiperSlide>
-						)
-					})}
+					: <>
+						{reviews.map(({ genre, type, data }) => {
+							return (
+								<SwiperSlide
+									key={`${data.slug}${genre}${type}`}
+									className={slideCls}
+								>
+									<Link href={`${EnRoutes.reviews}/${redirectOverrideType || type}/${data.slug}`}><ReviewItem {...data} className={itemCls} /></Link>
+								</SwiperSlide>
+							)
+						})}
+						{reviews.length <= REPEAT_REVIEWS_ITEMS ?
+							[...Array(REPEAT_REVIEWS_ITEMS)].map((_, index) => {
+								if (curRepeatItemIndex + 2 > reviews.length) {
+									curRepeatItemIndex = 0
+								} else {
+									curRepeatItemIndex++
+								}
+
+								const { data, genre, type } = reviews[curRepeatItemIndex]
+
+								return <SwiperSlide
+									key={`${data.slug}${genre}${type}${index}`}
+									className={slideCls}
+								>
+									<Link href={`${EnRoutes.reviews}/${redirectOverrideType || type}/${data.slug}`}><ReviewItem {...data} className={itemCls} /></Link>
+								</SwiperSlide>
+							})
+							: null}
+					</>
+				}
 			</Swiper>
 		</UiMainBlockWithTitle>
 	)

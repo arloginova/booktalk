@@ -34,6 +34,14 @@
 	--breakpoint-xs-big-1: 480px;
 	--breakpoint-xs-mid: 394px;
 	--breakpoint-xs-low: 321px;
+
+	--animate-shimmer: shimmer 2s infinite;
+
+	@keyframes shimmer {
+		100% {
+			translate: 100%;
+		}
+	}
 }
 @layer base {
 	@font-face {
@@ -54,16 +62,16 @@
 	}
 	@font-face {
 		font-family: Raleway;
-		src: local('Raleway'), url(/fonts/Raleway-Medium.woff) format(woff),
-			url(/fonts/Raleway-Medium.woff2) format(woff2);
+		src: local('Raleway'), url(/fonts/RalewayMedium.woff) format(woff),
+			url(/fonts/RalewayMedium.woff2) format(woff2);
 		font-display: swap;
 		font-weight: 500;
 		font-style: normal;
 	}
 	@font-face {
 		font-family: Raleway;
-		src: local('Raleway'), url(/fonts/Raleway-Semibold.woff) format(woff),
-			url(/fonts/Raleway-Semibold.woff2) format(woff2);
+		src: local('Raleway'), url(/fonts/RalewaySemibold.woff) format(woff),
+			url(/fonts/RalewaySemibold.woff2) format(woff2);
 		font-display: swap;
 		font-weight: 600;
 		font-style: normal;
@@ -99,15 +107,15 @@
 @layer components {
 	@media screen and (min-width: 0px) {
 		.p-hr-main {
-			padding-left: 16px;
-			padding-right: 16px;
+			padding-left: 14px;
+			padding-right: 14px;
 		}
 		.p-vr-main {
-			padding-top: 16px;
-			padding-bottom: 16px;
+			padding-top: 14px;
+			padding-bottom: 14px;
 		}
 		.p-main {
-			padding: 16px;
+			padding: 14px;
 		}
 	}
 	@media screen and (min-width: 601px) {
@@ -139,7 +147,10 @@
 	.no-scrollbar::-webkit-scrollbar {
 		height: 0px;
 	}
-	.font-size-inherit::placeholder {
+	.font-size-inherit {
 		font-size: inherit;
 	}
+}
+input::placeholder {
+	font-size: inherit !important;
 }

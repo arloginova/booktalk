@@ -5,9 +5,9 @@ import { HEADER_NAVIGATION } from '@/shared/constants'
 import Link from 'next/link'
 import { UiTypography } from '@/shared/ui'
 
-const wrapperCls = 'flex lg-big:gap-x-10 md-mid:gap-x-5 xs-mid:gap-x-4 gap-x-2'
+const wrapperCls = 'flex lg-big:gap-x-10 md-mid:gap-x-5 xs-mid:gap-x-4 gap-x-3.5'
 const linkCls =
-	'uppercase duration-150 hover:text-orangeMain lg-mid:text-base xs-mid:text-xs text-[10px]'
+	'uppercase duration-150 hover:text-orangeMain lg-mid:text-base xs-mid:text-xs text-[9px]'
 
 interface Props extends TClassName { }
 

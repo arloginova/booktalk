@@ -5,6 +5,7 @@ import { ReviewsDetectivesReviews } from '@/widgets/ReviewsDetectivesReviews'
 import { ReviewsHorrorsReviews } from '@/widgets/ReviewsHorrorsReviews'
 import { ReviewsNotFictionReviews } from '@/widgets/ReviewsNotFictionReviews'
 import { ReviewsRomanticReviews } from '@/widgets/ReviewsRomanticReviews'
+import { ReviewsFantasyReviews } from '@/widgets/ReviewsFantasyReviews'
 
 export const returnComponent = (genre?: EnCurrentTab): ReactNode => {
 	let component: ReactNode = null
@@ -16,7 +17,7 @@ export const returnComponent = (genre?: EnCurrentTab): ReactNode => {
 			component = <ReviewsDetectivesReviews />
 			break
 		case EnCurrentTab.fantasy:
-			component = <ReviewsNotFictionReviews />
+			component = <ReviewsFantasyReviews />
 			break
 		case EnCurrentTab.horrors:
 			component = <ReviewsHorrorsReviews />

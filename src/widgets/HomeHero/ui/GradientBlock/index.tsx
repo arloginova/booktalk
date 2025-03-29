@@ -11,11 +11,11 @@ import { LG_BIG, LG_LOW, MD_MID } from '@/shared/constants'
 const wrapperCls = 'flex flex-col items-start relative z-[0] overflow-hidden'
 const btnCls = 'shadow-[0_0_5px_0_rgba(0,0,0,20%)]'
 const btnWrapperCls = 'flex justify-end w-full mb-auto'
-const previewImagesCls = 'lg-low:max-w-[700px] xs-big:max-w-[370px] max-w-[400px] xl:mx-0 xl-1:mx-auto lg-low:mx-0 lg-low-1:mx-auto xs-mid:mx-0 mx-auto flex justify-center lg-big:gap-x-4 gap-x-2'
+const previewImagesCls = 'flex justify-center lg-big:gap-x-4 gap-x-2'
 const titleCls = 'lg-big:text-2xl text-whiteMain uppercase lg-big:mb-8 mb-5 leading-[130%]'
 const decorImageCls = 'absolute -z-[1]'
 const previewItemCls =
-	'h-auto -rotate-[16deg] lg-low:rounded-xl rounded-md flex-1 xl-1:max-w-[92.5px] lg-big:max-w-[75px] lg-low-1:max-w-[56.5px] max-w-[56px] w-full'
+	'h-auto -rotate-[16deg] lg-low:rounded-xl md-low:rounded-base rounded-md flex-1 xl-1:max-w-[92.5px] lg-big:max-w-[75px] lg-low-1:max-w-[56.5px] max-w-[53px] w-full translate-x-[20.77%]'
 
 interface Props extends TClassName { }
 
@@ -64,7 +64,7 @@ const GradientBlock: FC<Props> = ({ className }) => {
 					книги по 99 ₽
 				</UiButton>
 			</div>
-			<UiTypography tag='h2' font='Raleway-SB' className={titleCls}>
+			<UiTypography tag='h2' font='Raleway-M' className={titleCls}>
 				подарите себе время
 				<br />
 				для любимого чтения

@@ -9,6 +9,9 @@ import { TestFourth } from '@/widgets/TestFourth/ui'
 import { TestThird } from '@/widgets/TestThird/ui'
 import { TestSecond } from '@/widgets/TestSecond/ui'
 import { TestResult } from '@/widgets/TestResult'
+import { useScreen } from '@/shared/hooks'
+import { LG_MID } from '@/shared/constants'
+import { TestPreviewDesktop } from '@/widgets/TestPreviewDesktop'
 
 const wrapperCls = 'my-[var(--main-blocks-gap)] grow flex'
 
@@ -16,11 +19,14 @@ interface Props extends TClassName { }
 
 const TestScreen: FC<Props> = ({ className }) => {
 	const [screen, setScreen] = useState<EnScreens>(EnScreens.preview)
+	const { screenWidth } = useScreen()
 
 	return (
 		<main className={cn(wrapperCls, className)}>
 			{screen === EnScreens.preview ? (
-				<TestPreview setScreen={setScreen} className='w-full' />
+				screenWidth >= LG_MID ?
+					<TestPreviewDesktop setScreen={setScreen} className='w-full' /> :
+					<TestPreview setScreen={setScreen} className='w-full' />
 			) : null}
 			{screen === EnScreens.first ? (
 				<TestFirst setScreen={setScreen} className='w-full' />

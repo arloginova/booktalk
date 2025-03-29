@@ -5,16 +5,17 @@ import Image from 'next/image'
 import { cn } from '@/shared/lib'
 import { FastAverageColor } from 'fast-average-color'
 
-const wrapperCls = 'rounded-[10px] py-3'
+const wrapperCls = 'py-3'
 const imgCls =
-	'lg-low:w-[105px] w-[85px] lg-low:h-[165px] h-[130px] rounded-[6px] object-cover mx-auto'
+	'lg-low:w-[105px] w-[85px] rounded-[6px] object-cover mx-auto'
 
 interface Props extends TClassName {
 	src: string
 	slug: string
+	imageClassName?: string
 }
 
-const GradientImage: FC<Props> = ({ src, className, slug }) => {
+const GradientImage: FC<Props> = ({ src, className, slug, imageClassName }) => {
 	const [dominantColor, setDominantColor] = useState('transparent')
 
 	useEffect(() => {
@@ -41,7 +42,7 @@ const GradientImage: FC<Props> = ({ src, className, slug }) => {
 				backgroundImage: `linear-gradient(90deg,var(--color-greyBackground),${dominantColor},var(--color-greyBackground)`,
 			}}
 		>
-			<Image className={imgCls} width={105} height={165} alt={slug} src={src} />
+			<Image className={cn(imgCls, imageClassName)} width={105} height={165} alt={slug} src={src} />
 		</div>
 	)
 }

@@ -3,7 +3,7 @@ import { TClassName, TTag } from '@/shared/types'
 import { cn } from '@/shared/lib'
 import { TBookData } from '@/shared/types/Book'
 import Image from 'next/image'
-import { UiButton, UiTypography } from '@/shared/ui'
+import { UiButton, UiSkeleton, UiTypography } from '@/shared/ui'
 // import { TOurChoiceData } from '@/shared/types/OurChoice'
 
 const wrapperCls =
@@ -14,33 +14,48 @@ const titleCls = 'my-auto text-center lg-low:text-lg text-xs'
 const btnCls = 'mx-auto lg-low:text-base text-xs lg-low:mt-4 mt-3'
 const btnTextCls = 'flex items-center gap-x-3'
 
-interface Props
-	extends TClassName,
-		Pick<TBookData, 'signature' | 'slug' | 'image' | 'forAdult'> {
-	Tag?: TTag
-}
+
+type Props = TClassName & (
+	| {
+		Tag?: TTag
+		hasSkeleton: true
+	} & {
+		[K in keyof Pick<TBookData, 'signature' | 'slug' | 'image' | 'forAdult' | 'reviewName'>]?: never
+	}
+	| {
+		Tag?: TTag
+		hasSkeleton?: never
+	} & Pick<TBookData, 'signature' | 'slug' | 'image' | 'forAdult' | 'reviewName'>
+)
 
 const OurChoiceItem: FC<Props> = ({
 	Tag = 'div',
 	className,
 	signature,
 	slug,
-	forAdult,
-	image,
+	image, hasSkeleton, reviewName
 }) => {
+
+
 	return (
 		<Tag className={cn(wrapperCls, className)}>
-			<Image
-				src={image}
-				alt={slug}
-				width={210}
-				height={325}
-				className={imgCls}
-			/>
-			<UiTypography font='Raleway-M' tag='h2' className={titleCls}>
-				{signature}
-			</UiTypography>
-			<UiButton className={btnCls} textClassName={btnTextCls}>
+			{hasSkeleton ?
+				<UiSkeleton className={imgCls} isAbsolute={false} /> : <Image
+					src={image}
+					alt={slug}
+					width={210}
+					height={325}
+					className={imgCls}
+				/>
+			}
+			{hasSkeleton ? <UiSkeleton className={titleCls} isAbsolute={false} >
+				<UiTypography font='Raleway-M' tag='h2'>
+					skeleton
+				</UiTypography>
+			</UiSkeleton> : <UiTypography font='Raleway-M' tag='h2' className={titleCls}>
+				{signature || reviewName}
+			</UiTypography>}
+			{hasSkeleton ? null : <UiButton className={btnCls} textClassName={btnTextCls}>
 				<Image
 					src='/images/shared/second-logo.svg'
 					alt='Booktalk'
@@ -48,7 +63,7 @@ const OurChoiceItem: FC<Props> = ({
 					height={20}
 				/>
 				читать
-			</UiButton>
+			</UiButton>}
 		</Tag>
 	)
 }

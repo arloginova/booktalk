@@ -44,7 +44,7 @@ const ReviewsInfo: FC<Props> = async ({
 				<UiTypography font='Raleway-SB' tag='h1' className={titleCls}>
 					{responseData.data.slug}
 				</UiTypography>
-				<UiTypography font='Raleway-SB' tag='h1' className={introductionCls}>
+				<UiTypography font='Raleway-M' tag='h1' className={introductionCls}>
 					{responseData.data.review}
 				</UiTypography>
 

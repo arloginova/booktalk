@@ -13,22 +13,24 @@ import { TArticleData } from '@/shared/types/Articles'
 const wrapperCls = 'flex flex-col'
 const decorBgCls = 'lg-low:h-[185px] h-[150px] w-full relative grow'
 const infoCls =
-	'w-full flex items-center justify-between [&>span]:flex [&>span]:items-center text-greyExtra [&>span]:gap-x-1 leading-none mt-4 relative'
+	'w-full flex items-center justify-between [&>span]:flex [&>span]:items-center text-greyExtra [&>span]:gap-x-1 leading-none mt-4 relative '
 
-type TWithoutSkeleton = {
-	theme?: TUiArticleTheme
-	hasSkeleton?: never
-	backgroundImageClassName?: string
-} & TClassName &
-	Partial<Pick<TArticleData, 'readTime' | 'title' | 'books'>>
-type TWithSkeleton = {
-	theme?: never
-	hasSkeleton?: boolean
-	backgroundImageClassName?: string
-} & TClassName &
-	Partial<Pick<TArticleData, 'readTime' | 'title' | 'books'>>
-
-type Props = TWithSkeleton | TWithoutSkeleton
+type Props = TClassName & (
+	| {
+		hasSkeleton: true
+		theme?: TUiArticleTheme
+		themeClassName?: string
+		backgroundImageClassName?: string
+	} & {
+		[K in keyof Pick<TArticleData, 'readTime' | 'title' | 'books'>]?: never
+	}
+	| {
+		hasSkeleton?: never
+		theme?: TUiArticleTheme
+		themeClassName?: string
+		backgroundImageClassName?: string
+	} & Pick<TArticleData, 'readTime' | 'title' | 'books'>
+)
 
 const ArticleItem: FC<Props> = ({
 	className, backgroundImageClassName,
@@ -36,25 +38,25 @@ const ArticleItem: FC<Props> = ({
 	readTime,
 	theme,
 	title,
-	hasSkeleton,
+	hasSkeleton, themeClassName
 }) => {
 	return (
 		<div className={cn(wrapperCls, className)}>
 			<UiArticleTheme
 				backgroundImageClassName={backgroundImageClassName}
 				theme={hasSkeleton ? 'grey-cloud-4' : (theme as TUiArticleTheme)}
-				className={decorBgCls}
+				className={cn(decorBgCls, themeClassName)}
 			>
 				{hasSkeleton ? (
 					<UiSkeleton />
 				) : (
-					<UiTypography font='Raleway-SB' tag='h2' className='line-clamp-3'>
+					<UiTypography font='Raleway-M' tag='h2' className='line-clamp-2'>
 						{title}
 					</UiTypography>
 				)}
 			</UiArticleTheme>
 
-			<UiTypography font='Raleway-SB' tag='div' className={infoCls}>
+			<UiTypography font='Raleway-M' tag='div' className={infoCls}>
 				{hasSkeleton ? (
 					<UiSkeleton isAbsolute={false}>
 						<UiTypography font='Muller-R' tag='p'>

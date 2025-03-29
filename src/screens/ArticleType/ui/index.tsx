@@ -60,6 +60,7 @@ const ArticleTypeScreen: FC<Props> = ({ className, type }) => {
 									key={`${data.title}${genre}${type}`}
 								>
 									<ArticleItem
+										themeClassName='lg-big:text-2xl md'
 										backgroundImageClassName='lg-low:!h-[93%] xs-big:!h-[111%] !h-[102%] max-w-none !w-auto'
 										className={itemCls}
 										{...data}

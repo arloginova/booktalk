@@ -16,7 +16,7 @@ import { returnRecommendedRequest } from '../lib/returnRecommendedRequest'
 import { SliderBooks } from '@/widgets/SliderBooks'
 import { useQuery } from '@tanstack/react-query'
 import { useScreen } from '@/shared/hooks'
-import { MD_MID } from '@/shared/constants'
+import { LG_BIG, } from '@/shared/constants'
 
 const wrapperCls = ''
 const contentWrapperCls = ''
@@ -69,12 +69,12 @@ const TestResult: FC<Props> = ({ setScreen, className }) => {
 							пройти заново
 						</UiButton>
 					</div>
-					{screenWidth >= MD_MID ? (
+					{screenWidth >= LG_BIG ? (
 						<SliderBooks books={data.data} className={sliderCls} />
 					) : null}
 				</div>
 			</UiGridElemWrapper>
-			{screenWidth < MD_MID ? (
+			{screenWidth < LG_BIG ? (
 				<UiGridElemWrapper
 					plaque='результаты теста'
 					className={cn(wrapperCls, 'mt-4')}

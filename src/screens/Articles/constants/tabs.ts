@@ -2,7 +2,7 @@ import { EnRoutes } from '@/shared/constants'
 import { EnCurrentTab } from '../types/tabs'
 import { TLinkItem } from '@/widgets/NavigationTabs'
 
-const TABS: TLinkItem[] = [
+const TABS: TLinkItem<EnCurrentTab>[] = [
 	{
 		href: `${EnRoutes.articles}`,
 		text: EnCurrentTab.all,

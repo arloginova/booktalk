@@ -6,10 +6,11 @@ import { UiGridElemWrapper } from '@/shared/ui'
 import { SliderReviews } from '@/widgets/SliderReviews'
 import { useQuery } from '@tanstack/react-query'
 import { reviewsCollections } from '@/shared/api/reviewsCollections'
+import { EnRoutes } from '@/shared/constants'
 
 const wrapperCls = ''
 
-interface Props extends TClassName {}
+interface Props extends TClassName { }
 
 const HomeReviews: FC<Props> = ({ className }) => {
 	const reviews = useQuery({
@@ -26,7 +27,9 @@ const HomeReviews: FC<Props> = ({ className }) => {
 			<SliderReviews
 				withMarginTop
 				title='Обзоры на книги'
-				reviews={reviews.data}
+				reviews={reviews.data} headLink={{
+					href: EnRoutes.reviews
+				}}
 			/>
 		</UiGridElemWrapper>
 	)

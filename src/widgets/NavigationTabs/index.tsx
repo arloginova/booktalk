@@ -8,14 +8,14 @@ const wrapperCls = 'w-full overflow-auto flex lg-low:gap-x-6 gap-x-4 no-scrollba
 const linkCls = 'lg-low:text-base text-xs duration-150 uppercase'
 const linkActiveCls = 'text-orangeMain'
 
-type TLinkItem = {
+type TLinkItem<T extends string> = {
 	href: string
-	text: EnCurrentTab
+	text: T
 	className?: string
 }
 
 interface Props extends TClassName {
-	links: TLinkItem[]
+	links: TLinkItem<EnCurrentTab>[]
 }
 
 const NavigationTabs: FC<Props> = ({ className, links }) => {

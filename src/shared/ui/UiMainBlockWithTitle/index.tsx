@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { TChildren, TClassName, TTag } from '@/shared/types'
 import { cn } from '@/shared/lib'
-import { UiButton, UiTypography } from '@/shared/ui'
+import { TUiTypographyTextProps, UiButton, UiTypography } from '@/shared/ui'
 import Link from 'next/link'
 
 const wrapperCls = ''
@@ -14,8 +14,9 @@ interface TUiMainBlockWithTitleProps extends TClassName, TChildren {
 	titleClassName?: string
 	withMarginTop?: boolean
 	headClassName?: string
+	titleFont?: TUiTypographyTextProps['font']
 	headLink?: {
-		text: string
+		text?: string
 		href: string
 	}
 }
@@ -28,7 +29,7 @@ const UiMainBlockWithTitle: FC<TUiMainBlockWithTitleProps> = ({
 	title,
 	withMarginTop,
 	headLink,
-	headClassName,
+	headClassName, titleFont
 }) => {
 	return (
 		<Tag className={cn(wrapperCls, className)}>
@@ -38,7 +39,7 @@ const UiMainBlockWithTitle: FC<TUiMainBlockWithTitleProps> = ({
 						if (!headLink?.href) e.preventDefault()
 					}}>
 						<UiTypography
-							font='Raleway-M'
+							font={titleFont || 'Raleway-M'}
 							tag='h2'
 							className={cn(
 								titleCls,

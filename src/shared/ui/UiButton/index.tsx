@@ -4,7 +4,7 @@ import { UiTypography } from '../UiTypography'
 
 const wrapperCls = 'uppercase rounded-full duration-150'
 const isInvertedCls = 'bg-whiteMain text-orangeMain hover:bg-greyBackground'
-const isVertedCls = 'bg-orangeMain text-whiteMain hover:bg-orangeMainH '
+const isVertedCls = 'bg-orangeMain text-whiteMain hover:bg-black '
 
 const bigSizeCls = 'text-base px-7 pt-3 pb-2.25'
 const midSizeCls = 'text-xs px-7 pt-3 pb-2.25'
@@ -39,7 +39,7 @@ const UiButton: FC<TUiButtonProps> = ({
 			)}
 			{...props}
 		>
-			<UiTypography font='Muller-M' tag='p' className={textClassName}>
+			<UiTypography font='Raleway-M' tag='p' className={textClassName}>
 				{children}
 			</UiTypography>
 		</button>

@@ -39,7 +39,7 @@ const ArticleInfo: FC<Props> = async ({
 				<UiTypography font='Raleway-SB' tag='h1' className={titleCls}>
 					{responseData.data.title}
 				</UiTypography>
-				<UiTypography font='Raleway-SB' tag='h1' className={introductionCls}>
+				<UiTypography font='Raleway-M' tag='p' className={introductionCls}>
 					{responseData.data.introduction}
 				</UiTypography>
 				<ul className={groupCls}>

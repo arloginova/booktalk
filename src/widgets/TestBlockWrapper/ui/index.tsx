@@ -10,7 +10,7 @@ import { MD_MID } from '@/shared/constants'
 const wrapperCls =
 	'relative overflow-hidden flex flex-col justify-center md-mid:bg-whiteMain rounded-[16px]'
 const contentWrapperCls =
-	'relative md-mid:border-[11px] md-mid:border-solid md-mid:border-greyBackground max-w-[1000px] md-mid:w-[80%] w-full lg-low:h-[500px] md-mid:h-[460px] z-[0] flex flex-col mx-auto'
+	'relative md-mid:border-[11px] md-mid:border-solid md-mid:border-greyBackground max-w-[1000px] md-mid:w-[90%] w-full lg-low:h-[500px] md-mid:h-[460px] z-[0] flex flex-col mx-auto'
 const bgCls = 'absolute size-full object-cover'
 const innerCls = 'md-mid:p-10'
 

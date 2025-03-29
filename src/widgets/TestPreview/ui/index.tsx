@@ -5,7 +5,6 @@ import {
 	UiGridElemWrapper,
 	UiTypography,
 	UiButton,
-	UiTestDecorImage,
 } from '@/shared/ui'
 import { cn } from '@/shared/lib'
 import Image from 'next/image'
@@ -21,7 +20,7 @@ const contentCls =
 const titleCls = 'md-mid:mt-0 mt-35 lg-big:text-2xl uppercase'
 const subtitleCls = 'lg-big:text-xl text-sm mt-4 mb-5 leading-[130%]'
 const imageCls =
-	'absolute lg-big:w-[600px] lg-big:h-[390px] md-mid:w-[410px] md-mid:h-[265px] w-[330px] h-[210px] lg-big:right-8 right-5 lg-big:-bottom-3 -bottom-2 -z-[1]'
+	'absolute lg-big:w-[600px] lg-big:h-[390px] lg-low:w-[410px] lg-low:h-[265px] w-[330px] h-[210px] lg-big:right-8 right-5 lg-big:-bottom-3 -bottom-2 -z-[1]'
 const btnCls = 'lg-big:text-base text-xs'
 const decorImageCls = 'w-full h-auto'
 

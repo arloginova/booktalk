@@ -15,7 +15,7 @@ const imgCls =
 	'lg-low:w-[110px] w-[85px] lg-low:h-[170px] h-[130px] lg-low:rounded-[10px] rounded-[6px]'
 
 const infoCls = 'flex flex-col justify-center ml-6'
-const titleCls = 'lg-low:text-2xl xs-big:text-base text-sm leading-none '
+const titleCls = 'uppercase lg-low:text-2xl xs-big:text-base text-sm leading-none '
 const authorCls = 'lg-low:text-xl text-sm lg-low:my-3.5 my-2 text-greyExtra'
 const btnCls =
 	'lg-low:text-base text-xs lg-low:px-7 px-5 lg-low:pt-3 lg-low:pb-2.2 py-2'
@@ -49,7 +49,7 @@ const ArticleBookItem: FC<Props> = ({
 					className={imgCls}
 				/>
 				<div className={infoCls}>
-					<UiTypography font='Muller-M' tag='h2' className={titleCls}>
+					<UiTypography font='Raleway-SB' tag='h2' className={titleCls}>
 						{bookTitle}
 					</UiTypography>
 					<UiTypography font='Raleway-M' tag='h2' className={authorCls}>

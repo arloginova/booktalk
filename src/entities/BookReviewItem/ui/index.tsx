@@ -11,7 +11,7 @@ const avatarCls =
 	'flex items-center lg-low:gap-x-3 gap-x-2 lg-low:text-lg text-xs'
 const avatarImageCls = 'lg-low:size-10 size-7 rounded-full'
 const starsCls = 'flex gap-x-1'
-const descriptionCls = 'lg-low:text-xl text-xs lg-low:mt-4 mt-3'
+const descriptionCls = 'lg-low:text-xl text-sm lg-low:mt-4 mt-3'
 const expandCls = 'lg-low:text-xl text-sm'
 
 type TBookReviewItemData = {
