@@ -21,7 +21,7 @@ const allReviewsRoutes: Record<
 		queryFn: articlesPopular,
 	},
 	atmospheric: {
-		href: '/new',
+		href: '/atmospheric',
 		title: 'атмосферные',
 		queryFn: articlesAtmospheric,
 	},

@@ -96,6 +96,7 @@ const SliderArticles: FC<Props> = ({
 
 								const { data, genre, type } = articles[curRepeatItemIndex]
 
+
 								return (
 									<SwiperSlide
 										className={slideCls}

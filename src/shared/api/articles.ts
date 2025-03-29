@@ -103,6 +103,8 @@ export const articlesFindOneBySlugRequest = (type: TArticlesTypes) => {
 		case 'new':
 			return async (slug: TArticleData['title']) => {
 				const data = await articlesNews()
+				console.log(decodeURIComponent(slug).replace('?', ''), data)
+
 				return data.find(
 					({ data: { title } }) =>
 						title.replace('?', '') === decodeURIComponent(slug).replace('?', '')
