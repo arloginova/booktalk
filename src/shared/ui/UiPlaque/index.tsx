@@ -30,7 +30,7 @@ const UiPlaque: FC<TUiPlaqueProps> = ({
 				className
 			)}
 		>
-			<UiTypography font='Raleway-M' tag='p'>
+			<UiTypography font='Muller-M' tag='p'>
 				{children}
 			</UiTypography>
 		</Tag>

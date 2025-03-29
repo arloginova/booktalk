@@ -12,7 +12,7 @@ import { useScreen } from '@/shared/hooks'
 import { MD_MID } from '@/shared/constants'
 import { EnScreens } from '@/screens/Test/types/screens'
 
-const wrapperCls = 'relative -z-[1]'
+const wrapperCls = 'relative z-[0]'
 const contentCls =
 	'my-auto max-w-[330px]'
 const titleCls = 'mt-35 text-2xl uppercase'
