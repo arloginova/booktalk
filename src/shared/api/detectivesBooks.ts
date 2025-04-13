@@ -73,3 +73,47 @@ export const detectivesRiddleUnansweredBooks = () => {
 		}, API_MOCK_REQUEST_TIME_MS)
 	})
 }
+
+export const detectivesRecommendedBooks = () => {
+	return new Promise<TResponse>((res, rej) => {
+		setTimeout(() => {
+			res([
+				{
+					data: popular.data[0],
+					genre: popular.genre,
+					type: popular.type,
+				},
+				{
+					data: popular.data[1],
+					genre: popular.genre,
+					type: popular.type,
+				},
+				{
+					data: keyToUnraveling.data[2],
+					genre: keyToUnraveling.genre,
+					type: keyToUnraveling.type,
+				},
+				{
+					data: keyToUnraveling.data[3],
+					genre: keyToUnraveling.genre,
+					type: keyToUnraveling.type,
+				},
+				{
+					data: riddleUnanswered.data[4],
+					genre: riddleUnanswered.genre,
+					type: riddleUnanswered.type,
+				},
+				{
+					data: riddleUnanswered.data[5],
+					genre: riddleUnanswered.genre,
+					type: riddleUnanswered.type,
+				},
+				{
+					data: riddleUnanswered.data[2],
+					genre: riddleUnanswered.genre,
+					type: riddleUnanswered.type,
+				},
+			])
+		}, API_MOCK_REQUEST_TIME_MS)
+	})
+}

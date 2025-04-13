@@ -3,6 +3,7 @@
 	"type": "fantasy-popular",
 	"data": [
 		{
+			"id": "bd34099d11",
 			"slug": "Во главе конца",
 			"readTime": "4 мин",
 			"author": "Лия Арден",
@@ -13,6 +14,7 @@
 			"image": "/images/books/fantasy/popular/во_главе_конца.jpeg"
 		},
 		{
+			"id": "124f69550f",
 			"slug": "Второй шанс",
 			"readTime": "4 мин",
 			"author": "Елена Звездная",
@@ -23,6 +25,7 @@
 			"image": "/images/books/fantasy/popular/второй_шанс.jpeg"
 		},
 		{
+			"id": "a25c864257",
 			"slug": "Звездная кровь",
 			"readTime": "5 мин",
 			"author": "Роман Прокофьев",
@@ -33,6 +36,7 @@
 			"image": "/images/books/fantasy/popular/звездная_кровь.jpeg"
 		},
 		{
+			"id": "83bb87f4b5",
 			"slug": "Позже",
 			"readTime": "6 мин",
 			"author": "Стивен Кинг",
@@ -43,6 +47,7 @@
 			"image": "/images/books/fantasy/popular/позже.jpeg"
 		},
 		{
+			"id": "41777d6925",
 			"slug": "Птицеед",
 			"readTime": "6 мин",
 			"author": "Алексей Пехов",
@@ -53,6 +58,7 @@
 			"image": "/images/books/fantasy/popular/птицеед.jpeg"
 		},
 		{
+			"id": "780c5f1be2",
 			"slug": "Практик",
 			"readTime": "5 мин",
 			"author": "П. Корнев",
@@ -63,6 +69,7 @@
 			"image": "/images/books/fantasy/popular/практик.jpeg"
 		},
 		{
+			"id": "cdbc4e7728",
 			"slug": "Сайберия",
 			"readTime": "6 мин",
 			"author": "Владимир Василенко",

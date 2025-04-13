@@ -3,6 +3,7 @@
 	"type": "horrors-when-shadows-life",
 	"data": [
 		{
+			"id": "699ed8fe77",
 			"slug": "Цена колдоства",
 			"readTime": "5 мин",
 			"author": "Елена Паленова",
@@ -13,6 +14,7 @@
 			"image": "/images/books/horrors/when-shadows-life/цена_колдовства.jpeg"
 		},
 		{
+			"id": "c217f6aefb",
 			"slug": "Убийство по сказкам",
 			"readTime": "5 мин",
 			"author": "Ольга Которова",
@@ -23,6 +25,7 @@
 			"image": "/images/books/horrors/when-shadows-life/убийство_по_сказкам.jpeg"
 		},
 		{
+			"id": "2dcede6ca0",
 			"slug": "Узел смерти",
 			"readTime": "4 мин",
 			"author": "Альбина Нури",
@@ -33,6 +36,7 @@
 			"image": "/images/books/horrors/when-shadows-life/узел_смерти.jpeg"
 		},
 		{
+			"id": "53aad7e5c6",
 			"slug": "Похититель детей",
 			"readTime": "5 мин",
 			"author": "Бром",
@@ -43,6 +47,7 @@
 			"image": "/images/books/horrors/when-shadows-life/похититель_детей.jpeg"
 		},
 		{
+			"id": "cbf309cb8f",
 			"slug": "Инвазия III",
 			"readTime": "6 мин",
 			"author": "Александр Грохт и Влад Лей",
@@ -53,6 +58,7 @@
 			"image": "/images/books/horrors/when-shadows-life/инвазия_3.jpeg"
 		},
 		{
+			"id": "4c40d54e02",
 			"slug": "Самая страшная книга",
 			"readTime": "6 мин",
 			"author": "Максим Кабир, Станислав Миллер и 16 авторов",
@@ -63,6 +69,7 @@
 			"image": "/images/books/horrors/when-shadows-life/Самая_страшная_книга.jpeg"
 		},
 		{
+			"id": "6246cd2985",
 			"slug": "Шиша. Тринадцатая кукла",
 			"readTime": "6 мин",
 			"author": "Полина Луговцова",

@@ -3,6 +3,7 @@
 	"type": "romantic-modern-romance",
 	"data": [
 		{
+			"id": "37701751e2",
 			"slug": "Короли старшей школы",
 			"readTime": "6 мин",
 			"author": "Меган Брэнди",
@@ -13,6 +14,7 @@
 			"image": "/images/books/reviews/romantic/modern-romance/короли_старшей_школы.jpeg"
 		},
 		{
+			"id": "83db2b1f15",
 			"slug": "Все твои совершенства",
 			"readTime": "6 мин",
 			"author": "Колин Гувер",
@@ -23,6 +25,7 @@
 			"image": "/images/books/reviews/romantic/modern-romance/Все_твои_совершенства.jpeg"
 		},
 		{
+			"id": "87ea1e6bd6",
 			"slug": "Дом Духов",
 			"readTime": "6 мин",
 			"author": "Исабель Альенде",
@@ -33,6 +36,7 @@
 			"image": "/images/books/reviews/romantic/modern-romance/Дом_духов.jpeg"
 		},
 		{
+			"id": "8af68ff0c1",
 			"slug": "Разрушенный дворец",
 			"readTime": "6 мин",
 			"author": "Эрин Уатт",
@@ -43,6 +47,7 @@
 			"image": "/images/books/reviews/romantic/modern-romance/Разрушенный_дворец.jpeg"
 		},
 		{
+			"id": "dc36b7ef06",
 			"slug": "Поющие в терновнике",
 			"readTime": "6 мин",
 			"author": "Колин Маккалоу",

@@ -7,10 +7,9 @@ import {
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
 import { EnRoutes } from '@/shared/constants'
-import { SliderBooks } from '@/widgets/SliderBooks'
 import { SliderReviews } from '@/widgets/SliderReviews'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const StepsBestVersion: FC<Props> = ({ className }) => {
 	const stepsBestVersionBooks = useQuery({
@@ -20,12 +19,17 @@ const StepsBestVersion: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderReviews
+			buttonsID={{
+				next: 'gbweyfgiuewiugijijrijgrjirg',
+				prev: 'zxcxzczxcwyyyyyyy',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.stepsBestVersion].title}
 			reviews={stepsBestVersionBooks.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${allReviewsRoutes[EnAllReviewsRoutesKeys.stepsBestVersion].href
-					}`,
+				href: `${EnRoutes.collections}/${
+					allReviewsRoutes[EnAllReviewsRoutesKeys.stepsBestVersion].href
+				}`,
 				text: 'Подробнее',
 			}}
 		/>

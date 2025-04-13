@@ -8,6 +8,9 @@ const analyticsEnabled = !!(process.env.NODE_ENV === "production")
 export const metadata: Metadata = {
 	title: 'Booktalk',
 	description: '',
+	icons: {
+		icon: '/images/favicon.png', // /public path
+	},
 }
 
 export default function RootLayout({

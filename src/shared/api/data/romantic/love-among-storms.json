@@ -3,6 +3,7 @@
 	"type": "romantic-love-among-storms",
 	"data": [
 		{
+			"id": "5a92dfbe0f",
 			"slug": "Несчастье",
 			"readTime": "6 мин",
 			"author": "Эллин Ти",
@@ -13,6 +14,7 @@
 			"image": "/images/books/romantic/love-among-storms/несчастье.jpeg"
 		},
 		{
+			"id": "4bd7f3d0b1",
 			"slug": "Теневая палитра",
 			"readTime": "6 мин",
 			"author": "Тери Нова",
@@ -23,6 +25,7 @@
 			"image": "/images/books/romantic/love-among-storms/теневая_палитра.jpeg"
 		},
 		{
+			"id": "60424a5644",
 			"slug": "Невольница",
 			"readTime": "6 мин",
 			"author": "Сара Ривенс",
@@ -33,6 +36,7 @@
 			"image": "/images/books/romantic/love-among-storms/невольница.jpeg"
 		},
 		{
+			"id": "a2b020207a",
 			"slug": "Азимар",
 			"readTime": "6 мин",
 			"author": "Эмили Ли",
@@ -43,6 +47,7 @@
 			"image": "/images/books/romantic/love-among-storms/азимар.jpeg"
 		},
 		{
+			"id": "efbd03f1af",
 			"slug": "Правила игры",
 			"readTime": "6 мин",
 			"author": "Дж. Уайлдер",
@@ -53,6 +58,7 @@
 			"image": "/images/books/romantic/love-among-storms/правила_игры.jpeg"
 		},
 		{
+			"id": "c6fa64f026",
 			"slug": "Зверь",
 			"readTime": "6 мин",
 			"author": "Селина Аллен",
@@ -63,6 +69,7 @@
 			"image": "/images/books/romantic/love-among-storms/зверь.jpeg"
 		},
 		{
+			"id": "6a0b1006d8",
 			"slug": "Один год жизни",
 			"readTime": "6 мин",
 			"author": "Anne Dar",

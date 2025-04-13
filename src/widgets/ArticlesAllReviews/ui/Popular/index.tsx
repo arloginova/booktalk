@@ -17,6 +17,10 @@ const Popular: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderArticles
+			buttonsID={{
+				next: 'wqewqwqewqegrhtjytkukinvbbfvvc',
+				prev: 'dsajasdasoidsapfoiewfgoidjwcod',
+			}}
 			title='популярное'
 			articles={popular.data}
 			className={className}

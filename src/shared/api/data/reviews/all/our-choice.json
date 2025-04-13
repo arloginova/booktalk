@@ -3,6 +3,7 @@
 	"type": "all-choice",
 	"data": [
 		{
+			"id": "b284478991",
 			"slug": "Книжный домик в Тоскане",
 			"readTime": "6 мин",
 			"author": "Альба Донати",
@@ -13,6 +14,7 @@
 			"image": "/images/books/reviews/all/our-choice/книжный_домик_в_тоскане.jpeg"
 		},
 		{
+			"id": "d831002177",
 			"slug": "Северный лес",
 			"readTime": "6 мин",
 			"author": "Дэниел Мэйсон",
@@ -23,6 +25,7 @@
 			"image": "/images/books/reviews/all/our-choice/северный_лес.jpeg"
 		},
 		{
+			"id": "8272a5fa24",
 			"slug": "Интимная история человечества",
 			"readTime": "6 мин",
 			"author": "Теодор Зельдин",

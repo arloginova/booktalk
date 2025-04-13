@@ -9,7 +9,7 @@ import {
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const RiddleUnanswered: FC<Props> = ({ className }) => {
 	const riddleUnanswered = useQuery({
@@ -19,12 +19,17 @@ const RiddleUnanswered: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderReviews
+			buttonsID={{
+				next: 'idddddddddfjidfijdijfde',
+				prev: 'azssssfardwfwdfwqdrwrqfd',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.riddleUnanswered].title}
 			reviews={riddleUnanswered.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${allReviewsRoutes[EnAllReviewsRoutesKeys.riddleUnanswered].href
-					}`,
+				href: `${EnRoutes.collections}/${
+					allReviewsRoutes[EnAllReviewsRoutesKeys.riddleUnanswered].href
+				}`,
 				text: 'Подробнее',
 			}}
 		/>

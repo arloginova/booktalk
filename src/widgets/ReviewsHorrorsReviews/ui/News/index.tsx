@@ -9,7 +9,7 @@ import {
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const New: FC<Props> = ({ className }) => {
 	const news = useQuery({
@@ -19,12 +19,17 @@ const New: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderReviews
+			buttonsID={{
+				next: 'ugeuigeivbuernv',
+				prev: 'rnvnfdnvfdsiuvcdsciniwc',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.new].title}
 			reviews={news.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${allReviewsRoutes[EnAllReviewsRoutesKeys.new].href
-					}`,
+				href: `${EnRoutes.collections}/${
+					allReviewsRoutes[EnAllReviewsRoutesKeys.new].href
+				}`,
 				text: 'Подробнее',
 			}}
 		/>

@@ -3,6 +3,7 @@
 	"type": "romantic-choice",
 	"data": [
 		{
+			"id": "49e1272de1",
 			"slug": "День между пятницей и воскресеньем",
 			"readTime": "6 мин",
 			"author": "Ирина Лейк",
@@ -13,6 +14,7 @@
 			"image": "/images/books/romantic/our-choice/день_между_пятницей_и_воскресеньем.jpeg"
 		},
 		{
+			"id": "ec99e49b6a",
 			"slug": "Френдзона",
 			"readTime": "6 мин",
 			"author": "Ася Лавринович",
@@ -23,6 +25,7 @@
 			"image": "/images/books/romantic/our-choice/френдзона.jpg"
 		},
 		{
+			"id": "0d88f5bf78",
 			"slug": "Мое прекрасное несчастье",
 			"readTime": "6 мин",
 			"author": "Джейми Макгвайер",
@@ -33,6 +36,7 @@
 			"image": "/images/books/romantic/our-choice/мое_прекрасное_несчастье.jpeg"
 		},
 		{
+			"id": "a5b31bb1a8",
 			"slug": "Бриджит Джонс без ума от мальчишки",
 			"readTime": "6 мин",
 			"author": "Хелен Филдинг",

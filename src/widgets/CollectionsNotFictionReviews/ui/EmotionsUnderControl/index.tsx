@@ -20,6 +20,10 @@ const EmotionsUnderControl: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderBooks
+			buttonsID={{
+				next: 'dggtyweftetfeefe',
+				prev: 'kopoujkuooukuokukomnukom',
+			}}
 			title={
 				allReviewsRoutes[EnAllReviewsRoutesKeys.emotionsUnderControl].title
 			}

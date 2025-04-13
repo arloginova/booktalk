@@ -9,7 +9,7 @@ import {
 } from '../../constants/routes'
 import { SliderBooks } from '@/widgets/SliderBooks'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const NotFiction: FC<Props> = ({ className }) => {
 	const notFiction = useQuery({
@@ -19,12 +19,17 @@ const NotFiction: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderBooks
+			buttonsID={{
+				next: 'udwfuewghrghirgrihrihgrihgr',
+				prev: 'dcbsfcdvrgourgurogr',
+			}}
 			title='популярное'
 			books={notFiction.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${allReviewsRoutes[EnAllReviewsRoutesKeys.notFiction].href
-					}`,
+				href: `${EnRoutes.collections}/${
+					allReviewsRoutes[EnAllReviewsRoutesKeys.notFiction].href
+				}`,
 				text: 'Подробнее',
 			}}
 		/>

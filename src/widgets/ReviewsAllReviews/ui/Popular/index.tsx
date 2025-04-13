@@ -9,7 +9,7 @@ import {
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const Popular: FC<Props> = ({ className }) => {
 	const popular = useQuery({
@@ -19,13 +19,20 @@ const Popular: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderReviews
+			buttonsID={{
+				next: 'dsdsfddcnsnvcsv',
+				prev: 'dcijscifoewoifdeoijfewfoij',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys['all-popular']].title}
 			reviews={popular.data}
 			className={className}
-			redirectOverrideType={allReviewsRoutes[EnAllReviewsRoutesKeys['all-popular']].href}
+			redirectOverrideType={
+				allReviewsRoutes[EnAllReviewsRoutesKeys['all-popular']].href
+			}
 			headLink={{
-				href: `${EnRoutes.reviews}/${allReviewsRoutes[EnAllReviewsRoutesKeys['all-popular']].href
-					}`,
+				href: `${EnRoutes.reviews}/${
+					allReviewsRoutes[EnAllReviewsRoutesKeys['all-popular']].href
+				}`,
 				text: 'Подробнее',
 			}}
 		/>

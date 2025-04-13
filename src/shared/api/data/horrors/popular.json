@@ -3,6 +3,7 @@
 	"type": "horrors-popular",
 	"data": [
 		{
+			"id": "6866bfce11",
 			"slug": "Марионеточник",
 			"readTime": "6 мин",
 			"author": "Татьяна Корсакова",
@@ -13,6 +14,7 @@
 			"image": "/images/books/horrors/popular/марионеточник.jpeg"
 		},
 		{
+			"id": "a72456cd75",
 			"slug": "Марь",
 			"readTime": "6 мин",
 			"author": "Татьяна Корсакова",
@@ -23,6 +25,7 @@
 			"image": "/images/books/horrors/popular/марь.jpeg"
 		},
 		{
+			"id": "aa187714b1",
 			"slug": "Институт",
 			"readTime": "5 мин",
 			"author": "Стивен Кинг",
@@ -33,6 +36,7 @@
 			"image": "/images/books/horrors/popular/институт.jpeg"
 		},
 		{
+			"id": "f61616f729",
 			"slug": "Гадючий Яр",
 			"readTime": "6 мин",
 			"author": "Наталья Тимошенко",
@@ -43,6 +47,7 @@
 			"image": "/images/books/horrors/popular/гадючий_яр.jpeg"
 		},
 		{
+			"id": "15eb9eaf9b",
 			"slug": "Марионетки",
 			"readTime": "6 мин",
 			"author": "Татьяна Корсакова",
@@ -53,6 +58,7 @@
 			"image": "/images/books/horrors/popular/марионетки.jpeg"
 		},
 		{
+			"id": "fac72bb6ff",
 			"slug": "Сталь",
 			"readTime": "6 мин",
 			"author": "Анне Дар",
@@ -63,6 +69,7 @@
 			"image": "/images/books/horrors/popular/сталь.jpeg"
 		},
 		{
+			"id": "4683e9a775",
 			"slug": "Мертвая зона",
 			"readTime": "6 мин",
 			"author": "Стивен Кинг",

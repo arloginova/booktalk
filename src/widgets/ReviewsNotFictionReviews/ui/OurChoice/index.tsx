@@ -15,6 +15,10 @@ const OurChoice: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderOurChoice
+			buttonsID={{
+				next: 'qqqdwqdqwdwq',
+				prev: 'czczxcdcfbtgnnnh',
+			}}
 			title='Наш выбор'
 			books={ourChoice.data}
 			className={className}

@@ -3,6 +3,7 @@
 	"type": "detectives-new",
 	"data": [
 		{
+			"id": "21cbf108ec",
 			"slug": "За спиной",
 			"author": "Майк Омер",
 			"readTime": "6 мин",
@@ -14,6 +15,7 @@
 			"forAdult": true
 		},
 		{
+			"id": "8e1cb7ec50",
 			"slug": "Зимнее солнце",
 			"readTime": "4 мин",
 			"author": "Влада Ольховская",
@@ -24,6 +26,7 @@
 			"image": "/images/books/detectives/news/зимнее_солнце.jpeg"
 		},
 		{
+			"id": "7f09c03179",
 			"slug": "Зов кукушки",
 			"readTime": "11 мин",
 			"author": "Роберт Гэлбрейт",
@@ -34,6 +37,7 @@
 			"image": "/images/books/detectives/news/зов_кукушки.jpeg"
 		},
 		{
+			"id": "8cd0acb4b3",
 			"slug": "Интроверт",
 			"readTime": "6 мин",
 			"author": "Мари Мур",
@@ -44,6 +48,7 @@
 			"image": "/images/books/detectives/news/интроверт.jpeg"
 		},
 		{
+			"id": "a9a5609a86",
 			"slug": "Искалеченные",
 			"readTime": "7 мин",
 			"author": "Мари Мур",
@@ -54,6 +59,7 @@
 			"image": "/images/books/detectives/news/искалеченные.jpeg"
 		},
 		{
+			"id": "ebec42f1fb",
 			"slug": "В лесу",
 			"readTime": "8 мин",
 			"author": "Тана Френч",
@@ -64,6 +70,7 @@
 			"image": "/images/books/detectives/news/в_лесу.jpeg"
 		},
 		{
+			"id": "753b908513",
 			"slug": "Колодец и бабочка",
 			"readTime": "9 мин",
 			"author": "Елена Михалкова",
@@ -74,6 +81,7 @@
 			"image": "/images/books/detectives/news/колодец_и_бабочка.jpeg"
 		},
 		{
+			"id": "438fc6bcbd",
 			"slug": "Круть",
 			"readTime": "6 мин",
 			"author": "Виктор Пелевин",
@@ -84,6 +92,7 @@
 			"image": "/images/books/detectives/news/круть.jpeg"
 		},
 		{
+			"id": "963c8cf5ad",
 			"slug": "Наблюдатель",
 			"readTime": "6 мин",
 			"author": "Шарлотта Линк",

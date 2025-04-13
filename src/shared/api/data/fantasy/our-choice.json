@@ -3,6 +3,7 @@
 	"type": "fantasy-choice",
 	"data": [
 		{
+			"id": "d4151a1389",
 			"slug": "Стеллар Легат",
 			"readTime": "6 мин",
 			"author": "Роман Прокофьев",
@@ -13,6 +14,7 @@
 			"image": "/images/books/fantasy/our-choice/сайберия_байстрюк.jpeg"
 		},
 		{
+			"id": "cea2aefa33",
 			"slug": "Последняя битва",
 			"readTime": "7 мин",
 			"author": "Данияр Сугралинов",
@@ -23,6 +25,7 @@
 			"image": "/images/books/fantasy/our-choice/последняя_битва.jpeg"
 		},
 		{
+			"id": "b285823c83",
 			"slug": "Проникновение",
 			"readTime": "7 мин",
 			"author": "Марина Суржевская",
@@ -33,6 +36,7 @@
 			"image": "/images/books/fantasy/our-choice/проникновение.jpeg"
 		},
 		{
+			"id": "c0727557cf",
 			"slug": "Целитель",
 			"readTime": "6 мин",
 			"author": "Андрей Первухин",

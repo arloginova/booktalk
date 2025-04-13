@@ -3,6 +3,7 @@
 	"type": "romantic-forbidden-love",
 	"data": [
 		{
+			"id": "f16ec07b66",
 			"slug": "Под небом Парижа",
 			"readTime": "6 мин",
 			"author": "Дана Делон",
@@ -13,6 +14,7 @@
 			"image": "/images/books/reviews/romantic/forbidden-love/Под_небом_Парижа.jpeg"
 		},
 		{
+			"id": "7e6e7ec047",
 			"slug": "Эти бурные чувства",
 			"readTime": "6 мин",
 			"author": "Хлоя Гонг",
@@ -23,6 +25,7 @@
 			"image": "/images/books/reviews/romantic/forbidden-love/Эти_бурные_чувства.jpeg"
 		},
 		{
+			"id": "5a160da7f2",
 			"slug": "Аккорд",
 			"readTime": "6 мин",
 			"author": "Ава Хоуп",
@@ -33,6 +36,7 @@
 			"image": "/images/books/reviews/romantic/forbidden-love/аккорд.jpeg"
 		},
 		{
+			"id": "052d687cc4",
 			"slug": "Королевство Бездуш",
 			"readTime": "6 мин",
 			"author": "Марина Суржевская",

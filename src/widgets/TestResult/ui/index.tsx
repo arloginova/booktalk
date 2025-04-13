@@ -16,7 +16,7 @@ import { returnRecommendedRequest } from '../lib/returnRecommendedRequest'
 import { SliderBooks } from '@/widgets/SliderBooks'
 import { useQuery } from '@tanstack/react-query'
 import { useScreen } from '@/shared/hooks'
-import { LG_BIG, } from '@/shared/constants'
+import { LG_BIG } from '@/shared/constants'
 
 const wrapperCls = ''
 const contentWrapperCls = ''
@@ -42,7 +42,7 @@ const TestResult: FC<Props> = ({ setScreen, className }) => {
 	const request = returnRecommendedRequest({ first, second, third, fourth })
 	const data = useQuery({
 		queryKey: ['test', 'collections'],
-		queryFn: request.queryFn,
+		queryFn: request?.queryFn,
 	})
 
 	const handleReStart = () => {
@@ -63,14 +63,21 @@ const TestResult: FC<Props> = ({ setScreen, className }) => {
 							Ваши 7 Рекомендаций
 						</UiTypography>
 						<UiTypography className={subtitleCls} font='Raleway-M' tag='h2'>
-							{request.text}
+							{request?.text || null}
 						</UiTypography>
 						<UiButton onClick={handleReStart} className={btnCls}>
 							пройти заново
 						</UiButton>
 					</div>
 					{screenWidth >= LG_BIG ? (
-						<SliderBooks books={data.data} className={sliderCls} />
+						<SliderBooks
+							books={data.data}
+							className={sliderCls}
+							buttonsID={{
+								next: 'fqiufdwiuqfdiuqwfiueqfieiufeiufei',
+								prev: 'dweuqfrgorgourgurogr',
+							}}
+						/>
 					) : null}
 				</div>
 			</UiGridElemWrapper>
@@ -79,7 +86,14 @@ const TestResult: FC<Props> = ({ setScreen, className }) => {
 					plaque='результаты теста'
 					className={cn(wrapperCls, 'mt-4')}
 				>
-					<SliderBooks books={data.data} className={cn(sliderCls, 'mt-35')} />
+					<SliderBooks
+						books={data.data}
+						className={cn(sliderCls, 'mt-35')}
+						buttonsID={{
+							next: 'jpijythiotrotie',
+							prev: 'qddwuqydsuycuyd',
+						}}
+					/>
 				</UiGridElemWrapper>
 			) : null}
 		</div>

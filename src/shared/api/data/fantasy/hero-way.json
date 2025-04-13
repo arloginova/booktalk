@@ -3,6 +3,7 @@
 	"type": "fantasy-hero-way",
 	"data": [
 		{
+			"id": "b71e36bd87",
 			"slug": "Прибытие",
 			"readTime": "6 мин",
 			"author": "Алекс Ключевской",
@@ -13,6 +14,7 @@
 			"image": "/images/books/fantasy/hero-way/прибытие.jpeg"
 		},
 		{
+			"id": "b53cfad0d5",
 			"slug": "Король Ардена",
 			"readTime": "6 мин",
 			"author": "Софи Анри",
@@ -23,6 +25,7 @@
 			"image": "/images/books/fantasy/hero-way/король_ардена.jpeg"
 		},
 		{
+			"id": "dd65d85f8d",
 			"slug": "Темный маг",
 			"readTime": "5 мин",
 			"author": "Алекс Ключевской и Илья Ангел",
@@ -33,6 +36,7 @@
 			"image": "/images/books/fantasy/hero-way/темный_маг.jpeg"
 		},
 		{
+			"id": "9c084affd7",
 			"slug": "Сумерки",
 			"readTime": "6 мин",
 			"author": "Стефани Майер",
@@ -43,6 +47,7 @@
 			"image": "/images/books/fantasy/hero-way/сумерки.jpeg"
 		},
 		{
+			"id": "4f887c15c8",
 			"slug": "Система искупления",
 			"readTime": "4 мин",
 			"author": "Sia Tony",
@@ -53,6 +58,7 @@
 			"image": "/images/books/fantasy/hero-way/система_искупление.jpeg"
 		},
 		{
+			"id": "973c9e2356",
 			"slug": "Киссано",
 			"readTime": "6 мин",
 			"author": "Михаил Воробьёв",
@@ -63,6 +69,7 @@
 			"image": "/images/books/fantasy/hero-way/киссано.jpeg"
 		},
 		{
+			"id": "63eafe0ca4",
 			"slug": "Демон из Пустоши",
 			"readTime": "7 мин",
 			"author": "Виктор Дашкевич",

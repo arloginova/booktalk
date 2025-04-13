@@ -17,6 +17,10 @@ const RomanticMood: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderArticles
+			buttonsID={{
+				next: 'kogggggggdokdsfkoewokfeokwfoekwf',
+				prev: 'dqwwsqdwpqdswqdwqdokwqkodwqkodwq',
+			}}
 			title='романтичное настроение'
 			articles={romanticMood.data}
 			className={className}

@@ -3,6 +3,7 @@
 	"type": "fantasy-mistic",
 	"data": [
 		{
+			"id": "bfa5d8134e",
 			"slug": "Имя ей Хель",
 			"readTime": "4 мин",
 			"author": "Елена Кондрацкая",
@@ -13,6 +14,7 @@
 			"image": "/images/books/fantasy/mistic/имя_ей_хель.jpeg"
 		},
 		{
+			"id": "014a8ead8a",
 			"slug": "Мара и Морок",
 			"readTime": "6 мин",
 			"author": "Лия Арден",
@@ -23,6 +25,7 @@
 			"image": "/images/books/fantasy/mistic/мара_и_морок.jpeg"
 		},
 		{
+			"id": "0d0ac1930d",
 			"slug": "Принцип матрешки",
 			"readTime": "6 мин",
 			"author": "Владимир Сухинин",
@@ -33,6 +36,7 @@
 			"image": "/images/books/fantasy/mistic/принцип_матрешки.jpeg"
 		},
 		{
+			"id": "1a48a8e809",
 			"slug": "Солнце полуночи",
 			"readTime": "7 мин",
 			"author": "Стефани Майер",
@@ -43,6 +47,7 @@
 			"image": "/images/books/fantasy/mistic/солнце_полуночи.jpeg"
 		},
 		{
+			"id": "895b51c707",
 			"slug": "Дикарь",
 			"readTime": "7 мин",
 			"author": "Марина Суржевская",
@@ -53,6 +58,7 @@
 			"image": "/images/books/fantasy/mistic/дикарь.jpeg"
 		},
 		{
+			"id": "cb98470522",
 			"slug": "Мастер душ",
 			"readTime": "6 мин",
 			"author": "Илья Ангел и Алекс Ключевской",
@@ -63,6 +69,7 @@
 			"image": "/images/books/fantasy/mistic/мастер_душ.jpeg"
 		},
 		{
+			"id": "e702bd0e60",
 			"slug": "Грани власти",
 			"readTime": "8 мин",
 			"author": "Алексей Осадчук",

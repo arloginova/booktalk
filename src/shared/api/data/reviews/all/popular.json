@@ -3,6 +3,7 @@
 	"type": "all-popular",
 	"data": [
 		{
+			"id": "8324089c59",
 			"slug": "Четвёртое крыло",
 			"readTime": "6 мин",
 			"author": "Ребекка Яррос",
@@ -13,6 +14,7 @@
 			"image": "/images/books/reviews/all/popular/четвертое_крыло.jpeg"
 		},
 		{
+			"id": "f2edc4d991",
 			"slug": "Sapiens",
 			"readTime": "6 мин",
 			"author": "Юваль Ной Харари",
@@ -23,6 +25,7 @@
 			"image": "/images/books/reviews/all/popular/sapiens.jpeg"
 		},
 		{
+			"id": "9dc99fe094",
 			"slug": "Сказать да!",
 			"readTime": "6 мин",
 			"author": "Виктор Франкл",
@@ -33,6 +36,7 @@
 			"image": "/images/books/reviews/all/popular/сказать_да.jpeg"
 		},
 		{
+			"id": "bd6cd0ec87",
 			"slug": "Зачем мы спим",
 			"readTime": "6 мин",
 			"author": "Мэттью Уолкер",
@@ -43,6 +47,7 @@
 			"image": "/images/books/reviews/all/popular/зачем_мы_спим.jpeg"
 		},
 		{
+			"id": "ae16848228",
 			"slug": "Книга закончится, а ты нет",
 			"readTime": "6 мин",
 			"author": "Ольга Примаченко",

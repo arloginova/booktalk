@@ -1,4 +1,5 @@
 type TBookData = {
+	id: string
 	slug: string
 	author: string
 	image: string

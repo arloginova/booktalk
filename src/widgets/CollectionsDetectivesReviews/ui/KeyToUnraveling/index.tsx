@@ -19,6 +19,10 @@ const KeyToUnraveling: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderBooks
+			buttonsID={{
+				next: 'vicsudiuewfivuewfuewfhiuew',
+				prev: 'bgedrfvwncnbznxcnc',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.keyToUnraveling].title}
 			books={keyToUnraveling.data}
 			className={className}

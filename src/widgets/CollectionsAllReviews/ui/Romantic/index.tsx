@@ -9,7 +9,7 @@ import {
 } from '../../constants/routes'
 import { SliderBooks } from '@/widgets/SliderBooks'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const Romantic: FC<Props> = ({ className }) => {
 	const romantic = useQuery({
@@ -19,12 +19,17 @@ const Romantic: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderBooks
+			buttonsID={{
+				next: 'cuwquefefduyfeduyfeuyfe',
+				prev: 'dweuqfrgorgovfuygbsfwivc',
+			}}
 			title='атмосферные'
 			books={romantic.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${allReviewsRoutes[EnAllReviewsRoutesKeys.romantic].href
-					}`,
+				href: `${EnRoutes.collections}/${
+					allReviewsRoutes[EnAllReviewsRoutesKeys.romantic].href
+				}`,
 				text: 'Подробнее',
 			}}
 		/>

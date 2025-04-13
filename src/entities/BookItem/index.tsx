@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { TClassName } from '@/shared/types'
+import { TClassName, TTag } from '@/shared/types'
 import { UiSkeleton, UiTypography } from '@/shared/ui'
 import Image from 'next/image'
 import { TBookData } from '@/shared/types/Book'
@@ -14,17 +14,22 @@ const titleCls =
 	'mt-3.5 lg-low:text-xl text-sm lg-low:mb-2 mb-1 line-clamp-1 uppercase w-full'
 const authorCls = 'text-greyExtra lg-low:text-lg text-xs line-clamp-1'
 
-type Props = TClassName & (
-	| {
-		hasSkeleton: true
-	} & {
-		[K in keyof Pick<TBookData, 'forAdult' | 'slug' | 'slug' | 'author' | 'image'>]?: never
-	}
-	| {
-		hasSkeleton?: false | undefined
-	} & Pick<TBookData, 'forAdult' | 'slug' | 'slug' | 'author' | 'image'>
-)
-
+type Props = TClassName &
+	(
+		| ({
+				hasSkeleton: true
+				Tag?: TTag
+		  } & {
+				[K in keyof Pick<
+					TBookData,
+					'forAdult' | 'slug' | 'slug' | 'author' | 'image'
+				>]?: never
+		  })
+		| ({
+				hasSkeleton?: false | undefined
+				Tag?: TTag
+		  } & Pick<TBookData, 'forAdult' | 'slug' | 'slug' | 'author' | 'image'>)
+	)
 
 const BookItem: FC<Props> = ({
 	hasSkeleton,
@@ -33,9 +38,10 @@ const BookItem: FC<Props> = ({
 	className,
 	forAdult,
 	image,
+	Tag = 'div',
 }) => {
 	return (
-		<div className={cn(wrapperCls, className)}>
+		<Tag className={cn(wrapperCls, className)}>
 			<div className={imgWrapperCls}>
 				{hasSkeleton ? (
 					<UiSkeleton isAbsolute={false} className={imgCls} />
@@ -79,7 +85,7 @@ const BookItem: FC<Props> = ({
 					</UiTypography>
 				</>
 			)}
-		</div>
+		</Tag>
 	)
 }
 

@@ -16,6 +16,10 @@ const BookCollections: FC<Props> = async ({ className }) => {
 	return (
 		<UiGridElemWrapper plaque='Подборки' className={cn(wrapperCls, className)}>
 			<SliderBooks
+				buttonsID={{
+					next: 'fqidiofoifedfe',
+					prev: 'vdsuiuewfuiewfiuewfgurogr',
+				}}
 				withMarginTop
 				title='Вам может понравится'
 				books={data}

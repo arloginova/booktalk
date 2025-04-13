@@ -6,7 +6,7 @@ import { SliderOurChoice } from '@/widgets/SliderOurChoice'
 import { allReviewsRoutes } from '../../constants/routes'
 import { TBookItem } from '@/shared/types/Book'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const OurChoice: FC<Props> = ({ className }) => {
 	const ourChoice = useQuery({
@@ -16,8 +16,12 @@ const OurChoice: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderOurChoice
+			buttonsID={{
+				next: 'pfffffffffofewofdew',
+				prev: 'qwrwfujujujujujujujujujujujofg',
+			}}
 			title={allReviewsRoutes['our-choice'].title}
-			books={((ourChoice.data as unknown) as TBookItem[])}
+			books={ourChoice.data as unknown as TBookItem[]}
 			className={className}
 		/>
 	)

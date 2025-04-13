@@ -3,6 +3,7 @@
 	"type": "not-fiction-emotions-under-control",
 	"data": [
 		{
+			"id": "61efb4350a",
 			"slug": "Большая Книга о соцсетях",
 			"readTime": "6 мин",
 			"author": "Максим Ильяхов и Родион Скрябин",
@@ -13,6 +14,7 @@
 			"image": "/images/books/not-fiction/emotions-under-control/большя_книга_о_соцсетях.jpeg"
 		},
 		{
+			"id": "a6e9d76e13",
 			"slug": "Внутренняя опора",
 			"readTime": "6 мин",
 			"author": "Анна Бабич",
@@ -23,6 +25,7 @@
 			"image": "/images/books/not-fiction/emotions-under-control/внутренняя_опора.jpeg"
 		},
 		{
+			"id": "bb925e7605",
 			"slug": "Выбор",
 			"readTime": "6 мин",
 			"author": "Эдит Ева Эгер",
@@ -33,6 +36,7 @@
 			"image": "/images/books/not-fiction/emotions-under-control/выбор.jpeg"
 		},
 		{
+			"id": "031c43da06",
 			"slug": "Кафе на краю земли",
 			"readTime": "6 мин",
 			"author": "Джон П. Стрелеки",
@@ -43,6 +47,7 @@
 			"image": "/images/books/not-fiction/emotions-under-control/кафе_на_краю_земли.jpeg"
 		},
 		{
+			"id": "99f17b6edd",
 			"slug": "Мне всё льня",
 			"readTime": "6 мин",
 			"author": "Татьяна Мужицкая",
@@ -53,6 +58,7 @@
 			"image": "/images/books/not-fiction/emotions-under-control/мне_все_льзя.jpeg"
 		},
 		{
+			"id": "428706b45e",
 			"slug": "Наука Чтения Людей",
 			"readTime": "6 мин",
 			"author": "Патрик Кинг",
@@ -63,7 +69,8 @@
 			"image": "/images/books/not-fiction/emotions-under-control/наука_чтения_людей.jpg"
 		},
 		{
-			"slug": "Отель Перекрёсток",
+			"id": "d18dff00d5",
+			"slug": "Отель Перекресток",
 			"readTime": "6 мин",
 			"author": "Андрей Васильев",
 			"quote": "«Так всегда: в жизни ты на стороне добра, а когда играешь с ребятами в полицию, хочется быть гангстером»",

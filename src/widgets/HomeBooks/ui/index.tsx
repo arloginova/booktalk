@@ -10,7 +10,7 @@ import { EnRoutes } from '@/shared/constants'
 
 const wrapperCls = 'bg-whiteMain p-main'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const HomeBooks: FC<Props> = ({ className }) => {
 	const booksQuery = useQuery({
@@ -20,9 +20,18 @@ const HomeBooks: FC<Props> = ({ className }) => {
 
 	return (
 		<UiGridElemWrapper className={cn(wrapperCls, className)} plaque='Подборки'>
-			<SliderBooks withMarginTop books={booksQuery.data} title='Новинки книг' headLink={{
-				href: EnRoutes.collections
-			}} />
+			<SliderBooks
+				withMarginTop
+				books={booksQuery.data}
+				title='Новинки книг'
+				headLink={{
+					href: EnRoutes.collections,
+				}}
+				buttonsID={{
+					next: 'drtwqdrtwqudwudywdgy',
+					prev: 'bdknfjdbfkjdbkfdbkjfd',
+				}}
+			/>
 		</UiGridElemWrapper>
 	)
 }

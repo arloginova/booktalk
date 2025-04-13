@@ -17,6 +17,10 @@ const New: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderArticles
+			buttonsID={{
+				next: 'gkopfgkdckwckmwemcowcowwoiewifwoi',
+				prev: 'dsaijcoidqiwdijwqijdowqoifdqwijw',
+			}}
 			title='новинки'
 			articles={newBooks.data}
 			className={className}

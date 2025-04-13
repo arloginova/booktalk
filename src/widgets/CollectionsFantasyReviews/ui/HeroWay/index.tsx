@@ -19,6 +19,10 @@ const HeroWay: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderBooks
+			buttonsID={{
+				next: 'cdiciddiuqwfiueqfieiufeiufei',
+				prev: 'dweuqfrgorgourgvsyhidiwq',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.heroWay].title}
 			books={heroWay.data}
 			className={className}

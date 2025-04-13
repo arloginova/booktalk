@@ -10,7 +10,7 @@ import { EnRoutes } from '@/shared/constants'
 
 const wrapperCls = ''
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const HomeReviews: FC<Props> = ({ className }) => {
 	const reviews = useQuery({
@@ -25,10 +25,15 @@ const HomeReviews: FC<Props> = ({ className }) => {
 			plaque='Рецензии'
 		>
 			<SliderReviews
+				buttonsID={{
+					next: 'cvytyqtydvfdqvyfvefte',
+					prev: 'vfuyhbiviuewiufewuifewiu',
+				}}
 				withMarginTop
 				title='Обзоры на книги'
-				reviews={reviews.data} headLink={{
-					href: EnRoutes.reviews
+				reviews={reviews.data}
+				headLink={{
+					href: EnRoutes.reviews,
 				}}
 			/>
 		</UiGridElemWrapper>

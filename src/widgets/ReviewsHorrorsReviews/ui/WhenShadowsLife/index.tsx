@@ -9,7 +9,7 @@ import {
 import { EnRoutes } from '@/shared/constants'
 import { SliderReviews } from '@/widgets/SliderReviews'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const WhenShadowsLife: FC<Props> = ({ className }) => {
 	const whenShadowsLifeBooks = useQuery({
@@ -19,12 +19,17 @@ const WhenShadowsLife: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderReviews
+			buttonsID={{
+				next: 'gbweyfgvbiuerjebiure',
+				prev: 'chbdsbhcvbyvyrbyrf',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.whenShadowsLife].title}
 			reviews={whenShadowsLifeBooks.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${allReviewsRoutes[EnAllReviewsRoutesKeys.whenShadowsLife].href
-					}`,
+				href: `${EnRoutes.collections}/${
+					allReviewsRoutes[EnAllReviewsRoutesKeys.whenShadowsLife].href
+				}`,
 				text: 'Подробнее',
 			}}
 		/>

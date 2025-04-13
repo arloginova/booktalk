@@ -19,6 +19,10 @@ const Popular: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderBooks
+			buttonsID={{
+				next: 'fqiufdfufewqiucewifew',
+				prev: 'vbuyhbuwuyewuycwubwee',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.popular].title}
 			books={popularBooks.data}
 			className={className}

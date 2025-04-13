@@ -14,6 +14,8 @@ import 'swiper/swiper-bundle.css'
 import { ReviewItem } from '@/entities/ReviewItem'
 import Link from 'next/link'
 import { EnRoutes } from '@/shared/constants'
+import { ArrowIcon } from '@/shared/icons'
+import { Navigation } from 'swiper/modules'
 
 const wrapperCls = ''
 const sliderCls = ''
@@ -28,6 +30,10 @@ interface Props extends TClassName {
 	withMarginTop?: boolean
 	headLink?: TUiMainBlockWithTitleProps['headLink']
 	redirectOverrideType?: string
+	buttonsID: {
+		prev: string
+		next: string
+	}
 }
 
 const SliderReviews: FC<Props> = ({
@@ -35,7 +41,9 @@ const SliderReviews: FC<Props> = ({
 	title,
 	className,
 	withMarginTop,
-	headLink, redirectOverrideType
+	headLink,
+	redirectOverrideType,
+	buttonsID,
 }) => {
 	let curRepeatItemIndex = -1
 
@@ -46,45 +54,83 @@ const SliderReviews: FC<Props> = ({
 			title={title}
 			className={cn(wrapperCls, className)}
 		>
-			<Swiper {...sliderConfig()} className={sliderCls}>
-				{!reviews?.length || !reviews
-					? [...Array(12)].map((_, index) => (
-						<SwiperSlide key={index} className={slideCls}>
-							<ReviewItem hasSkeleton className={itemCls} />
-						</SwiperSlide>
-					))
-					: <>
-						{reviews.map(({ genre, type, data }) => {
-							return (
-								<SwiperSlide
-									key={`${data.slug}${genre}${type}`}
-									className={slideCls}
-								>
-									<Link href={`${EnRoutes.reviews}/${redirectOverrideType || type}/${data.slug}`}><ReviewItem {...data} className={itemCls} /></Link>
-								</SwiperSlide>
-							)
-						})}
-						{reviews.length <= REPEAT_REVIEWS_ITEMS ?
-							[...Array(REPEAT_REVIEWS_ITEMS)].map((_, index) => {
-								if (curRepeatItemIndex + 2 > reviews.length) {
-									curRepeatItemIndex = 0
-								} else {
-									curRepeatItemIndex++
-								}
+			<div className='relative'>
+				<button
+					className='absolute -rotate-180 top-[45%] left-0 -translate-1/2 z-10 bg-whiteMain rounded-full'
+					id={buttonsID.prev}
+				>
+					<ArrowIcon />
+				</button>
+				<Swiper
+					{...sliderConfig()}
+					{...sliderConfig()}
+					modules={[Navigation]}
+					navigation={{
+						prevEl: `#${buttonsID.prev}`,
+						nextEl: `#${buttonsID.next}`,
+					}}
+					className={sliderCls}
+				>
+					{!reviews?.length || !reviews ? (
+						[...Array(12)].map((_, index) => (
+							<SwiperSlide key={index} className={slideCls}>
+								<ReviewItem hasSkeleton className={itemCls} />
+							</SwiperSlide>
+						))
+					) : (
+						<>
+							{reviews.map(({ genre, type, data }) => {
+								return (
+									<SwiperSlide
+										key={`${data.slug}${genre}${type}`}
+										className={slideCls}
+									>
+										<Link
+											href={`${EnRoutes.reviews}/${
+												redirectOverrideType || type
+											}/${data.slug}`}
+										>
+											<ReviewItem {...data} className={itemCls} />
+										</Link>
+									</SwiperSlide>
+								)
+							})}
+							{reviews.length <= REPEAT_REVIEWS_ITEMS
+								? [...Array(REPEAT_REVIEWS_ITEMS)].map((_, index) => {
+										if (curRepeatItemIndex + 2 > reviews.length) {
+											curRepeatItemIndex = 0
+										} else {
+											curRepeatItemIndex++
+										}
 
-								const { data, genre, type } = reviews[curRepeatItemIndex]
+										const { data, genre, type } = reviews[curRepeatItemIndex]
 
-								return <SwiperSlide
-									key={`${data.slug}${genre}${type}${index}`}
-									className={slideCls}
-								>
-									<Link href={`${EnRoutes.reviews}/${redirectOverrideType || type}/${data.slug}`}><ReviewItem {...data} className={itemCls} /></Link>
-								</SwiperSlide>
-							})
-							: null}
-					</>
-				}
-			</Swiper>
+										return (
+											<SwiperSlide
+												key={`${data.slug}${genre}${type}${index}`}
+												className={slideCls}
+											>
+												<Link
+													href={`${EnRoutes.reviews}/${
+														redirectOverrideType || type
+													}/${data.slug}`}
+												>
+													<ReviewItem {...data} className={itemCls} />
+												</Link>
+											</SwiperSlide>
+										)
+								  })
+								: null}
+						</>
+					)}
+				</Swiper>
+				<button
+					className='absolute bg-whiteMain rounded-full top-[45%] right-0 -translate-y-1/2 translate-x-1/2 z-10'
+					id={buttonsID.next}
+				>
+					<ArrowIcon />
+				</button>
+			</div>
 		</UiMainBlockWithTitle>
 	)
 }

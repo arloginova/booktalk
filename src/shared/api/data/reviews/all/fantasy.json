@@ -3,6 +3,7 @@
 	"type": "all-fantasy",
 	"data": [
 		{
+			"id": "6595adac1a",
 			"slug": "Королевство шипов и роз",
 			"readTime": "6 мин",
 			"author": "Сара Дж. Маас",
@@ -13,6 +14,7 @@
 			"image": "/images/books/reviews/all/fantasy/королевство_шипов_и_роз.jpeg"
 		},
 		{
+			"id": "88dab89f90",
 			"slug": "Железное пламя",
 			"readTime": "6 мин",
 			"author": "Ребекка Яррос",
@@ -23,6 +25,7 @@
 			"image": "/images/books/reviews/all/fantasy/железное_пламя.jpeg"
 		},
 		{
+			"id": "8135d49cf3",
 			"slug": "Невеста ноября",
 			"readTime": "6 мин",
 			"author": "Лия Арден",
@@ -33,6 +36,7 @@
 			"image": "/images/books/reviews/all/fantasy/невеста_ноября.jpeg"
 		},
 		{
+			"id": "0788539660",
 			"slug": "Башня рассвета",
 			"readTime": "6 мин",
 			"author": "Сара Дж. Маас",
@@ -43,6 +47,7 @@
 			"image": "/images/books/reviews/all/fantasy/башня_рассвета.jpeg"
 		},
 		{
+			"id": "82d79753c8",
 			"slug": "Мара и Морок",
 			"readTime": "6 мин",
 			"author": "Лия Арден",

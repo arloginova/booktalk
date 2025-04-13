@@ -9,7 +9,7 @@ import {
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const Romantic: FC<Props> = ({ className }) => {
 	const romantic = useQuery({
@@ -19,13 +19,20 @@ const Romantic: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderReviews
+			buttonsID={{
+				next: 'gbweyfgicwuceuwcuiew',
+				prev: 'opsadpsaopdwqodwqpodwpoq',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys['all-romantic']].title}
 			reviews={romantic.data}
 			className={className}
-			redirectOverrideType={allReviewsRoutes[EnAllReviewsRoutesKeys['all-romantic']].href}
+			redirectOverrideType={
+				allReviewsRoutes[EnAllReviewsRoutesKeys['all-romantic']].href
+			}
 			headLink={{
-				href: `${EnRoutes.reviews}/${allReviewsRoutes[EnAllReviewsRoutesKeys['all-romantic']].href
-					}`,
+				href: `${EnRoutes.reviews}/${
+					allReviewsRoutes[EnAllReviewsRoutesKeys['all-romantic']].href
+				}`,
 				text: 'Подробнее',
 			}}
 		/>

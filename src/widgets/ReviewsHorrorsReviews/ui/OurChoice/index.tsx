@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query'
 import { SliderOurChoice } from '@/widgets/SliderOurChoice'
 import { horrorsOurChoiceBooks } from '@/shared/api/horrorsBooks'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const OurChoice: FC<Props> = ({ className }) => {
 	const ourChoice = useQuery({
@@ -15,6 +15,10 @@ const OurChoice: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderOurChoice
+			buttonsID={{
+				next: 'dsfdsfdnhnmuju',
+				prev: 'dddddddddnftgntnt',
+			}}
 			title='Наш выбор'
 			books={ourChoice.data}
 			className={className}

@@ -3,6 +3,7 @@
 	"type": "not-fiction-choice",
 	"data": [
 		{
+			"id": "416c95fc6f",
 			"slug": "Поток",
 			"readTime": "6 мин",
 			"author": "Михай Чиксентмихаи",
@@ -13,6 +14,7 @@
 			"image": "/images/books/not-fiction/our-choice/поток.jpeg"
 		},
 		{
+			"id": "e66f7b5e59",
 			"slug": "Код королевы",
 			"readTime": "5 мин",
 			"author": "Ольга Джейд",
@@ -23,6 +25,7 @@
 			"image": "/images/books/not-fiction/our-choice/код_королевы.jpeg"
 		},
 		{
+			"id": "a5e2b4840c",
 			"slug": "Психотрюки",
 			"readTime": "6 мин",
 			"author": "Игорь Рызов",
@@ -33,6 +36,7 @@
 			"image": "/images/books/not-fiction/our-choice/психотрюки.jpeg"
 		},
 		{
+			"id": "c2dfe6473e",
 			"slug": "Важные годы",
 			"readTime": "5 мин",
 			"author": "Мэг Джей",

@@ -4,6 +4,7 @@
 	/* COLORS */
 	--color-blackMain: #000;
 	--color-blackMain-50: rgba(0, 0, 0, 50%);
+	--color-blackMain-25: rgba(0, 0, 0, 25%);
 
 	--color-greyMain: #e2e1ea;
 	--color-greyBackground: #eeedf2;
@@ -103,6 +104,9 @@
 		outline: none;
 		box-shadow: none;
 	}
+	html:has(> .hide_scrollbar) {
+		overflow: hidden;
+	}
 }
 @layer components {
 	@media screen and (min-width: 0px) {
@@ -146,6 +150,7 @@
 	}
 	.no-scrollbar::-webkit-scrollbar {
 		height: 0px;
+		width: 0;
 	}
 	.font-size-inherit {
 		font-size: inherit;

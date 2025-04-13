@@ -1,8 +1,8 @@
-"use client"
+'use client'
 
-import Router from "next/router"
-import { useCallback, FC, useEffect } from "react"
-import ym, { YMInitializer } from "react-yandex-metrika"
+import Router from 'next/router'
+import { useCallback, FC, useEffect } from 'react'
+import ym, { YMInitializer } from 'react-yandex-metrika'
 
 type Props = {
 	enabled: boolean
@@ -11,22 +11,20 @@ type Props = {
 const YM_COUNTER_ID = 100667734
 
 const YandexMetrika: FC<Props> = ({ enabled }) => {
-	console.log(enabled)
-
 	const hit = useCallback(
 		(url: string) => {
 			if (enabled) {
-				ym("hit", url)
+				ym('hit', url)
 			} else {
 				console.log(`%c[YandexMetrika](HIT)`, `color: orange`, url)
 			}
 		},
-		[enabled],
+		[enabled]
 	)
 
 	useEffect(() => {
 		hit(window.location.pathname + window.location.search)
-		Router.events.on("routeChangeComplete", (url: string) => hit(url))
+		Router.events.on('routeChangeComplete', (url: string) => hit(url))
 	}, [hit])
 
 	if (!enabled) return null
@@ -41,7 +39,7 @@ const YandexMetrika: FC<Props> = ({ enabled }) => {
 				trackLinks: true,
 				accurateTrackBounce: true,
 			}}
-			version="2"
+			version='2'
 		/>
 	)
 }

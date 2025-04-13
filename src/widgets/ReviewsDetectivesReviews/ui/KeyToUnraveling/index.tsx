@@ -9,7 +9,7 @@ import {
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const KeyToUnraveling: FC<Props> = ({ className }) => {
 	const keyToUnraveling = useQuery({
@@ -19,12 +19,17 @@ const KeyToUnraveling: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderReviews
+			buttonsID={{
+				next: 'cdsaybdsydwqydwqydywydiuwq',
+				prev: 'ofofdgifdoigfdoigfdiogfio',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.keyToUnraveling].title}
 			reviews={keyToUnraveling.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${allReviewsRoutes[EnAllReviewsRoutesKeys.keyToUnraveling].href
-					}`,
+				href: `${EnRoutes.collections}/${
+					allReviewsRoutes[EnAllReviewsRoutesKeys.keyToUnraveling].href
+				}`,
 				text: 'Подробнее',
 			}}
 		/>

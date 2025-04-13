@@ -19,6 +19,10 @@ const Mistic: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderBooks
+			buttonsID={{
+				next: 'vdiueyrgiuwcvnbxsnbziuewq',
+				prev: 'npotgpoifgidojfvoerfw',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.mistic].title}
 			books={mistic.data}
 			className={className}

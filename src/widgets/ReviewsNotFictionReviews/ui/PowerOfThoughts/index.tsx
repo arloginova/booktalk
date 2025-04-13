@@ -7,10 +7,9 @@ import {
 	allReviewsRoutes,
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
-import { SliderBooks } from '@/widgets/SliderBooks'
 import { SliderReviews } from '@/widgets/SliderReviews'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const PowerOfThoughts: FC<Props> = ({ className }) => {
 	const powerOfThoughts = useQuery({
@@ -20,12 +19,17 @@ const PowerOfThoughts: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderReviews
+			buttonsID={{
+				next: 'opgogogogewuhfewfewuhfewfwe',
+				prev: 'cvudueueoxcxcxvfvffgf',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.powerOfThoughts].title}
 			reviews={powerOfThoughts.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${allReviewsRoutes[EnAllReviewsRoutesKeys.powerOfThoughts].href
-					}`,
+				href: `${EnRoutes.collections}/${
+					allReviewsRoutes[EnAllReviewsRoutesKeys.powerOfThoughts].href
+				}`,
 				text: 'Подробнее',
 			}}
 		/>

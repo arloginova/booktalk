@@ -19,6 +19,10 @@ const New: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderBooks
+			buttonsID={{
+				next: 'dchbwschfbwevrbcnbxcnqasxqo',
+				prev: 'ibpeiewrifvoiueurbue',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.new].title}
 			books={newBooks.data}
 			className={className}

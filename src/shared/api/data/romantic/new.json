@@ -3,6 +3,7 @@
 	"type": "romantic-new",
 	"data": [
 		{
+			"id": "8253856f0f",
 			"slug": "Амур и Психея",
 			"readTime": "6 мин",
 			"author": "Дана Делон",
@@ -13,6 +14,7 @@
 			"image": "/images/books/romantic/news/амур_и_психея.jpeg"
 		},
 		{
+			"id": "25b0989548",
 			"slug": "Миля над землей",
 			"readTime": "6 мин",
 			"author": "Лиз Томфорд",
@@ -23,6 +25,7 @@
 			"image": "/images/books/romantic/news/миля_над_землей.png"
 		},
 		{
+			"id": "a31768941b",
 			"slug": "Улей",
 			"readTime": "6 мин",
 			"author": "Алекс Д",
@@ -33,6 +36,7 @@
 			"image": "/images/books/romantic/news/улей.jpeg"
 		},
 		{
+			"id": "740e0f42c1",
 			"slug": "Испорченный король",
 			"readTime": "6 мин",
 			"author": "Рина Кент",
@@ -43,6 +47,7 @@
 			"image": "/images/books/romantic/news/испорченный_король.jpeg"
 		},
 		{
+			"id": "57a65356f0",
 			"slug": "Доля вероятности",
 			"readTime": "6 мин",
 			"author": "Ребекка Яррос",
@@ -53,6 +58,7 @@
 			"image": "/images/books/romantic/news/доля_вероятности.jpeg"
 		},
 		{
+			"id": "178c4f2e2c",
 			"slug": "Влюбленная ведьма",
 			"readTime": "6 мин",
 			"author": "Анна Джейн",
@@ -63,6 +69,7 @@
 			"image": "/images/books/romantic/news/влюбленная_ведьма.jpg"
 		},
 		{
+			"id": "f2510bb180",
 			"slug": "Творец слез",
 			"readTime": "6 мин",
 			"author": "Эрин Дум",
@@ -73,6 +80,7 @@
 			"image": "/images/books/romantic/news/творец_слез.jpg"
 		},
 		{
+			"id": "9b58e8478f",
 			"slug": "Она мне не сестра",
 			"readTime": "6 мин",
 			"author": "Алекс Хилл и Ася Лавринович",
@@ -83,6 +91,7 @@
 			"image": "/images/books/romantic/news/она_мне_не_сестра.jpeg"
 		},
 		{
+			"id": "66cc3c9376",
 			"slug": "Офсайд",
 			"readTime": "6 мин",
 			"author": "Эйвери Килан",

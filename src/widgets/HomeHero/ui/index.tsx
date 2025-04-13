@@ -9,6 +9,7 @@ import { useScreen } from '@/shared/hooks'
 import { LG_BIG, MD_MID } from '@/shared/constants'
 import { UiGridElemWrapper } from '@/shared/ui'
 import { useRouter } from 'next/navigation'
+import { TELEGRAM_LINK } from '@/shared/constants/info'
 
 const wrapperCls =
 	'grid lg-big:grid-rows-[450px_400px] md-mid:grid-rows-[295px_275px] gap-[var(--main-blocks-gap)] '
@@ -23,7 +24,7 @@ const aboutPlatformCls = 'md-mid:h-auto h-[295px]'
 const aboutPlatformImageCls = 'flex justify-center items-center h-[250px]'
 const booksClubs = 'md-mid:h-auto h-[295px]'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const HomeHero: FC<Props> = ({ className }) => {
 	const router = useRouter()
@@ -43,20 +44,23 @@ const HomeHero: FC<Props> = ({ className }) => {
 								Пройдите быстрый тест и получите
 								<br />
 								подборку книг на основе ваших
-								<br />интересов
+								<br />
+								интересов
 							</>
 						) : (
 							<>
 								Пройдите быстрый тест
 								<br />и получите подборку книг
-								<br />на основе ваших интересов
+								<br />
+								на основе ваших интересов
 							</>
 						)
 					}
 					button={{
-						text: 'пройти тест', onClick: () => {
+						text: 'пройти тест',
+						onClick: () => {
 							router.push('/test')
-						}
+						},
 					}}
 					className={cn(lowItemCls, testBlockCls)}
 				>
@@ -88,7 +92,8 @@ const HomeHero: FC<Props> = ({ className }) => {
 							</>
 						) : (
 							<>
-								Платформа для поиска <br />новых книг, знакомства
+								Платформа для поиска <br />
+								новых книг, знакомства
 								<br />с любителями литературы
 								<br />и изучения рецензий
 							</>
@@ -130,7 +135,9 @@ const HomeHero: FC<Props> = ({ className }) => {
 					}
 					button={{
 						text: '@btalkcom',
-						onClick: () => { window.location.href = 'https://t.me/btalkcom' }
+						onClick: () => {
+							window.location.href = TELEGRAM_LINK
+						},
 					}}
 					className={cn(lowItemCls, booksClubs)}
 				/>

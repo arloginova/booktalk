@@ -7,10 +7,9 @@ import {
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
 import { EnRoutes } from '@/shared/constants'
-import { SliderBooks } from '@/widgets/SliderBooks'
 import { SliderReviews } from '@/widgets/SliderReviews'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const EmotionsUnderControl: FC<Props> = ({ className }) => {
 	const emotionsUnderControlBooks = useQuery({
@@ -21,14 +20,19 @@ const EmotionsUnderControl: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderReviews
+			buttonsID={{
+				next: 'gbweyfgiuegiuruhgruhgrr',
+				prev: 'htotkhktohktkhtokht',
+			}}
 			title={
 				allReviewsRoutes[EnAllReviewsRoutesKeys.emotionsUnderControl].title
 			}
 			reviews={emotionsUnderControlBooks.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${allReviewsRoutes[EnAllReviewsRoutesKeys.emotionsUnderControl].href
-					}`,
+				href: `${EnRoutes.collections}/${
+					allReviewsRoutes[EnAllReviewsRoutesKeys.emotionsUnderControl].href
+				}`,
 				text: 'Подробнее',
 			}}
 		/>

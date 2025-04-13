@@ -19,6 +19,10 @@ const BrokenPromises: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderBooks
+			buttonsID={{
+				next: 'ugwfuewfuygewfguyewuyf',
+				prev: 'fewuqgtetwfteufyegfueygu',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.brokenPromises].title}
 			books={brokenPromises.data}
 			className={className}

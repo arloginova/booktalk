@@ -3,6 +3,7 @@
 	"type": "detectives-key-to-unraveling",
 	"data": [
 		{
+			"id": "470597bff1",
 			"slug": "Silence",
 			"author": "Анна Дар",
 			"readTime": "7 мин",
@@ -13,6 +14,7 @@
 			"image": "/images/books/detectives/key-to-unraveling/silence.jpeg"
 		},
 		{
+			"id": "f4d89afb7e",
 			"slug": "Роковое завещание",
 			"readTime": "8 мин",
 			"author": "Людмила Мартова",
@@ -23,6 +25,7 @@
 			"image": "/images/books/detectives/key-to-unraveling/роковое_завещание.jpeg"
 		},
 		{
+			"id": "d02ee8a1e3",
 			"slug": "Скрытые намерения",
 			"readTime": "5 мин",
 			"author": "Майк Омер",
@@ -33,6 +36,7 @@
 			"image": "/images/books/detectives/key-to-unraveling/скрытые_намерения.jpeg"
 		},
 		{
+			"id": "dccf3278e2",
 			"slug": "Тень колдуна",
 			"readTime": "5 мин",
 			"author": "Наталья Калинина",
@@ -43,6 +47,7 @@
 			"image": "/images/books/detectives/key-to-unraveling/тень_колдуна.jpeg"
 		},
 		{
+			"id": "d4808f40d7",
 			"slug": "Тень у порога",
 			"readTime": "6 мин",
 			"author": "Татьяна и Анна Поляковы",
@@ -53,6 +58,7 @@
 			"image": "/images/books/detectives/key-to-unraveling/тень_у_порога.jpeg"
 		},
 		{
+			"id": "2a2c92b539",
 			"slug": "Тихие шаги",
 			"readTime": "6 мин",
 			"author": "Лена Обухова",
@@ -63,6 +69,7 @@
 			"image": "/images/books/detectives/key-to-unraveling/тихие_шаги.jpeg"
 		},
 		{
+			"id": "85a12fc322",
 			"slug": "Токийская головоломка",
 			"readTime": "6 мин",
 			"author": "Содзи Симара",
@@ -73,6 +80,7 @@
 			"image": "/images/books/detectives/key-to-unraveling/токийская_головоломка.jpeg"
 		},
 		{
+			"id": "030d73d1cb",
 			"slug": "Токийский зодиак",
 			"readTime": "6 мин",
 			"author": "Содзи Симара",

@@ -3,9 +3,12 @@ import { FC } from 'react'
 import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
 import { SliderOurChoice } from '@/widgets/SliderOurChoice'
-import { allReviewsRoutes, EnAllReviewsRoutesKeys } from '../../constants/routes'
+import {
+	allReviewsRoutes,
+	EnAllReviewsRoutesKeys,
+} from '../../constants/routes'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const OurChoice: FC<Props> = ({ className }) => {
 	const ourChoice = useQuery({
@@ -15,6 +18,10 @@ const OurChoice: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderOurChoice
+			buttonsID={{
+				next: 'dstgtiuo9ytthrfvyt',
+				prev: 'psvdkovdwvcwonefvonwiu',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.choice].title}
 			books={ourChoice.data}
 			className={className}

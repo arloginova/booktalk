@@ -9,23 +9,31 @@ import {
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const NotFiction: FC<Props> = ({ className }) => {
 	const notFiction = useQuery({
 		queryKey: ['reviews', EnAllReviewsRoutesKeys['all-not-fiction']],
-		queryFn: allReviewsRoutes[EnAllReviewsRoutesKeys['all-not-fiction']].queryFn,
+		queryFn:
+			allReviewsRoutes[EnAllReviewsRoutesKeys['all-not-fiction']].queryFn,
 	})
 
 	return (
 		<SliderReviews
+			buttonsID={{
+				next: 'tdftfetrtrtetretretretr',
+				prev: 'dijcijdsvfoidoivjfoirew',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys['all-not-fiction']].title}
 			reviews={notFiction.data}
 			className={className}
-			redirectOverrideType={allReviewsRoutes[EnAllReviewsRoutesKeys['all-not-fiction']].href}
+			redirectOverrideType={
+				allReviewsRoutes[EnAllReviewsRoutesKeys['all-not-fiction']].href
+			}
 			headLink={{
-				href: `${EnRoutes.reviews}/${allReviewsRoutes[EnAllReviewsRoutesKeys['all-not-fiction']].href
-					}`,
+				href: `${EnRoutes.reviews}/${
+					allReviewsRoutes[EnAllReviewsRoutesKeys['all-not-fiction']].href
+				}`,
 				text: 'Подробнее',
 			}}
 		/>

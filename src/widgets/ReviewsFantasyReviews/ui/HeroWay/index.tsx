@@ -9,7 +9,7 @@ import {
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const HeroWay: FC<Props> = ({ className }) => {
 	const heroWay = useQuery({
@@ -19,12 +19,17 @@ const HeroWay: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderReviews
+			buttonsID={{
+				next: 'asuydsauygdsaguydgsadsuyag',
+				prev: 'uuuuuuuhfueiufefiue',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.heroWay].title}
 			reviews={heroWay.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${allReviewsRoutes[EnAllReviewsRoutesKeys.heroWay].href
-					}`,
+				href: `${EnRoutes.collections}/${
+					allReviewsRoutes[EnAllReviewsRoutesKeys.heroWay].href
+				}`,
 				text: 'Подробнее',
 			}}
 		/>

@@ -9,7 +9,7 @@ import {
 import { EnRoutes } from '@/shared/constants'
 import { SliderReviews } from '@/widgets/SliderReviews'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const UnforgettableGoosebumps: FC<Props> = ({ className }) => {
 	const unforgettableGoosebumpsBooks = useQuery({
@@ -20,14 +20,19 @@ const UnforgettableGoosebumps: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderReviews
+			buttonsID={{
+				next: 'gbweyfgirugurghurguhrg',
+				prev: 'gijiidnjcdscnjcewie',
+			}}
 			title={
 				allReviewsRoutes[EnAllReviewsRoutesKeys.unforgettableGoosebumps].title
 			}
 			reviews={unforgettableGoosebumpsBooks.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${allReviewsRoutes[EnAllReviewsRoutesKeys.unforgettableGoosebumps].href
-					}`,
+				href: `${EnRoutes.collections}/${
+					allReviewsRoutes[EnAllReviewsRoutesKeys.unforgettableGoosebumps].href
+				}`,
 				text: 'Подробнее',
 			}}
 		/>

@@ -19,6 +19,10 @@ const StepsBestVersion: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderBooks
+			buttonsID={{
+				next: 'hottohtihotihtoihtihtoht',
+				prev: 'qwtyytwqwqetywtewtewtyewt',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.stepsBestVersion].title}
 			books={stepsBestVersionBooks.data}
 			className={className}

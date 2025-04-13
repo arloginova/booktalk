@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { TelegramIcon } from '@/shared/icons'
 import { useScreen } from '@/shared/hooks'
 import { MD_MID, XS_MID } from '@/shared/constants'
+import { TELEGRAM_LINK } from '@/shared/constants/info'
 
 const wrapperCls =
 	'bg-blackMain p-hr-main text-whiteMain lg-mid:py-6 py-3 rounded-full flex items-center justify-between mt-auto'
@@ -16,7 +17,7 @@ const navCls =
 const linkCls = ''
 const telegramCls = ''
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const Footer: FC<Props> = ({ className }) => {
 	const { screenWidth } = useScreen()
@@ -49,7 +50,7 @@ const Footer: FC<Props> = ({ className }) => {
 					</>
 				) : null}
 			</nav>
-			<Link href='#' className={telegramCls}>
+			<Link href={TELEGRAM_LINK} className={telegramCls}>
 				<TelegramIcon className='md-mid:size-[30px] xs-mid:size-4 size-6' />
 			</Link>
 		</footer>

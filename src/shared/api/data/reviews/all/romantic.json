@@ -3,6 +3,7 @@
 	"type": "all-romantic",
 	"data": [
 		{
+			"id": "df1a23eaad",
 			"slug": "Little women",
 			"readTime": "6 мин",
 			"author": "Луиза Мей Алькотт",
@@ -13,6 +14,7 @@
 			"image": "/images/books/reviews/all/romantic/little_women.jpeg"
 		},
 		{
+			"id": "d44ce4eccc",
 			"slug": "Northanger Abbey",
 			"readTime": "6 мин",
 			"author": "Jane Austen",
@@ -23,6 +25,7 @@
 			"image": "/images/books/reviews/all/romantic/Northanger_Abbey.jpeg"
 		},
 		{
+			"id": "07f3ce830e",
 			"slug": "The picture of Dorian Grey",
 			"readTime": "6 мин",
 			"author": "Oscar Wilde",
@@ -33,6 +36,7 @@
 			"image": "/images/books/reviews/all/romantic/The_Picture_of_Dorian_Gray.webp"
 		},
 		{
+			"id": "83727b376f",
 			"slug": "Влюбленная ведьма",
 			"readTime": "6 мин",
 			"author": "Анна Джейн",
@@ -43,6 +47,7 @@
 			"image": "/images/books/reviews/all/romantic/из_моего_окна.jpeg"
 		},
 		{
+			"id": "bde934c2b5",
 			"slug": "Творец слез",
 			"readTime": "6 мин",
 			"author": "Эрин Дум",
@@ -53,6 +58,7 @@
 			"image": "/images/books/reviews/all/romantic/творец_слез.jpg"
 		},
 		{
+			"id": "90c01f7c5b",
 			"slug": "Она мне не сестра",
 			"readTime": "6 мин",
 			"author": "Алекс Хилл и Ася Лавринович",
@@ -63,6 +69,7 @@
 			"image": "/images/books/reviews/all/romantic/она_мне_не_сестра.jpeg"
 		},
 		{
+			"id": "daf8158f33",
 			"slug": "Офсайд",
 			"readTime": "6 мин",
 			"author": "Эйвери Килан",

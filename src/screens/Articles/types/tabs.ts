@@ -1,5 +1,5 @@
 enum EnCurrentTab {
-	all = 'все рецензии',
+	all = 'все статьи',
 	romantic = 'романтика',
 	detectives = 'детективы',
 	notFiction = 'нон-фикшн',

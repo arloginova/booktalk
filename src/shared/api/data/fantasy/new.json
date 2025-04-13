@@ -4,6 +4,7 @@
 	"data": [
 		{
 			"slug": "Совершенные",
+			"id": "a98230f8b1",
 			"readTime": "6 мин",
 			"author": "Марина Суржевская",
 			"quote": "«Я люблю книги. Они не предают. Не делают больно, если ты сама того не захочешь. И ещё — они не умирают. Те, кто их пишут — да»",
@@ -13,6 +14,7 @@
 			"image": "/images/books/fantasy/news/совершенные.jpeg"
 		},
 		{
+			"id": "0fd78a503f",
 			"slug": "Тёмный дар для попаданки",
 			"readTime": "6 мин",
 			"author": "Алина Углицкая и Полина Нема",
@@ -23,6 +25,7 @@
 			"image": "/images/books/fantasy/news/темный_дар_для_попаданки.jpeg"
 		},
 		{
+			"id": "3c963eba60",
 			"slug": "Четвёртое крыло",
 			"readTime": "5 мин",
 			"author": "Ребекка Яррос",
@@ -33,6 +36,7 @@
 			"image": "/images/books/fantasy/news/четвертое_крыло.jpeg"
 		},
 		{
+			"id": "d90cbbd4a1",
 			"slug": "Новое назначение",
 			"readTime": "6 мин",
 			"author": "Андрей Васильев",
@@ -43,6 +47,7 @@
 			"image": "/images/books/fantasy/news/новое_назначение.jpeg"
 		},
 		{
+			"id": "427f93c536",
 			"slug": "Любимая проблема академии драконов",
 			"readTime": "8 мин",
 			"author": "Оксана Гринберга",
@@ -53,6 +58,7 @@
 			"image": "/images/books/fantasy/news/любимая_проблема_академии_драконов.jpeg"
 		},
 		{
+			"id": "dccf3278e2",
 			"slug": "Тень колдуна",
 			"readTime": "6 мин",
 			"author": "Наталья Калинина",
@@ -63,6 +69,7 @@
 			"image": "/images/books/fantasy/news/тень_колдуна.jpeg"
 		},
 		{
+			"id": "31a3aa460f",
 			"slug": "Дракокрушение",
 			"readTime": "5 мин",
 			"author": "Тальяна Орлова",
@@ -73,6 +80,7 @@
 			"image": "/images/books/fantasy/news/дракокрушение.jpeg"
 		},
 		{
+			"id": "80a0111277",
 			"slug": "Закон силы",
 			"readTime": "5 мин",
 			"author": "Алексей Осадчук",
@@ -83,6 +91,7 @@
 			"image": "/images/books/fantasy/news/закон_силы.jpeg"
 		},
 		{
+			"id": "1e926658c4",
 			"slug": "Наследнички",
 			"readTime": "6 мин",
 			"author": "Алекс Ключевской",

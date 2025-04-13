@@ -3,6 +3,7 @@
 	"type": "not-fiction-power-of-thoughts",
 	"data": [
 		{
+			"id": "9b9009bdaf",
 			"slug": "Психология влияния",
 			"readTime": "4 мин",
 			"author": "Роберт Чалдини",
@@ -13,6 +14,7 @@
 			"image": "/images/books/not-fiction/power-of-thoughts/психология_влияния.jpeg"
 		},
 		{
+			"id": "944c054b93",
 			"slug": "Тайная Опора",
 			"readTime": "6 мин",
 			"author": "Людмила Петрановская",
@@ -23,6 +25,7 @@
 			"image": "/images/books/not-fiction/power-of-thoughts/тайная_опора.jpeg"
 		},
 		{
+			"id": "ee3ff1b0a9",
 			"slug": "Тело помнит всё",
 			"readTime": "5 мин",
 			"author": "Бессел Ван Дер Колк",
@@ -33,6 +36,7 @@
 			"image": "/images/books/not-fiction/power-of-thoughts/тело_помнит_всё.jpeg"
 		},
 		{
+			"id": "8ffcf0945e",
 			"slug": "Сила подсознания",
 			"readTime": "5 мин",
 			"author": "Джо Диспенза",
@@ -43,6 +47,7 @@
 			"image": "/images/books/not-fiction/power-of-thoughts/сила_подсознания.jpeg"
 		},
 		{
+			"id": "5b406496bd",
 			"slug": "Хрупкие Люди",
 			"readTime": "7 мин",
 			"author": "Юлия Пирумова",
@@ -53,6 +58,7 @@
 			"image": "/images/books/not-fiction/power-of-thoughts/хрупкие_люди.jpeg"
 		},
 		{
+			"id": "c981a250d4",
 			"slug": "Цифровая психология",
 			"readTime": "7 мин",
 			"author": "Алекс Ройтблат",
@@ -63,6 +69,7 @@
 			"image": "/images/books/not-fiction/power-of-thoughts/цифровая_психология.jpeg"
 		},
 		{
+			"id": "60b8202aa2",
 			"slug": "С тобой я дома",
 			"readTime": "6 мин",
 			"author": "Ольга Примаченко",
@@ -73,6 +80,7 @@
 			"image": "/images/books/not-fiction/power-of-thoughts/с_тобой_я_дома.jpeg"
 		},
 		{
+			"id": "c20b040bd6",
 			"slug": "Сила воли",
 			"readTime": "6 мин",
 			"author": "Келли Макгонигал",
@@ -83,6 +91,7 @@
 			"image": "/images/books/not-fiction/power-of-thoughts/сила_воли.jpeg"
 		},
 		{
+			"id": "41a66ab385",
 			"slug": "Разрыв",
 			"readTime": "6 мин",
 			"author": "Сьюзан Эллиотт",

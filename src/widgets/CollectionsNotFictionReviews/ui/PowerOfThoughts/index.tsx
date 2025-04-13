@@ -19,6 +19,10 @@ const PowerOfThoughts: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderBooks
+			buttonsID={{
+				next: 'rerreytscvcbvncbfm',
+				prev: 'jnfbnjgbjngbgjngbnj',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.powerOfThoughts].title}
 			books={powerOfThoughts.data}
 			className={className}

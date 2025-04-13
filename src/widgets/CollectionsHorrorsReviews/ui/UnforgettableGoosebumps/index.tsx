@@ -20,6 +20,10 @@ const UnforgettableGoosebumps: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderBooks
+			buttonsID={{
+				next: 'ftewtewfdewydcevcyt',
+				prev: 'ubuthbuhvtebvieiurhiurebiue',
+			}}
 			title={
 				allReviewsRoutes[EnAllReviewsRoutesKeys.unforgettableGoosebumps].title
 			}

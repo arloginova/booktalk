@@ -2,14 +2,13 @@ import { FC } from 'react'
 import { TClassName } from '@/shared/types'
 import { cn } from '@/shared/lib'
 import { UiGridElemWrapper } from '@/shared/ui'
-import { NavigationTabs } from '@/widgets/NavigationTabs'
-import { TABS } from '../constants/tabs'
+// import { NavigationTabs } from '@/widgets/NavigationTabs'
+// import { TABS } from '../constants/tabs'
 import { notFound } from 'next/navigation'
 import { returnComponent } from '../lib/returnComponent'
 import { EnCurrentTab } from '../types/tabs'
 
-const wrapperCls = 'my-[var(--main-blocks-gap)]'
-const navCls = 'mt-35 mb-16'
+const wrapperCls = 'my-[var(--main-blocks-gap)]  '
 
 interface Props extends TClassName {
 	genre?: string
@@ -35,7 +34,8 @@ const ArticlesScreen: FC<Props> = ({ className, genre }) => {
 			plaque='тематические статьи'
 			className={cn(wrapperCls, className)}
 		>
-			<NavigationTabs links={TABS} className={navCls} />
+			{/* <NavigationTabs links={TABS} className={navCls} /> */}
+			<p className='mt-35' />
 			{renderComponent}
 		</UiGridElemWrapper>
 	)

@@ -3,6 +3,7 @@
 	"type": "all-not-fiction",
 	"data": [
 		{
+			"id": "899408da34",
 			"slug": "Ты меня еще любишь",
 			"readTime": "6 мин",
 			"author": "Мишель Скин",
@@ -13,6 +14,7 @@
 			"image": "/images/books/reviews/all/not-fiction/ты_меня_еще_любишь.jpeg"
 		},
 		{
+			"id": "0300b050bf",
 			"slug": "Тревожный мозг",
 			"readTime": "6 мин",
 			"author": "Джозеф А. Аннибали",
@@ -23,6 +25,7 @@
 			"image": "/images/books/reviews/all/not-fiction/тревожный_мозг.jpeg"
 		},
 		{
+			"id": "175c0ef5f0",
 			"slug": "Иди туда, где трудно",
 			"readTime": "6 мин",
 			"author": "Таэ Юн Ким",
@@ -33,6 +36,7 @@
 			"image": "/images/books/reviews/all/not-fiction/иди_туда_где_не_трудно.jpeg"
 		},
 		{
+			"id": "38c192261a",
 			"slug": "Невидимый сценарий",
 			"readTime": "6 мин",
 			"author": "Пол Миллерд",

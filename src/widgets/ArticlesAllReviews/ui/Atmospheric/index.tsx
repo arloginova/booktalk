@@ -17,6 +17,10 @@ const Atmospheric: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderArticles
+			buttonsID={{
+				next: 'qwdwqdscvdgfhjghdfgf',
+				prev: 'rtijgreoigvriofojioediwqowq',
+			}}
 			title='атмосферные'
 			articles={atmospheric.data}
 			className={className}

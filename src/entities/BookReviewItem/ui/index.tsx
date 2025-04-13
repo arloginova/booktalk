@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { TClassName, TTag } from '@/shared/types'
 import { cn } from '@/shared/lib'
 import Image from 'next/image'
-import { UiExpandText, UiTypography } from '@/shared/ui'
+import { UiTypography } from '@/shared/ui'
 import { StarIcon } from '@/shared/icons'
 
 const wrapperCls = ''
@@ -12,11 +12,10 @@ const avatarCls =
 const avatarImageCls = 'lg-low:size-10 size-7 rounded-full'
 const starsCls = 'flex gap-x-1'
 const descriptionCls = 'lg-low:text-xl text-sm lg-low:mt-4 mt-3'
-const expandCls = 'lg-low:text-xl text-sm'
 
 type TBookReviewItemData = {
 	id: number
-	avatar: string
+	avatar?: string
 	name: string
 	grate: number
 	description: string
@@ -39,7 +38,7 @@ const BookReviewItem: FC<Props> = ({
 			<div className={headCls}>
 				<div className={avatarCls}>
 					<Image
-						src={avatar}
+						src={avatar || '/images/shared/user-account.svg'}
 						alt={name}
 						width={40}
 						height={40}
@@ -63,11 +62,9 @@ const BookReviewItem: FC<Props> = ({
 					))}
 				</div>
 			</div>
-			<UiExpandText buttonClassName={expandCls}>
-				<UiTypography font='Raleway-M' tag='p' className={descriptionCls}>
-					{description}
-				</UiTypography>
-			</UiExpandText>
+			<UiTypography font='Raleway-M' tag='p' className={descriptionCls}>
+				{description}
+			</UiTypography>
 		</Tag>
 	)
 }

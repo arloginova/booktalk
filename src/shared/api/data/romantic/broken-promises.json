@@ -3,6 +3,7 @@
 	"type": "romantic-broken-promises",
 	"data": [
 		{
+			"id": "8c7884baed",
 			"slug": "Предел скорости",
 			"readTime": "6 мин",
 			"author": "Тери Нова",
@@ -13,6 +14,7 @@
 			"image": "/images/books/romantic/broken-promises/предел_скорости.jpeg"
 		},
 		{
+			"id": "012784b246",
 			"slug": "Из моего окна",
 			"readTime": "6 мин",
 			"author": "Ариана Годой",
@@ -23,6 +25,7 @@
 			"image": "/images/books/romantic/broken-promises/из_моего_окна.jpeg"
 		},
 		{
+			"id": "d2ca388293",
 			"slug": "Ложь за ложью",
 			"readTime": "6 мин",
 			"author": "Елена Хантинг",
@@ -33,6 +36,7 @@
 			"image": "/images/books/romantic/broken-promises/ложь_за_ложью.jpeg"
 		},
 		{
+			"id": "21360ea2a8",
 			"slug": "Гордость и предубеждение",
 			"readTime": "6 мин",
 			"author": "Джейн Остен",
@@ -43,6 +47,7 @@
 			"image": "/images/books/romantic/broken-promises/гордость_и_предубеждение.jpeg"
 		},
 		{
+			"id": "cc3ce4ebef",
 			"slug": "Шагай",
 			"readTime": "6 мин",
 			"author": "Хельга Петерсон",
@@ -53,6 +58,7 @@
 			"image": "/images/books/romantic/broken-promises/шагай.jpeg"
 		},
 		{
+			"id": "bf8777cdb0",
 			"slug": "В пепел",
 			"readTime": "6 мин",
 			"author": "Юлия Ода",
@@ -63,6 +69,7 @@
 			"image": "/images/books/romantic/broken-promises/в_пепел.jpeg"
 		},
 		{
+			"id": "bd5994125a",
 			"slug": "Разбей",
 			"readTime": "6 мин",
 			"author": "Фэя Моран",

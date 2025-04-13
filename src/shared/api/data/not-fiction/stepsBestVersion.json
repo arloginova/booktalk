@@ -3,6 +3,7 @@
 	"type": "not-fiction-steps-best-version",
 	"data": [
 		{
+			"id": "df1aff6b22",
 			"slug": "Моя лола",
 			"readTime": "5 мин",
 			"author": "Наталья Ремиш",
@@ -13,6 +14,7 @@
 			"image": "/images/books/not-fiction/steps-best-version/моя_лола.jpeg"
 		},
 		{
+			"id": "b96721ad89",
 			"slug": "Бизнес ведьмы",
 			"readTime": "5 мин",
 			"author": "Светлана Комарова и Елена Рисберг",
@@ -23,6 +25,7 @@
 			"image": "/images/books/not-fiction/steps-best-version/бизнес_ведьмы.jpeg"
 		},
 		{
+			"id": "5520e31038",
 			"slug": "Невроз и личностный рост",
 			"readTime": "6 мин",
 			"author": "Карен Хорни",
@@ -33,6 +36,7 @@
 			"image": "/images/books/not-fiction/steps-best-version/невроз_и_личностный_рост.jpeg"
 		},
 		{
+			"id": "f918d26d03",
 			"slug": "Нлп",
 			"readTime": "6 мин",
 			"author": "Анвар Бакиров",
@@ -43,6 +47,7 @@
 			"image": "/images/books/not-fiction/steps-best-version/нлп.jpeg"
 		},
 		{
+			"id": "9411492c57",
 			"slug": "Код искателя",
 			"readTime": "8 мин",
 			"author": "Дони Эпстин",
@@ -53,6 +58,7 @@
 			"image": "/images/books/not-fiction/steps-best-version/код_искателя.jpeg"
 		},
 		{
+			"id": "2fd298a990",
 			"slug": "Психология лжи",
 			"readTime": "8 мин",
 			"author": "Пол Экман",
@@ -63,6 +69,7 @@
 			"image": "/images/books/not-fiction/steps-best-version/психология_лжи.jpeg"
 		},
 		{
+			"id": "ee3894fb96",
 			"slug": "Материнская любовь",
 			"readTime": "6 мин",
 			"author": "Анатолий Некрасов",
@@ -73,6 +80,7 @@
 			"image": "/images/books/not-fiction/steps-best-version/материнская_любовь.jpeg"
 		},
 		{
+			"id": "dfcf7f3093",
 			"slug": "Мужские правила",
 			"readTime": "6 мин",
 			"author": "Марк Мэнсон",
@@ -83,6 +91,7 @@
 			"image": "/images/books/not-fiction/steps-best-version/мужские_правила.jpg"
 		},
 		{
+			"id": "d7edfdb9f5",
 			"slug": "Про твою же мать",
 			"readTime": "6 мин",
 			"author": "Ирина Семизорова",
@@ -93,6 +102,7 @@
 			"image": "/images/books/not-fiction/steps-best-version/про_твою_же_мать.jpg"
 		},
 		{
+			"id": "e629378699",
 			"slug": "Лжец на кушетке",
 			"readTime": "6 мин",
 			"author": "Ирвин Ялом",
@@ -103,6 +113,7 @@
 			"image": "/images/books/not-fiction/steps-best-version/лжец_на_кушетке.jpeg"
 		},
 		{
+			"id": "caf183ca3e",
 			"slug": "Ясно, понятно",
 			"readTime": "6 мин",
 			"author": "Максим Ильяхов",
@@ -113,6 +124,7 @@
 			"image": "/images/books/not-fiction/steps-best-version/ясно_понятно.jpeg"
 		},
 		{
+			"id": "34c7338f5d",
 			"slug": "Дар",
 			"readTime": "6 мин",
 			"author": "Эдит Ева Эгер",
@@ -123,6 +135,7 @@
 			"image": "/images/books/not-fiction/steps-best-version/дар.jpeg"
 		},
 		{
+			"id": "8a19c24d4d",
 			"slug": "Воля и самоконтроль",
 			"readTime": "6 мин",
 			"author": "Ирина Якутенко",
@@ -133,6 +146,7 @@
 			"image": "/images/books/not-fiction/steps-best-version/Воля_и_самоконтроль.jpeg"
 		},
 		{
+			"id": "9c12ff54eb",
 			"slug": "Как быть стоиком",
 			"readTime": "6 мин",
 			"author": "Массимо Пильюччи",

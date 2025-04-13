@@ -19,6 +19,10 @@ const RiddleUnanswered: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderBooks
+			buttonsID={{
+				next: 'vjdsfviuwiguwrrfei',
+				prev: 'nmiurfwyeqfyudvcubv',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.riddleUnanswered].title}
 			books={riddleUnanswered.data}
 			className={className}

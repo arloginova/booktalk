@@ -33,7 +33,7 @@ const ArticleInfo: FC<Props> = async ({
 		<UiGridElemWrapper
 			Tag='section'
 			className={cn(wrapperCls, className)}
-			plaque='Рецензии'
+			plaque='Тематические статьи'
 		>
 			<div className={contentCls}>
 				<UiTypography font='Raleway-M' tag='h1' className={titleCls}>

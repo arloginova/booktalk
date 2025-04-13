@@ -9,7 +9,7 @@ import {
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
 
-interface Props extends TClassName { }
+interface Props extends TClassName {}
 
 const Mistic: FC<Props> = ({ className }) => {
 	const mistic = useQuery({
@@ -19,12 +19,17 @@ const Mistic: FC<Props> = ({ className }) => {
 
 	return (
 		<SliderReviews
+			buttonsID={{
+				next: 'gbweyfgiudsxzclcsmowowd',
+				prev: 'sdfdfdsfvffgf',
+			}}
 			title={allReviewsRoutes[EnAllReviewsRoutesKeys.mistic].title}
 			reviews={mistic.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${allReviewsRoutes[EnAllReviewsRoutesKeys.mistic].href
-					}`,
+				href: `${EnRoutes.collections}/${
+					allReviewsRoutes[EnAllReviewsRoutesKeys.mistic].href
+				}`,
 				text: 'Подробнее',
 			}}
 		/>
