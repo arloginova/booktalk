@@ -42,19 +42,28 @@ const ReviewsTypeScreen: FC<Props> = ({ className, type }) => {
 				<ul className={groupCls}>
 					{!data.data || !data.data?.length
 						? [...Array(6)].map((_, index) => (
-							<ReviewItem className={itemCls} hasSkeleton />
-						))
+								<ReviewItem
+									className={itemCls}
+									imageClassName='!h-full !w-auto'
+									gradientImageClassName='lg-low:h-[227px] xs-big:h-[180px] h-[208px]'
+									hasSkeleton
+								/>
+						  ))
 						: data.data.map(({ data, genre, type }) => {
-
-							return (
-								<Link
-									href={`${EnRoutes.reviews}/${reviewsRoutes[pageTypeKey].href}/${data.slug}`}
-									key={`${data.slug}${genre}${type}`}
-								>
-									<ReviewItem className={itemCls} {...data} />
-								</Link>
-							)
-						})}
+								return (
+									<Link
+										href={`${EnRoutes.reviews}/${reviewsRoutes[pageTypeKey].href}/${data.slug}`}
+										key={`${data.slug}${genre}${type}`}
+									>
+										<ReviewItem
+											{...data}
+											className={itemCls}
+											imageClassName='!h-full !w-auto'
+											gradientImageClassName='lg-low:h-[227px] h-[150px]'
+										/>
+									</Link>
+								)
+						  })}
 				</ul>
 			</UiMainBlockWithTitle>
 		</UiGridElemWrapper>
