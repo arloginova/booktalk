@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { TBookItem } from '../types/Book'
 import stepsBestVersion from './data/not-fiction/stepsBestVersion.json'
 import powerOfThoughts from './data/not-fiction/powerOfThoughts.json'

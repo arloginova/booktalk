@@ -9,7 +9,7 @@ const orangeCls =
 	'bg-orangeMain hover:bg-orangeExtra text-whiteMain [text-shadow:0_0_2px_var(--color-blackMain-50)]'
 const orangeExtra =
 	'bg-orangeMain  hover:bg-orangeExtra text-whiteMain [text-shadow:0_0_2px_var(--color-blackMain-50)]'
-const greyCls = 'bg-greyBackground text-blackMain hover:opacity-60'
+const greyCls = 'bg-greyBackground text-blackMain hover:bg-greyBackgroundH'
 
 const bgCls = 'absolute -z-[1]'
 const greyFlower4 =
@@ -26,7 +26,8 @@ const orangeFlower6 =
 	'lg-low:w-[192px] lg-low:h-[203px] w-[163px] h-[159px] right-0 top-0 lg-low:translate-x-[10%] translate-x-[26%] lg-low:-translate-y-[30%] -translate-y-[44%] rotate-[21deg]'
 const orangeExtraFlower4 =
 	'lg-low:size-[190px] size-[150px] lg-low:rotate-[150deg] rotate-[165deg] right-0 top-0 lg-low:translate-x-[22%] lg-low:-translate-y-[19%] translate-x-[34%] -translate-y-[24%]'
-const orangeCloud8 = 'lg-low:size-[200px] size-[170px] right-0 top-0 lg-low:-translate-y-1/2 -translate-y-[66%]'
+const orangeCloud8 =
+	'lg-low:size-[200px] size-[170px] right-0 top-0 lg-low:-translate-y-1/2 -translate-y-[66%]'
 
 type TUiArticleTheme =
 	| 'grey-flower-4'
@@ -44,7 +45,8 @@ interface TUiArticleThemeProps extends TClassName, TChildren {
 }
 
 const UiArticleTheme: FC<TUiArticleThemeProps> = ({
-	className, backgroundImageClassName,
+	className,
+	backgroundImageClassName,
 	theme,
 	Tag = 'div',
 	children,
@@ -102,16 +104,20 @@ const UiArticleTheme: FC<TUiArticleThemeProps> = ({
 				alt='Декорации'
 				width={100}
 				height={100}
-				className={cn(bgCls, {
-					[greyFlower4]: theme === 'grey-flower-4',
-					[greyStar4]: theme === 'grey-star-4',
-					[greyStar5]: theme === 'grey-star-5',
-					[greyCloud4]: theme === 'grey-cloud-4',
-					[orangeExtraStar8]: theme === 'orangeExtra-star-8',
-					[orangeFlower6]: theme === 'orange-flower-6',
-					[orangeExtraFlower4]: theme === 'orangeExtra-flower-4',
-					[orangeCloud8]: theme === 'orange-cloud-8',
-				}, backgroundImageClassName)}
+				className={cn(
+					bgCls,
+					{
+						[greyFlower4]: theme === 'grey-flower-4',
+						[greyStar4]: theme === 'grey-star-4',
+						[greyStar5]: theme === 'grey-star-5',
+						[greyCloud4]: theme === 'grey-cloud-4',
+						[orangeExtraStar8]: theme === 'orangeExtra-star-8',
+						[orangeFlower6]: theme === 'orange-flower-6',
+						[orangeExtraFlower4]: theme === 'orangeExtra-flower-4',
+						[orangeCloud8]: theme === 'orange-cloud-8',
+					},
+					backgroundImageClassName
+				)}
 			/>
 			{children}
 		</Tag>

@@ -12,19 +12,34 @@ import Link from 'next/link'
 import { reviewsRoutes } from '@/screens/BookType'
 import { EnRoutes } from '@/shared/constants'
 import Image from 'next/image'
+import { searchArticles } from '@/shared/api/searchArticle'
+import { TArticleItem } from '@/shared/types/Articles'
+import { ArticleItem } from '@/entities/ArticleItem'
+import { CHAIN } from '../../constants/chain'
+import { allReviewsRoutes } from '@/widgets/ArticlesAllReviews'
+import { type } from 'os'
+import { ReviewItem } from '@/entities/ReviewItem'
+import { searchReviews } from '@/shared/api/searchReviews'
 
 interface Props extends TClassName {}
 
 const SearchContent: FC<Props> = ({ className }) => {
 	const searchValue = useAppSelector(searchValueSelector)
 	const [findBooks, setFindBooks] = useState<TBookItem[]>([])
+	const [findArticles, setFindArticles] = useState<TArticleItem[]>([])
+	const [findReviews, setFindReviews] = useState<TBookItem[]>([])
 	const dispatch = useAppDispatch()
 
 	useDebouncedEffect(
 		() => {
 			const request = async () => {
-				const res = await searchBooks(searchValue || '')
-				setFindBooks(res)
+				const resBooks = await searchBooks(searchValue || '')
+				const resArticles = await searchArticles(searchValue || '')
+				const resReviews = await searchReviews(searchValue || '')
+
+				setFindBooks(resBooks)
+				setFindArticles(resArticles)
+				setFindReviews(resReviews)
 			}
 			request()
 		},
@@ -43,7 +58,7 @@ const SearchContent: FC<Props> = ({ className }) => {
 				className
 			)}
 		>
-			{findBooks.length ? (
+			{findBooks.length || findArticles.length ? (
 				<div className='flex flex-col gap-y-[inherit]'>
 					{findBooks.map(({ data: { author, slug, image }, genre, type }) => (
 						<Link
@@ -67,6 +82,39 @@ const SearchContent: FC<Props> = ({ className }) => {
 									{author}
 								</UiTypography>
 							</div>
+						</Link>
+					))}
+
+					{findReviews.map(({ data, genre, type }) => (
+						<Link
+							onClick={handleRedirect}
+							key={`${data.slug}${genre}${type}`}
+							href={`${EnRoutes.reviews}/${type}/${data.slug}`}
+						>
+							<ReviewItem
+								withoutText
+								gradientImageClassName='h-[223px]'
+								imageClassName='!h-full !w-auto'
+								key={data.id}
+								{...data}
+							/>
+						</Link>
+					))}
+					{findArticles.map(({ data, genre, type }) => (
+						<Link
+							onClick={handleRedirect}
+							href={`${EnRoutes.articles}${
+								allReviewsRoutes[type].href
+							}/${data.title.replace('?', '')}`}
+							key={`${data.title}${genre}${type}`}
+						>
+							<ArticleItem
+								className='h-[223px]'
+								withoutText
+								theme={CHAIN[Math.floor(Math.random() * CHAIN.length + 1)]}
+								key={data.id}
+								{...data}
+							/>
 						</Link>
 					))}
 				</div>

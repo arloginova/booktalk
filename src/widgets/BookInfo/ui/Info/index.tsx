@@ -19,9 +19,17 @@ const expandCls = 'lg-low:text-xl text-sm'
 
 interface Props
 	extends TClassName,
-	Pick<TBookData, 'slug' | 'description' | 'author'> { }
+		Pick<TBookData, 'slug' | 'description' | 'author'> {
+	reviewGrate: number | null
+}
 
-const Info: FC<Props> = ({ className, description, slug, author }) => {
+const Info: FC<Props> = ({
+	className,
+	description,
+	slug,
+	author,
+	reviewGrate,
+}) => {
 	return (
 		<div className={cn(wrapperCls, className)}>
 			<UiTypography font='Raleway-M' tag='h1' className={titleCls}>
@@ -36,8 +44,12 @@ const Info: FC<Props> = ({ className, description, slug, author }) => {
 						fill='var(--color-blackMain)'
 						className='lg-low:size-6 size-5'
 					/>
-					<UiTypography font='Muller-M' tag='p' className="lg-low:translate-y-0 translate-y-0.5">
-						4,7
+					<UiTypography
+						font='Muller-M'
+						tag='p'
+						className='lg-low:translate-y-0 translate-y-0.5'
+					>
+						{reviewGrate?.toFixed(1) || 'Нет данных'}
 					</UiTypography>
 				</div>
 				<div className={starsCls}>

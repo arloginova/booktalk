@@ -4,6 +4,7 @@ import { cn } from '@/shared/lib'
 import Image from 'next/image'
 import { UiTypography } from '@/shared/ui'
 import { StarIcon } from '@/shared/icons'
+import { TBookReview } from '@/shared/types/Book'
 
 const wrapperCls = ''
 const headCls = 'flex justify-between items-center'
@@ -16,10 +17,7 @@ const descriptionCls = 'lg-low:text-xl text-sm lg-low:mt-4 mt-3'
 type TBookReviewItemData = {
 	id: number
 	avatar?: string
-	name: string
-	grate: number
-	description: string
-}
+} & TBookReview
 
 interface Props extends TClassName, TBookReviewItemData {
 	Tag?: TTag
@@ -28,7 +26,7 @@ interface Props extends TClassName, TBookReviewItemData {
 const BookReviewItem: FC<Props> = ({
 	avatar,
 	Tag = 'div',
-	description,
+	text,
 	grate,
 	name,
 	className,
@@ -63,7 +61,7 @@ const BookReviewItem: FC<Props> = ({
 				</div>
 			</div>
 			<UiTypography font='Raleway-M' tag='p' className={descriptionCls}>
-				{description}
+				{text}
 			</UiTypography>
 		</Tag>
 	)

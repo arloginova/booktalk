@@ -36,6 +36,7 @@ interface Props extends TClassName {
 		prev: string
 		next: string
 	}
+	customButtons?: boolean
 }
 
 const SliderBooks: FC<Props> = ({
@@ -47,6 +48,7 @@ const SliderBooks: FC<Props> = ({
 	titleFont,
 	buttonsID,
 	sliderClassName,
+	customButtons,
 }) => {
 	let curRepeatItemIndex = -1
 
@@ -59,12 +61,14 @@ const SliderBooks: FC<Props> = ({
 			className={cn(wrapperCls, className)}
 		>
 			<div className='relative'>
-				<button
-					className='absolute -rotate-180 top-[45%] left-0 -translate-1/2 z-10 bg-whiteMain rounded-full'
-					id={buttonsID.prev}
-				>
-					<ArrowIcon />
-				</button>
+				{!customButtons ? (
+					<button
+						className='absolute -rotate-180 top-[45%] left-0 -translate-1/2 z-10 bg-whiteMain rounded-full'
+						id={buttonsID.prev}
+					>
+						<ArrowIcon />
+					</button>
+				) : null}
 				<Swiper
 					className={cn(sliderCls, sliderClassName)}
 					{...sliderConfig()}
@@ -123,12 +127,14 @@ const SliderBooks: FC<Props> = ({
 						</>
 					)}
 				</Swiper>
-				<button
-					className='absolute bg-whiteMain rounded-full top-[45%] right-0 -translate-y-1/2 translate-x-1/2 z-10'
-					id={buttonsID.next}
-				>
-					<ArrowIcon />
-				</button>
+				{!customButtons ? (
+					<button
+						className='absolute bg-whiteMain rounded-full top-[45%] right-0 -translate-y-1/2 translate-x-1/2 z-10'
+						id={buttonsID.next}
+					>
+						<ArrowIcon />
+					</button>
+				) : null}
 			</div>
 		</UiMainBlockWithTitle>
 	)

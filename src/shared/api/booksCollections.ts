@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { API_MOCK_REQUEST_TIME_MS } from '../constants'
 import { TBookData, TBookItem } from '../types/Book'
 import fantasyNew from './data/fantasy/new.json'

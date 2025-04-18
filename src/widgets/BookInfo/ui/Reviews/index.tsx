@@ -3,8 +3,8 @@ import { FC, MouseEventHandler, useState } from 'react'
 import { TClassName } from '@/shared/types'
 import { cn } from '@/shared/lib'
 import { UiButton, UiTypography } from '@/shared/ui'
-import { LOAD_STEP, REVIEWS } from '../../constants/reviews'
 import { BookReviewItem } from '@/entities/BookReviewItem'
+import { TBookData, TBookReview } from '@/shared/types/Book'
 
 const wrapperCls = ''
 const headCls =
@@ -14,14 +14,16 @@ const reviewsCountCls = 'uppercase'
 const reviewsCls = 'flex flex-col lg-low:gap-y-8 gap-y-4'
 const btnCls = 'lg-low:mt-8 mt-3.5 lg-low:text-base text-xs'
 
-interface Props extends TClassName {}
+interface Props extends TClassName, Pick<TBookData, 'userReviews'> {}
 
-const Reviews: FC<Props> = ({ className }) => {
-	const [dataIndex, setDataIndex] = useState<number>(LOAD_STEP)
+const Reviews: FC<Props> = ({ className, userReviews }) => {
+	const [dataIndex, setDataIndex] = useState<number>(3)
 
 	const handleMore: MouseEventHandler = () => {
-		setDataIndex(cur => cur + LOAD_STEP)
+		setDataIndex(cur => cur + 3)
 	}
+
+	const reviews = [...userReviews].splice(1)
 
 	return (
 		<div className={cn(wrapperCls, className)}>
@@ -37,7 +39,7 @@ const Reviews: FC<Props> = ({ className }) => {
 						tag='span'
 						className='text-greyExtra lg-low:ml-3 ml-1'
 					>
-						{REVIEWS.length}
+						{userReviews.length - 1}
 					</UiTypography>
 				</UiTypography>
 				<button className={addReviewCls}>
@@ -46,17 +48,21 @@ const Reviews: FC<Props> = ({ className }) => {
 					</UiTypography>
 				</button>
 			</div>
-			<ul className={reviewsCls}>
-				{REVIEWS.map((data, index) =>
-					index <= dataIndex - 1 ? (
-						<BookReviewItem {...data} key={data.id} />
-					) : null
-				)}
-			</ul>
-			{REVIEWS.length >= dataIndex - 1 ? (
-				<UiButton className={btnCls} onClick={handleMore}>
-					Показать еще
-				</UiButton>
+			{userReviews[0] ? (
+				<ul className={reviewsCls}>
+					{(reviews as TBookReview[]).map((data, index) =>
+						index <= dataIndex - 1 ? (
+							<BookReviewItem {...data} id={index} avatar='' key={index} />
+						) : null
+					)}
+				</ul>
+			) : null}
+			{userReviews[0] ? (
+				reviews.length >= dataIndex - 1 ? (
+					<UiButton className={btnCls} onClick={handleMore}>
+						Показать еще
+					</UiButton>
+				) : null
 			) : null}
 		</div>
 	)

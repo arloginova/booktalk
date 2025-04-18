@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { TBookData, TBookItem } from '../types/Book'
 import { API_MOCK_REQUEST_TIME_MS } from '../constants'
 

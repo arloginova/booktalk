@@ -23,7 +23,7 @@ const NotFiction: FC<Props> = ({ className }) => {
 				next: 'udwfuewghrghirgrihrihgrihgr',
 				prev: 'dcbsfcdvrgourgurogr',
 			}}
-			title='популярное'
+			title='ужасы'
 			books={notFiction.data}
 			className={className}
 			headLink={{

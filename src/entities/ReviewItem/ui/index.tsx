@@ -21,6 +21,7 @@ type Props = TClassName &
 				imageClassName?: string
 				gradientImageClassName?: string
 				hasSkeleton: true
+				withoutText?: boolean
 		  } & {
 				[K in keyof Pick<
 					TBookData,
@@ -31,6 +32,7 @@ type Props = TClassName &
 				imageClassName?: string
 				gradientImageClassName?: string
 				hasSkeleton?: never
+				withoutText?: boolean
 		  } & Pick<TBookData, 'image' | 'reviewName' | 'slug' | 'readTime'>)
 	)
 
@@ -43,6 +45,7 @@ const ReviewItem: FC<Props> = ({
 	hasSkeleton,
 	gradientImageClassName,
 	imageClassName,
+	withoutText,
 }) => {
 	return (
 		<div className={cn(itemCls, className)}>
@@ -59,27 +62,33 @@ const ReviewItem: FC<Props> = ({
 					slug={slug}
 				/>
 			)}
-			<div className={infoCls}>
-				{hasSkeleton ? (
-					<UiSkeleton
-						className={cn(itemTitleCls, 'max-w-none')}
-						isAbsolute={false}
-					>
-						<UiTypography font='Raleway-M' tag='h2'>
-							{reviewName}
-						</UiTypography>
-					</UiSkeleton>
-				) : (
-					<>
-						<UiTypography font='Raleway-M' tag='h2' className={itemTitleCls}>
-							{reviewName}
-						</UiTypography>
-						<UiTypography font='Raleway-M' tag='h2' className={itemSubtitleCls}>
-							<BookIcon fill='var(--color-greyExtra)' /> {readTime}
-						</UiTypography>
-					</>
-				)}
-			</div>
+			{!withoutText ? (
+				<div className={infoCls}>
+					{hasSkeleton ? (
+						<UiSkeleton
+							className={cn(itemTitleCls, 'max-w-none')}
+							isAbsolute={false}
+						>
+							<UiTypography font='Raleway-M' tag='h2'>
+								{reviewName}
+							</UiTypography>
+						</UiSkeleton>
+					) : (
+						<>
+							<UiTypography font='Raleway-M' tag='h2' className={itemTitleCls}>
+								{reviewName}
+							</UiTypography>
+							<UiTypography
+								font='Raleway-M'
+								tag='h2'
+								className={itemSubtitleCls}
+							>
+								<BookIcon fill='var(--color-greyExtra)' /> {readTime}
+							</UiTypography>
+						</>
+					)}
+				</div>
+			) : null}
 		</div>
 	)
 }

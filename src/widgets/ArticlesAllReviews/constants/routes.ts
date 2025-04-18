@@ -1,5 +1,8 @@
 import {
 	articlesAtmospheric,
+	articlesBrightEmotions,
+	articlesCinemaAndSeries,
+	articlesEasyRead,
 	articlesNews,
 	articlesOurChoice,
 	articlesPopular,
@@ -36,6 +39,21 @@ const allReviewsRoutes: Record<
 		title: 'Наш выбор',
 		//@ts-ignore
 		queryFn: articlesOurChoice,
+	},
+	'cinema-and-series': {
+		href: '/cinema-and-series',
+		title: 'Кино и сериалы',
+		queryFn: articlesCinemaAndSeries,
+	},
+	'easy-read': {
+		href: '/easy-read',
+		title: 'Легкое чтение',
+		queryFn: articlesEasyRead,
+	},
+	'bright-emotions': {
+		href: '/bright-emotions',
+		title: 'Яркие эмоции',
+		queryFn: articlesBrightEmotions,
 	},
 }
 

@@ -6,6 +6,9 @@ import { New } from './New'
 import { OurChoice } from './OurChoice'
 import { RomanticMood } from './RomanticMood'
 import { Atmospheric } from './Atmospheric'
+import { BrightEmotions } from './BrightEmotions'
+import { CinemaAndSeries } from './EasyRead'
+import { EasyRead } from './BrightEmotions copy 2'
 
 const wrapperCls = 'flex flex-col gap-y-16'
 
@@ -19,6 +22,10 @@ const ArticlesAllReviews: FC<Props> = ({ className }) => {
 			<OurChoice />
 			<RomanticMood />
 			<Atmospheric />
+			<EasyRead />
+			{/* <OurChoice /> */}
+			<CinemaAndSeries />
+			<BrightEmotions />
 		</section>
 	)
 }

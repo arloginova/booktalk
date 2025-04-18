@@ -3,7 +3,6 @@ import { FC } from 'react'
 import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
 import { SliderOurChoice } from '@/widgets/SliderOurChoice'
-import { romanticOurChoiceBooks } from '@/shared/api/romanticBooks'
 import {
 	allReviewsRoutes,
 	EnAllReviewsRoutesKeys,
@@ -23,7 +22,7 @@ const OurChoice: FC<Props> = ({ className }) => {
 				next: 'sdaadsadsadsdsaqwqwwqwdqwqwqwwq',
 				prev: 'opiuyrtfkjgtrtrfgfdfgb',
 			}}
-			title={allReviewsRoutes[EnAllReviewsRoutesKeys.choice].title}
+			title={'детективы'}
 			books={ourChoice.data}
 			className={className}
 		/>

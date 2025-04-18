@@ -4,7 +4,10 @@ import { UiGridElemWrapper, UiTypography } from '@/shared/ui'
 import { notFound } from 'next/navigation'
 import { cn } from '@/shared/lib'
 import { TDynamicParams } from '@/screens/Review'
-import { EnReviewsTypes, reviewsFindOneBySlugRequest } from '@/shared/api/reviewsList'
+import {
+	EnReviewsTypes,
+	reviewsFindOneBySlugRequest,
+} from '@/shared/api/reviewsList'
 import { ArticleBookItem } from '@/entities/ArticleBookItem'
 
 const wrapperCls = ''
@@ -35,19 +38,27 @@ const ReviewsInfo: FC<Props> = async ({
 		>
 			<div className={contentCls}>
 				<ArticleBookItem
+					litresLink={responseData.data.litresLink}
 					author={responseData.data.author}
 					bookTitle={responseData.data.slug}
 					image={responseData.data.image}
 					className='mt-[110px] '
 				/>
-				{responseData.data.quote ? <UiTypography className='lg-low:text-lg text-xs p-main lg-low:rounded-[20px] rounded-2xl text-center bg-greyBackground leading-[130%] lg-low:mt-10 mt-8' font="Raleway-M" tag="blockquote">«{responseData.data.quote.replace('»', '').replace('«', '')}»</UiTypography> : null}
+				{responseData.data.quote ? (
+					<UiTypography
+						className='lg-low:text-lg text-xs p-main lg-low:rounded-[20px] rounded-2xl text-center bg-greyBackground leading-[130%] lg-low:mt-10 mt-8'
+						font='Raleway-M'
+						tag='blockquote'
+					>
+						«{responseData.data.quote.replace('»', '').replace('«', '')}»
+					</UiTypography>
+				) : null}
 				<UiTypography font='Raleway-M' tag='h1' className={titleCls}>
 					{responseData.data.slug}
 				</UiTypography>
 				<UiTypography font='Raleway-M' tag='h1' className={introductionCls}>
 					{responseData.data.review}
 				</UiTypography>
-
 			</div>
 		</UiGridElemWrapper>
 	)

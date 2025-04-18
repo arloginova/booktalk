@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { API_MOCK_REQUEST_TIME_MS } from '../constants'
 import { TBookItem } from '../types/Book'
 import reviewsAllPopular from './data/reviews/all/popular.json'

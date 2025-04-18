@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { TBookItem } from '../types/Book'
 import popular from './data/romantic/popular.json'
 import news from './data/romantic/new.json'

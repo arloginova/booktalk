@@ -26,7 +26,7 @@ const contentCls = 'flex items-start mt-35 mb-15 lg-big:gap-x-15 gap-x-12'
 const titleCls = 'lg-big:text-2xl uppercase'
 const subtitleCls = 'lg-big:text-xl text-sm mt-4 mb-5 leading-[130%]'
 const btnCls = 'lg-big:text-base text-xs'
-const sliderCls = 'grow overflow-hidden'
+const sliderCls = 'grow overflow-hidden px-[21px]'
 
 interface Props extends TClassName {
 	setScreen: TState<EnScreens>

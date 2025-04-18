@@ -23,7 +23,7 @@ const Romantic: FC<Props> = ({ className }) => {
 				next: 'cuwquefefduyfeduyfeuyfe',
 				prev: 'dweuqfrgorgovfuygbsfwivc',
 			}}
-			title='атмосферные'
+			title='популярное'
 			books={romantic.data}
 			className={className}
 			headLink={{

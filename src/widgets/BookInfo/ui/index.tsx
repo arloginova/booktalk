@@ -32,7 +32,7 @@ const BookInfo: FC<Props> = async ({ className, params: { book, type } }) => {
 	if (!responseData) notFound()
 
 	const {
-		data: { author, image, slug, description },
+		data: { author, image, slug, description, litresLink, userReviews },
 	} = responseData
 
 	return (
@@ -42,15 +42,21 @@ const BookInfo: FC<Props> = async ({ className, params: { book, type } }) => {
 			plaque={['Книги', responseData.genre]}
 		>
 			<div className={contentCls}>
-				<Image image={image} slug={slug} className={imageCls} />
+				<Image
+					image={image}
+					slug={slug}
+					className={imageCls}
+					litresLink={litresLink}
+				/>
 				<div className={reviewsCls}>
 					<Info
+						reviewGrate={userReviews[0]}
 						author={author}
 						description={description}
 						slug={slug}
 						className={infoCls}
 					/>
-					<Reviews className={reviewsContentCls} />
+					<Reviews className={reviewsContentCls} userReviews={userReviews} />
 				</div>
 			</div>
 		</UiGridElemWrapper>
