@@ -66,7 +66,7 @@ const HomeHero: FC<Props> = ({ className }) => {
 				>
 					<Image
 						className='absolute right-0 bottom-0 h-auto lg-big:w-[185px] md-mid:w-[130px] w-[135px]'
-						src='/images/Home/backgrounds/test.png'
+						src='/images/Home/backgrounds/test.webp'
 						alt='Booktalk quiz'
 						width={185}
 						height={370}
@@ -105,7 +105,7 @@ const HomeHero: FC<Props> = ({ className }) => {
 						{screenWidth >= MD_MID ? (
 							<Image
 								className=''
-								src='/images/Home/backgrounds/about-platform.png'
+								src='/images/Home/backgrounds/about-platform.webp'
 								alt='Booktalk quiz'
 								width={430}
 								height={295}
@@ -116,7 +116,7 @@ const HomeHero: FC<Props> = ({ className }) => {
 				{screenWidth < MD_MID ? (
 					<UiGridElemWrapper className={aboutPlatformImageCls}>
 						<Image
-							src='/images/Home/backgrounds/about-platform.png'
+							src='/images/Home/backgrounds/about-platform.webp'
 							alt='Booktalk quiz'
 							width={268}
 							height={183}

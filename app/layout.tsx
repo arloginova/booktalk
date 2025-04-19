@@ -3,13 +3,13 @@ import './globals.css'
 import { QueryProvider, ReduxProvider } from '@/app/layouts'
 import YandexMetrika from '@/app/layouts/YandexMetric'
 
-const analyticsEnabled = !!(process.env.NODE_ENV === "production")
+const analyticsEnabled = !!(process.env.NODE_ENV === 'production')
 
 export const metadata: Metadata = {
 	title: 'Booktalk',
 	description: '',
 	icons: {
-		icon: '/images/favicon.png', // /public path
+		icon: '/images/favicon.webp', // /public path
 	},
 }
 

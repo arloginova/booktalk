@@ -17,7 +17,7 @@ const UiTestDecorImage: FC<TUiTestDecorImageProps> = ({
 	return (
 		<Tag className={cn(wrapperCls, className)}>
 			<Image
-				src='/images/Test/backgrounds/main-background.png'
+				src='/images/Test/backgrounds/main-background.webp'
 				alt='фон'
 				width={1405}
 				height={715}

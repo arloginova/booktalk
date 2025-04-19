@@ -32,7 +32,7 @@ const TestBlockWrapper: FC<Props> = ({
 		<div className={cn(wrapperCls, className)}>
 			{screenWidth >= MD_MID ? (
 				<Image
-					src='/images/Test/backgrounds/main-background.png'
+					src='/images/Test/backgrounds/main-background.webp'
 					alt='фон'
 					width={1405}
 					height={715}
