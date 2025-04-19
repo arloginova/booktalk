@@ -17,7 +17,6 @@ const ModernRomance: FC<Props> = ({ className }) => {
 		queryFn:
 			romanticReviewsRoutes[EnAllReviewsRoutesKeys.modernRomance].queryFn,
 	})
-	console.log(romanticReviewsRoutes[EnAllReviewsRoutesKeys.modernRomance].href)
 
 	return (
 		<SliderReviews

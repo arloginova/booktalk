@@ -9,6 +9,7 @@ import {
 	searchValueSelector,
 	setSearchValue,
 	setIsMobileVisible,
+	setIsSearching,
 } from '@/shared/store/searchSlice'
 import { cn } from '@/shared/lib'
 
@@ -27,6 +28,7 @@ const SearchInput: FC<Props> = ({ className }) => {
 	const handleSearch: ChangeEventHandler<HTMLInputElement> = event => {
 		dispatch(setSearchValue(event.target.value))
 		dispatch(setIsMobileVisible(true))
+		dispatch(setIsSearching(true))
 	}
 
 	return (

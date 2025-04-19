@@ -268,8 +268,6 @@ export const searchReviews = async (slug: string): Promise<TBookItem[]> => {
 			)
 			.map(result => (result as PromiseFulfilledResult<TBookItem>).value)
 
-		console.log(results)
-
 		const uniqueResults = successfulResults.reduce(
 			(acc: TBookItem[], current) => {
 				if (!acc.some(item => item.data.id === current.data.id)) {

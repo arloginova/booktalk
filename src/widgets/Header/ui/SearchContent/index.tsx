@@ -3,8 +3,13 @@ import { FC, MouseEventHandler, useState } from 'react'
 import { TClassName } from '@/shared/types'
 import { cn } from '@/shared/lib'
 import { useAppDispatch, useAppSelector } from '@/shared/hooks/redux'
-import { searchValueSelector, setSearchValue } from '@/shared/store/searchSlice'
-import { UiTypography } from '@/shared/ui'
+import {
+	isSearchingSelector,
+	searchValueSelector,
+	setIsSearching,
+	setSearchValue,
+} from '@/shared/store/searchSlice'
+import { UiSpinner, UiTypography } from '@/shared/ui'
 import { searchBooks } from '@/shared/api/searchBook'
 import { useDebouncedEffect } from '@/shared/hooks/useDebounceEffect'
 import { TBookItem } from '@/shared/types/Book'
@@ -27,11 +32,13 @@ const SearchContent: FC<Props> = ({ className }) => {
 	const [findBooks, setFindBooks] = useState<TBookItem[]>([])
 	const [findArticles, setFindArticles] = useState<TArticleItem[]>([])
 	const [findReviews, setFindReviews] = useState<TBookItem[]>([])
+	const isSearching = useAppSelector(isSearchingSelector)
 	const dispatch = useAppDispatch()
 
 	useDebouncedEffect(
 		() => {
 			const request = async () => {
+				dispatch(setIsSearching(true))
 				const resBooks = await searchBooks(searchValue || '')
 				const resArticles = await searchArticles(searchValue || '')
 				const resReviews = await searchReviews(searchValue || '')
@@ -39,6 +46,7 @@ const SearchContent: FC<Props> = ({ className }) => {
 				setFindBooks(resBooks)
 				setFindArticles(resArticles)
 				setFindReviews(resReviews)
+				dispatch(setIsSearching(false))
 			}
 			request()
 		},
@@ -57,7 +65,8 @@ const SearchContent: FC<Props> = ({ className }) => {
 				className
 			)}
 		>
-			{findBooks.length || findArticles.length ? (
+			{(findBooks.length || findArticles.length || findReviews.length) &&
+			!isSearching ? (
 				<div className='flex flex-col gap-y-[inherit]'>
 					{findBooks.map(({ data: { author, slug, image }, genre, type }) => (
 						<Link
@@ -118,7 +127,7 @@ const SearchContent: FC<Props> = ({ className }) => {
 							<ArticleItem
 								className='lg-mid:h-[223px] h-[155px]'
 								withoutText
-								theme={CHAIN[Math.floor(Math.random() * CHAIN.length + 1)]}
+								theme={CHAIN[Math.floor(Math.random() * CHAIN.length)]}
 								key={data.id}
 								{...data}
 							/>
@@ -127,9 +136,13 @@ const SearchContent: FC<Props> = ({ className }) => {
 				</div>
 			) : (
 				<div className='w-full h-[185px] rounded-[20px] bg-white flex items-center justify-center text-blackMain text-2xl'>
-					<UiTypography font='Raleway-M' tag='h2'>
-						Ничего не найдено
-					</UiTypography>
+					{isSearching ? (
+						<UiSpinner />
+					) : (
+						<UiTypography font='Raleway-M' tag='h2'>
+							Ничего не найдено
+						</UiTypography>
+					)}
 				</div>
 			)}
 		</div>

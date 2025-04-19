@@ -34,3 +34,4 @@ export {
 export { UiMessageCloud, type TUiMessageCloudProps } from './UiMessageCloud'
 export { UiRadio, type UiRadioProps } from './UiRadio'
 export { UiRadioGroup, type TUiRadioGroupProps } from './UiRadioGroup'
+export { UiSpinner, type TUiSpinnerProps } from './UiSpinner'

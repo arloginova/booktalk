@@ -62,8 +62,6 @@ export const searchArticles = async (slug: string): Promise<TArticleItem[]> => {
 			)
 			.map(result => (result as PromiseFulfilledResult<TArticleItem>).value)
 
-		console.log(results)
-
 		const uniqueResults = successfulResults.reduce(
 			(acc: TArticleItem[], current) => {
 				if (!acc.some(item => item.data.id === current.data.id)) {

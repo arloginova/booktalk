@@ -36,12 +36,39 @@
 	--breakpoint-xs-big-1: 480px;
 	--breakpoint-xs-mid: 394px;
 	--breakpoint-xs-low: 321px;
+	/* Добавляем классы для анимаций */
+	--animate-rotate: rotate 1s linear infinite;
+	--animate-prixClipFix: prixClipFix 2s linear infinite;
 
 	--animate-shimmer: shimmer 2s infinite;
 
 	@keyframes shimmer {
 		100% {
 			translate: 100%;
+		}
+	}
+
+	@keyframes rotate {
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes prixClipFix {
+		0% {
+			clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+		}
+		25% {
+			clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+		}
+		50% {
+			clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+		}
+		75% {
+			clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+		}
+		100% {
+			clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
 		}
 	}
 }
