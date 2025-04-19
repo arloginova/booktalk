@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { TClassName } from '@/shared/types'
 import { cn } from '@/shared/lib'
 import { UiExpandText, UiTypography } from '@/shared/ui'
-import { TBookData } from '@/shared/types/Book'
+import { TBookData, TBookReview } from '@/shared/types/Book'
 import { StarIcon } from '@/shared/icons'
 
 const wrapperCls = ''
@@ -19,17 +19,17 @@ const expandCls = 'lg-low:text-xl text-sm'
 
 interface Props
 	extends TClassName,
-		Pick<TBookData, 'slug' | 'description' | 'author'> {
-	reviewGrate: number | null
-}
+		Pick<TBookData, 'slug' | 'description' | 'author' | 'userReviews'> {}
 
 const Info: FC<Props> = ({
 	className,
 	description,
 	slug,
 	author,
-	reviewGrate,
+	userReviews,
 }) => {
+	const reviews = [...userReviews].slice(1) as TBookReview[]
+
 	return (
 		<div className={cn(wrapperCls, className)}>
 			<UiTypography font='Raleway-M' tag='h1' className={titleCls}>
@@ -49,7 +49,11 @@ const Info: FC<Props> = ({
 						tag='p'
 						className='lg-low:translate-y-0 translate-y-0.5'
 					>
-						{reviewGrate?.toFixed(1) || 'Нет данных'}
+						{(
+							reviews.reduce((acc, item) => {
+								return acc + item.grate
+							}, 0) / reviews.length
+						).toFixed(1) || 'Нет данных'}
 					</UiTypography>
 				</div>
 				<div className={starsCls}>

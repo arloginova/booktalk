@@ -23,7 +23,7 @@ const Reviews: FC<Props> = ({ className, userReviews }) => {
 		setDataIndex(cur => cur + 3)
 	}
 
-	const reviews = [...userReviews].splice(1)
+	const reviews = [...userReviews].slice(1)
 
 	return (
 		<div className={cn(wrapperCls, className)}>

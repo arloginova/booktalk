@@ -50,7 +50,7 @@ const BookInfo: FC<Props> = async ({ className, params: { book, type } }) => {
 				/>
 				<div className={reviewsCls}>
 					<Info
-						reviewGrate={userReviews[0]}
+						userReviews={userReviews}
 						author={author}
 						description={description}
 						slug={slug}
