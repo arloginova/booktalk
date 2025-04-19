@@ -17,7 +17,6 @@ import { TArticleItem } from '@/shared/types/Articles'
 import { ArticleItem } from '@/entities/ArticleItem'
 import { CHAIN } from '../../constants/chain'
 import { allReviewsRoutes } from '@/widgets/ArticlesAllReviews'
-import { type } from 'os'
 import { ReviewItem } from '@/entities/ReviewItem'
 import { searchReviews } from '@/shared/api/searchReviews'
 
@@ -54,7 +53,7 @@ const SearchContent: FC<Props> = ({ className }) => {
 	return (
 		<div
 			className={cn(
-				'absolute left-0 bottom-0 lg-low:translate-y-[calc(100%+13px)] translate-y-[calc(100%+8px)] max-h-[670px] overflow-auto w-full flex flex-col gap-y-2 no-scrollbar',
+				'absolute left-0 bottom-0 lg-low:translate-y-[calc(100%+13px)] translate-y-[calc(100%+8px)] lg-low:max-h-[685px] max-h-[481px] overflow-auto w-full flex flex-col gap-y-2 no-scrollbar',
 				className
 			)}
 		>
@@ -65,20 +64,28 @@ const SearchContent: FC<Props> = ({ className }) => {
 							onClick={handleRedirect}
 							key={`${slug}${genre}${type}`}
 							href={`${EnRoutes.collections}/${reviewsRoutes[type]?.href}/${slug}`}
-							className='py-6 px-8 rounded-[20px] bg-whiteMain text-blackMain flex items-center gap-x-6'
+							className='lg-mid:py-6 p-3 lg-mid:px-8 rounded-[20px] bg-whiteMain text-blackMain flex items-center gap-x-6 lg-mid:h-[223px] h-[155px]'
 						>
 							<Image
 								src={image}
 								alt={slug}
 								width={110}
 								height={170}
-								className='rounded-[8px]'
+								className='rounded-[8px] h-full w-auto'
 							/>
 							<div className=''>
-								<UiTypography font='Muller-M' tag='h2' className='text-2xl'>
+								<UiTypography
+									font='Muller-M'
+									tag='h2'
+									className='lg-mid:text-2xl text-lg'
+								>
 									{slug}
 								</UiTypography>
-								<UiTypography font='Raleway-M' tag='h3' className='text-xl'>
+								<UiTypography
+									font='Raleway-M'
+									tag='h3'
+									className='lg-mid:text-xl text-sm'
+								>
 									{author}
 								</UiTypography>
 							</div>
@@ -93,7 +100,7 @@ const SearchContent: FC<Props> = ({ className }) => {
 						>
 							<ReviewItem
 								withoutText
-								gradientImageClassName='h-[223px]'
+								gradientImageClassName='lg-mid:h-[223px] h-[155px]'
 								imageClassName='!h-full !w-auto'
 								key={data.id}
 								{...data}
@@ -109,7 +116,7 @@ const SearchContent: FC<Props> = ({ className }) => {
 							key={`${data.title}${genre}${type}`}
 						>
 							<ArticleItem
-								className='h-[223px]'
+								className='lg-mid:h-[223px] h-[155px]'
 								withoutText
 								theme={CHAIN[Math.floor(Math.random() * CHAIN.length + 1)]}
 								key={data.id}
