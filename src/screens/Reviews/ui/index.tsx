@@ -16,7 +16,6 @@ interface Props extends TClassName {
 }
 
 const ReviewsScreen: FC<Props> = ({ className, genre }) => {
-	console.log(EnCurrentTab.romantic, genre)
 	if (
 		genre !== EnCurrentTab.all &&
 		genre !== EnCurrentTab.detectives &&

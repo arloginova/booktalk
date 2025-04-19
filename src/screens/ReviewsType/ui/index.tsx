@@ -21,6 +21,7 @@ interface Props extends TClassName {
 
 const ReviewsTypeScreen: FC<Props> = ({ className, type }) => {
 	const keys = Object.keys(reviewsRoutes)
+
 	const pageTypeKey = keys.find(key => reviewsRoutes[key].href === type)
 
 	if (!pageTypeKey) notFound()

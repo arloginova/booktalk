@@ -4,7 +4,7 @@ import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
 import { EnRoutes } from '@/shared/constants'
 import {
-	allReviewsRoutes,
+	detectivesReviewsRoutes,
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
@@ -14,7 +14,8 @@ interface Props extends TClassName {}
 const RiddleUnanswered: FC<Props> = ({ className }) => {
 	const riddleUnanswered = useQuery({
 		queryKey: ['reviews', EnAllReviewsRoutesKeys.riddleUnanswered],
-		queryFn: allReviewsRoutes[EnAllReviewsRoutesKeys.riddleUnanswered].queryFn,
+		queryFn:
+			detectivesReviewsRoutes[EnAllReviewsRoutesKeys.riddleUnanswered].queryFn,
 	})
 
 	return (
@@ -23,12 +24,14 @@ const RiddleUnanswered: FC<Props> = ({ className }) => {
 				next: 'idddddddddfjidfijdijfde',
 				prev: 'azssssfardwfwdfwqdrwrqfd',
 			}}
-			title={allReviewsRoutes[EnAllReviewsRoutesKeys.riddleUnanswered].title}
+			title={
+				detectivesReviewsRoutes[EnAllReviewsRoutesKeys.riddleUnanswered].title
+			}
 			reviews={riddleUnanswered.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${
-					allReviewsRoutes[EnAllReviewsRoutesKeys.riddleUnanswered].href
+				href: `${EnRoutes.reviews}/${
+					detectivesReviewsRoutes[EnAllReviewsRoutesKeys.riddleUnanswered].href
 				}`,
 				text: 'Подробнее',
 			}}

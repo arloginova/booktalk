@@ -4,7 +4,7 @@ import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
 import { EnRoutes } from '@/shared/constants'
 import {
-	allReviewsRoutes,
+	notFictionReviewsRoutes,
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
@@ -14,7 +14,8 @@ interface Props extends TClassName {}
 const PowerOfThoughts: FC<Props> = ({ className }) => {
 	const powerOfThoughts = useQuery({
 		queryKey: ['collections', EnAllReviewsRoutesKeys.powerOfThoughts],
-		queryFn: allReviewsRoutes[EnAllReviewsRoutesKeys.powerOfThoughts].queryFn,
+		queryFn:
+			notFictionReviewsRoutes[EnAllReviewsRoutesKeys.powerOfThoughts].queryFn,
 	})
 
 	return (
@@ -23,12 +24,14 @@ const PowerOfThoughts: FC<Props> = ({ className }) => {
 				next: 'opgogogogewuhfewfewuhfewfwe',
 				prev: 'cvudueueoxcxcxvfvffgf',
 			}}
-			title={allReviewsRoutes[EnAllReviewsRoutesKeys.powerOfThoughts].title}
+			title={
+				notFictionReviewsRoutes[EnAllReviewsRoutesKeys.powerOfThoughts].title
+			}
 			reviews={powerOfThoughts.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${
-					allReviewsRoutes[EnAllReviewsRoutesKeys.powerOfThoughts].href
+				href: `${EnRoutes.reviews}/${
+					notFictionReviewsRoutes[EnAllReviewsRoutesKeys.powerOfThoughts].href
 				}`,
 				text: 'Подробнее',
 			}}

@@ -16,7 +16,7 @@ enum EnAllReviewsRoutesKeys {
 	choice = EnBookTypes['detectives-choice'],
 }
 
-const allReviewsRoutes: Record<
+const detectivesReviewsRoutes: Record<
 	string,
 	{ href: string; title: string; queryFn: () => Promise<TBookItem[]> }
 > = {
@@ -47,4 +47,4 @@ const allReviewsRoutes: Record<
 	},
 }
 
-export { allReviewsRoutes, EnAllReviewsRoutesKeys }
+export { detectivesReviewsRoutes, EnAllReviewsRoutesKeys }

@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
 import {
-	allReviewsRoutes,
+	horrorsReviewsRoutes,
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
 import { EnRoutes } from '@/shared/constants'
@@ -15,7 +15,8 @@ const UnforgettableGoosebumps: FC<Props> = ({ className }) => {
 	const unforgettableGoosebumpsBooks = useQuery({
 		queryKey: ['reviews', EnAllReviewsRoutesKeys.unforgettableGoosebumps],
 		queryFn:
-			allReviewsRoutes[EnAllReviewsRoutesKeys.unforgettableGoosebumps].queryFn,
+			horrorsReviewsRoutes[EnAllReviewsRoutesKeys.unforgettableGoosebumps]
+				.queryFn,
 	})
 
 	return (
@@ -25,13 +26,15 @@ const UnforgettableGoosebumps: FC<Props> = ({ className }) => {
 				prev: 'gijiidnjcdscnjcewie',
 			}}
 			title={
-				allReviewsRoutes[EnAllReviewsRoutesKeys.unforgettableGoosebumps].title
+				horrorsReviewsRoutes[EnAllReviewsRoutesKeys.unforgettableGoosebumps]
+					.title
 			}
 			reviews={unforgettableGoosebumpsBooks.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${
-					allReviewsRoutes[EnAllReviewsRoutesKeys.unforgettableGoosebumps].href
+				href: `${EnRoutes.reviews}/${
+					horrorsReviewsRoutes[EnAllReviewsRoutesKeys.unforgettableGoosebumps]
+						.href
 				}`,
 				text: 'Подробнее',
 			}}

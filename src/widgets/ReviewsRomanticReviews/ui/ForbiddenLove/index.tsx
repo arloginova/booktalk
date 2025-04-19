@@ -4,7 +4,7 @@ import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
 import { EnRoutes } from '@/shared/constants'
 import {
-	allReviewsRoutes,
+	romanticReviewsRoutes,
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
@@ -14,7 +14,8 @@ interface Props extends TClassName {}
 const ForbiddenLove: FC<Props> = ({ className }) => {
 	const forbiddenLove = useQuery({
 		queryKey: ['reviews', EnAllReviewsRoutesKeys.forbiddenLove],
-		queryFn: allReviewsRoutes[EnAllReviewsRoutesKeys.forbiddenLove].queryFn,
+		queryFn:
+			romanticReviewsRoutes[EnAllReviewsRoutesKeys.forbiddenLove].queryFn,
 	})
 
 	return (
@@ -23,12 +24,12 @@ const ForbiddenLove: FC<Props> = ({ className }) => {
 				next: 'vsuduuhdvddvewfewuhfewfwe',
 				prev: 'iiiicxvfvffgf',
 			}}
-			title={allReviewsRoutes[EnAllReviewsRoutesKeys.forbiddenLove].title}
+			title={romanticReviewsRoutes[EnAllReviewsRoutesKeys.forbiddenLove].title}
 			reviews={forbiddenLove.data}
 			className={className}
 			headLink={{
 				href: `${EnRoutes.reviews}/${
-					allReviewsRoutes[EnAllReviewsRoutesKeys.forbiddenLove]?.href
+					romanticReviewsRoutes[EnAllReviewsRoutesKeys.forbiddenLove]?.href
 				}`,
 				text: 'Подробнее',
 			}}

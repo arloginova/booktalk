@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
 import {
-	allReviewsRoutes,
+	romanticReviewsRoutes,
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
 import { EnRoutes } from '@/shared/constants'
@@ -14,7 +14,7 @@ interface Props extends TClassName {}
 const Popular: FC<Props> = ({ className }) => {
 	const popularBooks = useQuery({
 		queryKey: ['reviews', EnAllReviewsRoutesKeys.popular],
-		queryFn: allReviewsRoutes[EnAllReviewsRoutesKeys.popular].queryFn,
+		queryFn: romanticReviewsRoutes[EnAllReviewsRoutesKeys.popular].queryFn,
 	})
 
 	return (
@@ -23,12 +23,12 @@ const Popular: FC<Props> = ({ className }) => {
 				next: 'gbweyfgiuewiugfewuhfewfewuhfewfwe',
 				prev: 'zxcxzczxcxcxcxvfvffgf',
 			}}
-			title={allReviewsRoutes[EnAllReviewsRoutesKeys.popular].title}
+			title={romanticReviewsRoutes[EnAllReviewsRoutesKeys.popular].title}
 			reviews={popularBooks.data}
 			className={className}
 			headLink={{
 				href: `${EnRoutes.reviews}/${
-					allReviewsRoutes[EnAllReviewsRoutesKeys.popular].href
+					romanticReviewsRoutes[EnAllReviewsRoutesKeys.popular].href
 				}`,
 				text: 'Подробнее',
 			}}

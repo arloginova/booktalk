@@ -4,7 +4,7 @@ import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
 import { EnRoutes } from '@/shared/constants'
 import {
-	allReviewsRoutes,
+	romanticReviewsRoutes,
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
@@ -14,9 +14,10 @@ interface Props extends TClassName {}
 const ModernRomance: FC<Props> = ({ className }) => {
 	const modernRomance = useQuery({
 		queryKey: ['reviews', EnAllReviewsRoutesKeys.modernRomance],
-		queryFn: allReviewsRoutes[EnAllReviewsRoutesKeys.modernRomance].queryFn,
+		queryFn:
+			romanticReviewsRoutes[EnAllReviewsRoutesKeys.modernRomance].queryFn,
 	})
-	console.log(allReviewsRoutes[EnAllReviewsRoutesKeys.modernRomance].href)
+	console.log(romanticReviewsRoutes[EnAllReviewsRoutesKeys.modernRomance].href)
 
 	return (
 		<SliderReviews
@@ -24,12 +25,12 @@ const ModernRomance: FC<Props> = ({ className }) => {
 				next: 'gbweyfgiuewiugfewudcds',
 				prev: 'duhdiuidiudcxcxvfvffgf',
 			}}
-			title={allReviewsRoutes[EnAllReviewsRoutesKeys.modernRomance].title}
+			title={romanticReviewsRoutes[EnAllReviewsRoutesKeys.modernRomance].title}
 			reviews={modernRomance.data}
 			className={className}
 			headLink={{
 				href: `${EnRoutes.reviews}/${
-					allReviewsRoutes[EnAllReviewsRoutesKeys.modernRomance].href
+					romanticReviewsRoutes[EnAllReviewsRoutesKeys.modernRomance].href
 				}`,
 				text: 'Подробнее',
 			}}

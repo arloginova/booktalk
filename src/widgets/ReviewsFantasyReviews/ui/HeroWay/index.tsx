@@ -4,7 +4,7 @@ import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
 import { EnRoutes } from '@/shared/constants'
 import {
-	allReviewsRoutes,
+	fantasyReviewsRoutes,
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
@@ -14,7 +14,7 @@ interface Props extends TClassName {}
 const HeroWay: FC<Props> = ({ className }) => {
 	const heroWay = useQuery({
 		queryKey: ['reviews', EnAllReviewsRoutesKeys.heroWay],
-		queryFn: allReviewsRoutes[EnAllReviewsRoutesKeys.heroWay].queryFn,
+		queryFn: fantasyReviewsRoutes[EnAllReviewsRoutesKeys.heroWay].queryFn,
 	})
 
 	return (
@@ -23,12 +23,12 @@ const HeroWay: FC<Props> = ({ className }) => {
 				next: 'asuydsauygdsaguydgsadsuyag',
 				prev: 'uuuuuuuhfueiufefiue',
 			}}
-			title={allReviewsRoutes[EnAllReviewsRoutesKeys.heroWay].title}
+			title={fantasyReviewsRoutes[EnAllReviewsRoutesKeys.heroWay].title}
 			reviews={heroWay.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${
-					allReviewsRoutes[EnAllReviewsRoutesKeys.heroWay].href
+				href: `${EnRoutes.reviews}/${
+					fantasyReviewsRoutes[EnAllReviewsRoutesKeys.heroWay].href
 				}`,
 				text: 'Подробнее',
 			}}

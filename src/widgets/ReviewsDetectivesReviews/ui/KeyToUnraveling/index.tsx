@@ -4,7 +4,7 @@ import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
 import { EnRoutes } from '@/shared/constants'
 import {
-	allReviewsRoutes,
+	detectivesReviewsRoutes,
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
@@ -14,7 +14,8 @@ interface Props extends TClassName {}
 const KeyToUnraveling: FC<Props> = ({ className }) => {
 	const keyToUnraveling = useQuery({
 		queryKey: ['reviews', EnAllReviewsRoutesKeys.keyToUnraveling],
-		queryFn: allReviewsRoutes[EnAllReviewsRoutesKeys.keyToUnraveling].queryFn,
+		queryFn:
+			detectivesReviewsRoutes[EnAllReviewsRoutesKeys.keyToUnraveling].queryFn,
 	})
 
 	return (
@@ -23,12 +24,14 @@ const KeyToUnraveling: FC<Props> = ({ className }) => {
 				next: 'cdsaybdsydwqydwqydywydiuwq',
 				prev: 'ofofdgifdoigfdoigfdiogfio',
 			}}
-			title={allReviewsRoutes[EnAllReviewsRoutesKeys.keyToUnraveling].title}
+			title={
+				detectivesReviewsRoutes[EnAllReviewsRoutesKeys.keyToUnraveling].title
+			}
 			reviews={keyToUnraveling.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${
-					allReviewsRoutes[EnAllReviewsRoutesKeys.keyToUnraveling].href
+				href: `${EnRoutes.reviews}/${
+					detectivesReviewsRoutes[EnAllReviewsRoutesKeys.keyToUnraveling].href
 				}`,
 				text: 'Подробнее',
 			}}

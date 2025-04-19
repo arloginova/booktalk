@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
 import {
-	allReviewsRoutes,
+	romanticReviewsRoutes,
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
 import { EnRoutes } from '@/shared/constants'
@@ -14,7 +14,7 @@ interface Props extends TClassName {}
 const New: FC<Props> = ({ className }) => {
 	const newBooks = useQuery({
 		queryKey: ['reviews', EnAllReviewsRoutesKeys.new],
-		queryFn: allReviewsRoutes[EnAllReviewsRoutesKeys.new].queryFn,
+		queryFn: romanticReviewsRoutes[EnAllReviewsRoutesKeys.new].queryFn,
 	})
 
 	return (
@@ -23,12 +23,12 @@ const New: FC<Props> = ({ className }) => {
 				next: 'grfgijrgijrjigr',
 				prev: 'zxcxzczxcxcxcxczxxxxxxxxx',
 			}}
-			title={allReviewsRoutes[EnAllReviewsRoutesKeys.new].title}
+			title={romanticReviewsRoutes[EnAllReviewsRoutesKeys.new].title}
 			reviews={newBooks.data}
 			className={className}
 			headLink={{
 				href: `${EnRoutes.reviews}/${
-					allReviewsRoutes[EnAllReviewsRoutesKeys.new].href
+					romanticReviewsRoutes[EnAllReviewsRoutesKeys.new].href
 				}`,
 				text: 'Подробнее',
 			}}

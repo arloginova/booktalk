@@ -4,7 +4,7 @@ import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
 import { EnRoutes } from '@/shared/constants'
 import {
-	allReviewsRoutes,
+	horrorsReviewsRoutes,
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
@@ -14,7 +14,7 @@ interface Props extends TClassName {}
 const New: FC<Props> = ({ className }) => {
 	const news = useQuery({
 		queryKey: ['reviews', EnAllReviewsRoutesKeys.new],
-		queryFn: allReviewsRoutes[EnAllReviewsRoutesKeys.new].queryFn,
+		queryFn: horrorsReviewsRoutes[EnAllReviewsRoutesKeys.new].queryFn,
 	})
 
 	return (
@@ -23,12 +23,12 @@ const New: FC<Props> = ({ className }) => {
 				next: 'ugeuigeivbuernv',
 				prev: 'rnvnfdnvfdsiuvcdsciniwc',
 			}}
-			title={allReviewsRoutes[EnAllReviewsRoutesKeys.new].title}
+			title={horrorsReviewsRoutes[EnAllReviewsRoutesKeys.new].title}
 			reviews={news.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${
-					allReviewsRoutes[EnAllReviewsRoutesKeys.new].href
+				href: `${EnRoutes.reviews}/${
+					horrorsReviewsRoutes[EnAllReviewsRoutesKeys.new].href
 				}`,
 				text: 'Подробнее',
 			}}

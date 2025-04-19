@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
 import {
-	allReviewsRoutes,
+	horrorsReviewsRoutes,
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
 import { EnRoutes } from '@/shared/constants'
@@ -14,7 +14,8 @@ interface Props extends TClassName {}
 const WhenShadowsLife: FC<Props> = ({ className }) => {
 	const whenShadowsLifeBooks = useQuery({
 		queryKey: ['reviews', EnAllReviewsRoutesKeys.whenShadowsLife],
-		queryFn: allReviewsRoutes[EnAllReviewsRoutesKeys.whenShadowsLife].queryFn,
+		queryFn:
+			horrorsReviewsRoutes[EnAllReviewsRoutesKeys.whenShadowsLife].queryFn,
 	})
 
 	return (
@@ -23,12 +24,12 @@ const WhenShadowsLife: FC<Props> = ({ className }) => {
 				next: 'gbweyfgvbiuerjebiure',
 				prev: 'chbdsbhcvbyvyrbyrf',
 			}}
-			title={allReviewsRoutes[EnAllReviewsRoutesKeys.whenShadowsLife].title}
+			title={horrorsReviewsRoutes[EnAllReviewsRoutesKeys.whenShadowsLife].title}
 			reviews={whenShadowsLifeBooks.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${
-					allReviewsRoutes[EnAllReviewsRoutesKeys.whenShadowsLife].href
+				href: `${EnRoutes.reviews}/${
+					horrorsReviewsRoutes[EnAllReviewsRoutesKeys.whenShadowsLife].href
 				}`,
 				text: 'Подробнее',
 			}}

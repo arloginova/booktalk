@@ -1,2 +1,2 @@
 export { ReviewsDetectivesReviews } from './ui'
-export { allReviewsRoutes as reviewsDetectivesReviews } from './constants/routes'
+export { detectivesReviewsRoutes as reviewsDetectivesReviews } from './constants/routes'

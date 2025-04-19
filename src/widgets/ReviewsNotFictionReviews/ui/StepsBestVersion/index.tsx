@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
 import {
-	allReviewsRoutes,
+	notFictionReviewsRoutes,
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
 import { EnRoutes } from '@/shared/constants'
@@ -14,7 +14,8 @@ interface Props extends TClassName {}
 const StepsBestVersion: FC<Props> = ({ className }) => {
 	const stepsBestVersionBooks = useQuery({
 		queryKey: ['collections', EnAllReviewsRoutesKeys.stepsBestVersion],
-		queryFn: allReviewsRoutes[EnAllReviewsRoutesKeys.stepsBestVersion].queryFn,
+		queryFn:
+			notFictionReviewsRoutes[EnAllReviewsRoutesKeys.stepsBestVersion].queryFn,
 	})
 
 	return (
@@ -23,12 +24,14 @@ const StepsBestVersion: FC<Props> = ({ className }) => {
 				next: 'gbweyfgiuewiugijijrijgrjirg',
 				prev: 'zxcxzczxcwyyyyyyy',
 			}}
-			title={allReviewsRoutes[EnAllReviewsRoutesKeys.stepsBestVersion].title}
+			title={
+				notFictionReviewsRoutes[EnAllReviewsRoutesKeys.stepsBestVersion].title
+			}
 			reviews={stepsBestVersionBooks.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${
-					allReviewsRoutes[EnAllReviewsRoutesKeys.stepsBestVersion].href
+				href: `${EnRoutes.reviews}/${
+					notFictionReviewsRoutes[EnAllReviewsRoutesKeys.stepsBestVersion].href
 				}`,
 				text: 'Подробнее',
 			}}

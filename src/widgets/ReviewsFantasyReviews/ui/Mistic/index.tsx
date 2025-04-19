@@ -4,7 +4,7 @@ import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
 import { EnRoutes } from '@/shared/constants'
 import {
-	allReviewsRoutes,
+	fantasyReviewsRoutes,
 	EnAllReviewsRoutesKeys,
 } from '../../constants/routes'
 import { SliderReviews } from '@/widgets/SliderReviews'
@@ -14,7 +14,7 @@ interface Props extends TClassName {}
 const Mistic: FC<Props> = ({ className }) => {
 	const mistic = useQuery({
 		queryKey: ['reviews', EnAllReviewsRoutesKeys.mistic],
-		queryFn: allReviewsRoutes[EnAllReviewsRoutesKeys.mistic].queryFn,
+		queryFn: fantasyReviewsRoutes[EnAllReviewsRoutesKeys.mistic].queryFn,
 	})
 
 	return (
@@ -23,12 +23,12 @@ const Mistic: FC<Props> = ({ className }) => {
 				next: 'gbweyfgiudsxzclcsmowowd',
 				prev: 'sdfdfdsfvffgf',
 			}}
-			title={allReviewsRoutes[EnAllReviewsRoutesKeys.mistic].title}
+			title={fantasyReviewsRoutes[EnAllReviewsRoutesKeys.mistic].title}
 			reviews={mistic.data}
 			className={className}
 			headLink={{
-				href: `${EnRoutes.collections}/${
-					allReviewsRoutes[EnAllReviewsRoutesKeys.mistic].href
+				href: `${EnRoutes.reviews}/${
+					fantasyReviewsRoutes[EnAllReviewsRoutesKeys.mistic].href
 				}`,
 				text: 'Подробнее',
 			}}
