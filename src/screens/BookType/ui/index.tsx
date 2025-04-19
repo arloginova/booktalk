@@ -25,8 +25,6 @@ const BookTypeScreen: FC<Props> = ({ className, type }) => {
 
 	if (!pageTypeKey) notFound()
 
-
-
 	const data = useQuery({
 		queryKey: ['articles', 'type', type],
 		queryFn: reviewsRoutes[pageTypeKey].queryFn,
@@ -44,18 +42,18 @@ const BookTypeScreen: FC<Props> = ({ className, type }) => {
 				<ul className={groupCls}>
 					{!data.data || !data.data?.length
 						? [...Array(6)].map((_, index) => (
-							<BookItem key={index} hasSkeleton />
-						))
+								<BookItem key={index} hasSkeleton />
+						  ))
 						: data.data.map(({ data, genre, type }) => {
-							return (
-								<Link
-									href={`${EnRoutes.collections}/${reviewsRoutes[pageTypeKey].href}/${data.slug}`}
-									key={`${data.slug}${genre}${type}`}
-								>
-									<BookItem className={itemCls} {...data} />
-								</Link>
-							)
-						})}
+								return (
+									<Link
+										href={`${EnRoutes.collections}/${reviewsRoutes[pageTypeKey].href}/${data.slug}`}
+										key={`${data.slug}${genre}${type}`}
+									>
+										<BookItem className={itemCls} {...data} />
+									</Link>
+								)
+						  })}
 				</ul>
 			</UiMainBlockWithTitle>
 		</UiGridElemWrapper>
