@@ -28,8 +28,6 @@ const Info: FC<Props> = ({
 	author,
 	userReviews,
 }) => {
-	const reviews = [...userReviews].slice(1) as TBookReview[]
-
 	return (
 		<div className={cn(wrapperCls, className)}>
 			<UiTypography font='Raleway-M' tag='h1' className={titleCls}>
@@ -49,11 +47,13 @@ const Info: FC<Props> = ({
 						tag='p'
 						className='lg-low:translate-y-0 translate-y-0.5'
 					>
-						{(
-							reviews.reduce((acc, item) => {
-								return acc + item.grate
-							}, 0) / reviews.length
-						).toFixed(1) || 'Нет данных'}
+						{userReviews
+							? (
+									userReviews.reduce((acc, item) => {
+										return acc + item.grate
+									}, 0) / userReviews.length
+							  ).toFixed(1)
+							: 'Нет данных'}
 					</UiTypography>
 				</div>
 				<div className={starsCls}>

@@ -5,6 +5,7 @@ import { cn } from '@/shared/lib'
 import { UiButton, UiTypography } from '@/shared/ui'
 import { BookReviewItem } from '@/entities/BookReviewItem'
 import { TBookData, TBookReview } from '@/shared/types/Book'
+import Link from 'next/link'
 
 const wrapperCls = ''
 const headCls =
@@ -14,17 +15,11 @@ const reviewsCountCls = 'uppercase'
 const reviewsCls = 'flex flex-col lg-low:gap-y-8 gap-y-4'
 const btnCls = 'lg-low:mt-8 mt-3.5 lg-low:text-base text-xs'
 
-interface Props extends TClassName, Pick<TBookData, 'userReviews'> {}
+interface Props
+	extends TClassName,
+		Pick<TBookData, 'userReviews' | 'litresLink'> {}
 
-const Reviews: FC<Props> = ({ className, userReviews }) => {
-	const [dataIndex, setDataIndex] = useState<number>(3)
-
-	const handleMore: MouseEventHandler = () => {
-		setDataIndex(cur => cur + 3)
-	}
-
-	const reviews = [...userReviews].slice(1)
-
+const Reviews: FC<Props> = ({ className, userReviews, litresLink }) => {
 	return (
 		<div className={cn(wrapperCls, className)}>
 			<div className={headCls}>
@@ -50,19 +45,15 @@ const Reviews: FC<Props> = ({ className, userReviews }) => {
 			</div>
 			{userReviews[0] ? (
 				<ul className={reviewsCls}>
-					{(reviews as TBookReview[]).map((data, index) =>
-						index <= dataIndex - 1 ? (
-							<BookReviewItem {...data} id={index} avatar='' key={index} />
-						) : null
-					)}
+					{(userReviews as TBookReview[]).map((data, index) => (
+						<BookReviewItem {...data} id={index} avatar='' key={index} />
+					))}
 				</ul>
 			) : null}
 			{userReviews[0] ? (
-				reviews.length >= dataIndex - 1 ? (
-					<UiButton className={btnCls} onClick={handleMore}>
-						Показать еще
-					</UiButton>
-				) : null
+				<Link href={litresLink} target='_blank'>
+					<UiButton className={btnCls}>Показать еще</UiButton>
+				</Link>
 			) : null}
 		</div>
 	)

@@ -16,7 +16,7 @@ type TBookData = {
 	forAdult?: boolean
 	readTime: string
 	signature?: string
-	userReviews: [number | null, ...TBookReview[]]
+	userReviews: TBookReview[]
 	litresLink: string
 }
 type TBookItem = { genre: string; type: string; data: TBookData }

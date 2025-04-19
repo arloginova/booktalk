@@ -38,6 +38,7 @@ import {
 	horrorsUnforgettableGoosebumpsBooks,
 	horrorsWhenShadowsLifeBooks,
 } from './horrorsBooks'
+import { articlesOurChoice, articlesOurChoiceSecond } from './articles'
 
 export enum EnBookTypes {
 	'all-new' = 'all-new',
@@ -68,6 +69,8 @@ export enum EnBookTypes {
 	'detectives-popular' = 'detectives-popular',
 	'detectives-riddle-unanswered' = 'detectives-riddle-unanswered',
 	'detectives-choice' = 'detectives-choice',
+	'articles-our-choice-second' = 'articles-our-choice-second',
+	'articles-our-choice' = 'articles-our-choice',
 }
 
 export const booksCollections = () => {
@@ -143,6 +146,24 @@ export const booksFindOneBySlugRequest = (type: EnBookTypes) => {
 		case EnBookTypes['all-new']:
 			return async (slug: TBookData['slug']) => {
 				const data = await booksCollections()
+				return data.find(
+					({ data }) =>
+						data.slug.replace('?', '') ===
+						decodeURIComponent(slug).replace('?', '')
+				)
+			}
+		case EnBookTypes['articles-our-choice']:
+			return async (slug: TBookData['slug']) => {
+				const data = await articlesOurChoice()
+				return data.find(
+					({ data }) =>
+						data.slug.replace('?', '') ===
+						decodeURIComponent(slug).replace('?', '')
+				)
+			}
+		case EnBookTypes['articles-our-choice-second']:
+			return async (slug: TBookData['slug']) => {
+				const data = await articlesOurChoiceSecond()
 				return data.find(
 					({ data }) =>
 						data.slug.replace('?', '') ===

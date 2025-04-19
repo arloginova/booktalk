@@ -7,6 +7,7 @@ import easyRead from './data/articles/easyRead.json'
 import atmospheric from './data/articles/atmospheric.json'
 import ourChoice from './data/articles/our-choice.json'
 import romanticMood from './data/articles/romantic-mood.json'
+import ourChoiceSecond from './data/articles/our-choice-second.json'
 // import сhildrens from './data/articles/сhildrens.json'
 import { API_MOCK_REQUEST_TIME_MS } from '../constants'
 import { TArticleData, TArticleItem, TArticlesTypes } from '../types/Articles'
@@ -36,6 +37,19 @@ export const articlesCinemaAndSeries = () => {
 					data,
 					genre: cinemaAndSeries.genre,
 					type: cinemaAndSeries.type,
+				}))
+			)
+		}, API_MOCK_REQUEST_TIME_MS)
+	})
+}
+export const articlesOurChoiceSecond = () => {
+	return new Promise<TOurChoiceResponse>((res, rej) => {
+		setTimeout(() => {
+			res(
+				ourChoiceSecond.data.map(data => ({
+					data,
+					genre: ourChoiceSecond.genre,
+					type: ourChoiceSecond.type,
 				}))
 			)
 		}, API_MOCK_REQUEST_TIME_MS)

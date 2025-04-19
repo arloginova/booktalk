@@ -2,7 +2,7 @@
 import { FC } from 'react'
 import { TClassName } from '@/shared/types'
 import { useQuery } from '@tanstack/react-query'
-import { articlesNews } from '@/shared/api/articles'
+import { articlesAtmospheric } from '@/shared/api/articles'
 import { SliderArticles } from '@/widgets/SliderArticles'
 import { EnRoutes } from '@/shared/constants'
 import { allReviewsRoutes } from '../../constants/routes'
@@ -12,7 +12,7 @@ interface Props extends TClassName {}
 const Atmospheric: FC<Props> = ({ className }) => {
 	const atmospheric = useQuery({
 		queryKey: ['articles', 'atmospheric'],
-		queryFn: articlesNews,
+		queryFn: articlesAtmospheric,
 	})
 
 	return (

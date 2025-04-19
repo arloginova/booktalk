@@ -56,7 +56,11 @@ const BookInfo: FC<Props> = async ({ className, params: { book, type } }) => {
 						slug={slug}
 						className={infoCls}
 					/>
-					<Reviews className={reviewsContentCls} userReviews={userReviews} />
+					<Reviews
+						className={reviewsContentCls}
+						userReviews={userReviews}
+						litresLink={litresLink}
+					/>
 				</div>
 			</div>
 		</UiGridElemWrapper>

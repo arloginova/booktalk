@@ -5,6 +5,7 @@ import {
 	articlesEasyRead,
 	articlesNews,
 	articlesOurChoice,
+	articlesOurChoiceSecond,
 	articlesPopular,
 	articlesRomanticMood,
 } from '@/shared/api/articles'
@@ -39,6 +40,12 @@ const allReviewsRoutes: Record<
 		title: 'Наш выбор',
 		//@ts-ignore
 		queryFn: articlesOurChoice,
+	},
+	'our-choice-second': {
+		href: '/our-choice-second',
+		title: 'Наш выбор',
+		//@ts-ignore
+		queryFn: articlesOurChoiceSecond,
 	},
 	'cinema-and-series': {
 		href: '/cinema-and-series',
