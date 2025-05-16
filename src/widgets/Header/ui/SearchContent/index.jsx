@@ -30,6 +30,12 @@ const SearchContent = ({ className }) => {
 	const isSearching = useAppSelector(isSearchingSelector)
 	const dispatch = useAppDispatch()
 
+	function getSecureRandomInt(max) {
+		const randomBuffer = new Uint32Array(1);
+		window.crypto.getRandomValues(randomBuffer);
+		return Math.floor((randomBuffer[0] / (0xFFFFFFFF + 1)) * max);
+	}
+
 	useDebouncedEffect(
 		() => {
 			const request = async () => {
@@ -122,7 +128,7 @@ const SearchContent = ({ className }) => {
 							<ArticleItem
 								className='lg-mid:h-[223px] h-[155px]'
 								withoutText
-								theme={CHAIN[Math.floor(Math.random() * CHAIN.length)]}
+								theme={CHAIN[getSecureRandomInt(CHAIN.length)]}
 								key={data.id}
 								{...data}
 							/>
