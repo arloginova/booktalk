@@ -7,3 +7,4 @@ const ArticlesPage = async ({ searchParams }) => {
 };
 
 export default ArticlesPage;
+
