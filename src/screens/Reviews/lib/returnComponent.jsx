@@ -4,6 +4,7 @@ import { ReviewsHorrorsReviews } from '@/widgets/ReviewsHorrorsReviews'
 import { ReviewsNotFictionReviews } from '@/widgets/ReviewsNotFictionReviews'
 import { ReviewsRomanticReviews } from '@/widgets/ReviewsRomanticReviews'
 import { ReviewsFantasyReviews } from '@/widgets/ReviewsFantasyReviews'
+import {EnCurrentTab} from "@/screens/Reviews/types/tabs";
 
 export const returnComponent = (genre) => {
 	let component = null
@@ -11,19 +12,19 @@ export const returnComponent = (genre) => {
 		case undefined:
 			component = <ReviewsAllReviews />
 			break
-		case 'detectives':
+		case EnCurrentTab.detectives:
 			component = <ReviewsDetectivesReviews />
 			break
-		case 'fantasy':
+		case EnCurrentTab.fantasy:
 			component = <ReviewsFantasyReviews />
 			break
-		case 'horrors':
+		case EnCurrentTab.horrors:
 			component = <ReviewsHorrorsReviews />
 			break
-		case 'notFiction':
+		case EnCurrentTab.notFiction:
 			component = <ReviewsNotFictionReviews />
 			break
-		case 'romantic':
+		case EnCurrentTab.romantic:
 			component = <ReviewsRomanticReviews />
 			break
 	}
