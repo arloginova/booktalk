@@ -12,6 +12,8 @@ const contentCls = 'lg-low:max-w-[680px] max-w-[470px] mx-auto';
 const ReviewsInfo = async ({ className, params: { review, type } }) => {
 	const responseData = await reviewsFindOneBySlugRequest(type)(review);
 
+	console.log(responseData);
+
 	if (!responseData) notFound();
 
 	return (
