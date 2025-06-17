@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://booktalk-ten.vercel.app
+
+# Sitemaps
+Sitemap: https://booktalk-ten.vercel.app/sitemap.xml
